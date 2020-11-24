@@ -36,10 +36,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 
 # estilização
-# gem 'bootstrap', '~> 5.0.0.alpha3'
+gem 'bootstrap'
 
 # icones pela font-awesome
-# gem 'font-awesome-rails'
+gem 'font-awesome-rails'
+
+gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
