@@ -15,3 +15,16 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+//Whatsapp
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+//Carousel
+$('#carouselExampleIndicators').on('slide.bs.carousel', function () {
+  $('.carousel').carousel({
+    interval: 2
+  })
+})
