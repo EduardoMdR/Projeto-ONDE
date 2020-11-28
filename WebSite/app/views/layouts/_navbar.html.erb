@@ -31,5 +31,19 @@
     <div class="navbar-nav">
       <%= link_to 'Admin', homeempresa_path, class: 'nav-item nav-link text-light'%>
     </div>
+
+    <div class="navbar-nav">
+      <div class="text-center">
+        <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm">Login</a>
+      </div>
+    </div>
+    <div class=navbar-nav>
+      <div class="text-center">
+        <a href="" class="btn btn-default" data-toggle="modal" data-target="#modalLRForm">Entre no site</a>
+      </div>
+    </div>
   </div>
 </nav>
+
+<%= render 'layouts/login-modal' %>
+<%= render 'layouts/register-modal' %>
