@@ -1,4 +1,7 @@
 class TestsController < ApplicationController
+  layout 'admin_page_layout', only: [:homeempresa, :criaroferta, 
+                :review, :dashboard, :todasofertas, :editardados]
+
   def categorias
   end
   def cupons

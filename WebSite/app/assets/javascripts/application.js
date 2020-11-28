@@ -28,3 +28,9 @@ $('#carouselExampleIndicators').on('slide.bs.carousel', function () {
     interval: 2
   })
 })
+
+//SideBar
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
