@@ -1,3 +1,41 @@
+<div id="wrapper">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav" style="margin-left:0;">
+      <li class="sidebar-brand">
+        <a href="#menu-toggle"  id="menu-toggle" style="margin-top:20px;float:right;" > <i class="fa fa-bars " style="font-size:20px;" aria-hidden="true" aria-hidden="true"></i> 
+      </li>
+      <li>
+        <a href="./homeempresa"> <i class="fa fa-home" aria-hidden="true"> </i> <span style="margin-left:10px;">Home</span> </a>
+      </li>
+      <li>
+        <a href="./dashboard"><i class="fa fa-bar-chart " aria-hidden="true"> </i> <span style="margin-left:10px;">Estatistica</span>  </a>
+      </li>
+      <li>
+        <a href="./todasofertas"> <i class="fa fa-money" aria-hidden="true"> </i> <span style="margin-left:10px;">Ofertas</span> </a>
+      </li>
+      <li>
+        <a href=""> <i class="fa fa-ticket" aria-hidden="true"> </i> <span style="margin-left:10px;">Cupons</span> </a>
+      </li>
+      <li>
+        <a href="./review"> <i class="fa fa-comment-o" aria-hidden="true"> </i> <span style="margin-left:10px;">Review</span> </a>
+      </li>
+      <li>
+        <a href="./editardados"><i class="fa fa-pencil-square-o" aria-hidden="true"> </i> <span style="margin-left:10px;">Editar dados</span> </a>
+      </li>
+      <li>
+        <a href="#"> <i class="fa fa-user" aria-hidden="true"> </i> <span style="margin-left:10px;">Contato</span> </a>
+      </li>
+    </ul>
+  </div>
+      <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+<!--
 <div class="sidebar-container">
   <div class="sidebar-logo">
     Onde Pinhal
@@ -5,7 +43,7 @@
   <ul class="sidebar-navigation">
     <li class="header">Painel administrativo</li>
     <li>
-      <%= link_to "<i class='fa fa-home'> Homepage</i>".html_safe, homeempresa_path %>
+      
     </li>
     <li>
       <%= link_to "<i class='fa fa-bar-chart'> Estatística</i>".html_safe, dashboard_path %>
@@ -28,3 +66,4 @@
     </li>
   </ul>
 </div>
+-->

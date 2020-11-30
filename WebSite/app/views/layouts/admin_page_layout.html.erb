@@ -17,11 +17,11 @@
   <body>
 
     <%= render 'layouts/sidebar' %>
-    <div class="content-container pb-0">
-      <div class="container-fluid pl-0 pr-0">
+    <div id="page-content-wrapper mt-0">
+      <div class="container-fluid">
         <%= yield %>
-        <%= render 'layouts/footer' %>
       </div>
+    </div>
     </div>
 
     
