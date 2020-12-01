@@ -129,22 +129,9 @@
 
 .textreview {
   color: #313131;
-  background-color:  #2574a90e;
+  background-color:  #312a2515;
   border-radius: 25px;
-  border: 2px solid #2574a970;
-}
-.botaoreview {
-	background-color: #2574a92c;
-	border-radius:28px;
-	border:1px solid #2574a970;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Times New Roman;
-}
-.botaoreview:hover {
-  background-color: #2574a970;
-  transition: .9s;
+  border: 2px solid #312A25;
 }
 
 /* Scroll View */
@@ -196,6 +183,41 @@
   opacity: 0.7;
   transition: .5s;
  }
+
+ .table{
+  border-radius: 10px; 
+ }
+.btnempresas {
+  background-color: #312A25;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+.btnempresas:hover {
+  opacity: 0.7;
+  transition: .5s;
+}
+.btn-empresas {
+  border-color: #312A25;
+  color: black;
+  background-image: -webkit-linear-gradient(45deg, #312A25 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #312A25 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-radius: 12px;
+}
+.btn-empresas:hover {
+  background-position: 0;
+  color: #ffffff;
+}
+
 
 // Cards e o Section
 section {
@@ -391,10 +413,6 @@ section {
 
 
 // SideBar
-
-
-
-
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.6s ease;
@@ -418,6 +436,7 @@ section {
   margin-left: -250px;
   overflow-y: auto;
   background-color:#312A25;
+  
  
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
