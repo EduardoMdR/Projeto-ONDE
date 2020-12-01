@@ -1,9 +1,25 @@
+<div class="container pt-4 pb-5 text-center">
+  <h1 class="titulo pt-4 pb-1">Criar oferta</h1>
 
-<div class="jumbotron">
-  <h1>Navbar example</h1>
-  <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-  <p>To see the difference between static and fixed top navbars, just scroll.</p>
-  <p>
-    <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-  </p>
+  <h4 class="pt-5">Produto</h4>
+  <input class="inputtext" type="text" placeholder="Nome do produto ou serviço ...">
+
+  <h4 class="pt-5">Validade da oferta</h4>
+  <input class="inputtext w-25" type="date" placeholder="Digitar categoria ...">
+
+  <h4 class="pt-5">Preço antigo</h4>
+  <input class="inputtext w-25" type="number" placeholder="R$ ??,??">
+
+  <h4 class="pt-5">Preço da promoção</h4>
+  <input class="inputtext w-25" type="number" placeholder="R$ ??,??">
+
+  <h4 class="pt-5">Descrição</h4>
+  <textarea class="inputtext" style="max-height:260px; min-height:40px" id="exampleFormControlTextarea1" rows="2" placeholder="Marca confiavel com preços inperdiveis ..."></textarea>
+
+  <h4 class="pt-5">Inserir fotos</h4>
+  <input class="inputtext w-50" type="file" value="ola">
+
+  <div class="text-center pt-5 pb-3">
+    <%= button_to  "Cadastrar nova oferta", criaroferta_path, method: :get, class: 'btn-empresas' %>
+  </div>
 </div>
