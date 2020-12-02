@@ -19,7 +19,16 @@
   <h4 class="pt-5">Inserir fotos</h4>
   <input class="inputtext w-50" type="file" value="ola">
 
+  <h4 class="pt-5">
+    <button id="modalActivate" type="button" data-toggle="modal" data-target="#exampleModalPreview">
+      Preview da página
+    </button>
+  </h4>
+
+
   <div class="text-center pt-5 pb-3">
     <%= button_to  "Cadastrar nova oferta", criaroferta_path, method: :get, class: 'btn-empresas' %>
   </div>
 </div>
+
+<%= render 'layouts/preview-modal' %>
