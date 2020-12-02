@@ -1,3 +1,22 @@
 <div class="container">
-  <h1 class="titulo">Painel de Controle</h1>
+  <h1 class="titulo pt-4">Painel de Controle</h1>
+
+  <div class="row pt-5">
+    <div class="col-6">
+      <h4 class="text-center pb-2">Cupons</h4>
+      <%= javascript_include_tag "chart" %>
+      <canvas id="myChart2"></canvas>
+    </div>
+
+    <div class="col-6">
+      <h4 class="text-center pb-2">Ofertas mais acessadas</h4>
+      <%= javascript_include_tag "chart" %>
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+  <div class="pt-5">
+      <h4 class="text-center pb-2">Prazo das ofertas (tempo restante)</h4>
+      <%= javascript_include_tag "chart" %>
+      <canvas id="myChart3"></canvas>
+  </div>
 </div>
