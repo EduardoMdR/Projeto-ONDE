@@ -1,5 +1,5 @@
 class TestsController < ApplicationController
-  layout 'admin_page_layout', only: [:homeempresa, :criaroferta, 
+  layout 'admin_page_layout', only: [:criaroferta, 
                 :review, :dashboard, :todasofertas, :editardados]
 
   def categorias
