@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     get 'dashboard', to: "tests#dashboard", as: :dashboard
     get 'todasofertas', to: "tests#todasofertas", as: :todasofertas
     get 'editardados', to: "tests#editardados", as: :editardados
+    get 'hover', to: "tests#hover", as: :hover
   end
 end

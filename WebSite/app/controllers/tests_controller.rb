@@ -18,6 +18,8 @@ class TestsController < ApplicationController
   end
   def ofertasdestaque
   end
+  def hover
+  end
 
   # empresas
   def homeempresa
