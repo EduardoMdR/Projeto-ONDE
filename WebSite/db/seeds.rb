@@ -14,13 +14,9 @@ unless already_seeded
   company_role = Role.create!(name: 'Empresa')
   user_role = Role.create!(name: 'Usuário')
 
-  # Criação de usuários
-  # User.create(
-  #   email: 'sergio@enotecadecanterbsb.com.br',
-  #   password: '123456',
-  #   name: 'Sérgio Inoue',
-  #   cpf: '904.742.470-07',
-  #   phone_number: '(61) 99820-8800'
-  #   role: adm_role
-  # )
-end
+User.create(
+  name: 'admin',
+  role: adm_role,
+  email: 'admin@admin.com.br',
+  password: '123456'
+)
