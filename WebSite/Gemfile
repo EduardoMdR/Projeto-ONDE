@@ -46,6 +46,9 @@ gem 'jquery-rails'
 # graficos pelo charts js
 gem 'chartjs-ror'
 
+# autenticação do usuario
+gem 'sorcery'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
