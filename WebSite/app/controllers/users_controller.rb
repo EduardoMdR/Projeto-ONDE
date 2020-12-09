@@ -14,8 +14,8 @@ class UsersController < ApplicationController
       flash[:success] = 'Cadastro realizado com sucesso!'
       redirect_to root_path
     rescue => exception
-      flash[:error] = e.message
-      render 'new'
+      flash[:error] = exception.message
+      redirect_back fallback_location: new_user_path
     end
   end
 
