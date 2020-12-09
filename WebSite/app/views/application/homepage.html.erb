@@ -1,6 +1,12 @@
 <%= render 'layouts/navbar' %>
+<%= flash[:success] %>
 <div class="imghome">
   <h1 class="titulo">Homepage<i class="fa fa-home"></i></h1>
+  <% if current_user %>
+    <h1> <%= current_user.name %> </h1>
+  <% else %>
+    <h1> Usuário não logado </h1>
+  <% end %>
 </div>
 <div class="container">
 
