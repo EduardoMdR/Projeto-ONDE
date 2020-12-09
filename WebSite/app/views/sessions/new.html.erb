@@ -1,7 +1,7 @@
 <p><%= flash[:error] %></p>
 <div class="container">
-  <h2 class="text-center">
-  <%= form_with url: :login, method: :post do |form| %>
+  <h2 class="text-center"> Login </h2>
+  <%= form_with url: login_path, method: :post do |form| %>
     <div class="form-group">
       <%= form.label :email %>
       <%= form.email_field :email, class: 'form-control' %>
@@ -10,6 +10,10 @@
       <%= form.label :password %>
       <%= form.password_field :password, class: 'form-control' %>
     </div>
+    <div class="form-group">
+      <%= form.label :remember %>
+      <%= check_box_tag :remember %>
+    </div>
     <%= form.submit "Logar", class: 'btn btn-outline-primary' %>
-  <% end %> Login </h2>
+  <% end %>
 </div>

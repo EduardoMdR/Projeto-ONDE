@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
   private
     # Realiza login com os parametros
     def login_user
-      login(params[:email], params[:password])
+      login(params[:email], params[:password], params[:remember])
       # , params[:remember]
     end
 end
