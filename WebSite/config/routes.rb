@@ -19,4 +19,17 @@ Rails.application.routes.draw do
     get 'editardados', to: "tests#editardados", as: :editardados
     get 'hover', to: "tests#hover", as: :hover
   end
+
+  scope 'users' do
+    get 'index', to: 'users#index', as: :user_index
+    get 'novo_usuario', to: 'users#new', as: :new_user
+    post 'novo_usuario', to: 'users#create'
+    get '/:id/activate', to: 'users#activate', as: :activate
+  end
+
+  scope 'auth' do
+    get 'login', to: 'sessions#new', as: :login
+    post 'login', to: 'sessions#create'
+    delete 'logout', to: 'sessions#destroy', as: :logout
+  end
 end

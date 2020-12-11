@@ -2,6 +2,9 @@ class TestsController < ApplicationController
   layout 'admin_page_layout', only: [:criaroferta, 
                 :review, :dashboard, :todasofertas, :editardados]
 
+  # before_action :require_company, only: [:homeempresa]
+  # before_action :restrict_access, only: [:cupons]
+
   def categorias
   end
   def cupons

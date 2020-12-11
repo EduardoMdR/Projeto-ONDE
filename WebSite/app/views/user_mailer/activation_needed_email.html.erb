@@ -1,0 +1,8 @@
+<p>Bem vindo ao ONDE, <%= @user.name %>.</p>
+
+<p>Para conseguir entrar no site, é preciso verificar sua conta</p>
+<p>
+ <%= link_to 'Verificar', activate_user_url(@user.activation_token) %>.
+</p>
+
+<p>Obrigado por se cadastrar e tenha um ótimo dia!</p>
