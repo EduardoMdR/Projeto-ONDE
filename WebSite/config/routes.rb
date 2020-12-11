@@ -24,6 +24,7 @@ Rails.application.routes.draw do
     get 'index', to: 'users#index', as: :user_index
     get 'novo_usuario', to: 'users#new', as: :new_user
     post 'novo_usuario', to: 'users#create'
+    get '/:id/activate', to: 'users#activate', as: :activate
   end
 
   scope 'auth' do
