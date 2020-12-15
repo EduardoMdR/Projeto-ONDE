@@ -1,6 +1,8 @@
 <%= render 'layouts/navbar' %>
 <%= flash[:success] %>
 <%= flash[:error] %>
+
+<div class="background">
 <div class="imghome">
   <h1 class="titulo">Homepage<i class="fa fa-home"></i></h1>
   <% if current_user %>
@@ -87,10 +89,9 @@
   <div class="row">
     <div class="col-8 pt-5">
       <h4>Ofertas do dia</h4>
-      <h6>Aute et proident occaecat in minim officia duis quis 
-      nulla non. Proident reprehenderit dolor pariatur dolor 
-      nostrud cillum nulla qui adipisicing culpa pariatur anim 
-      commodo. Duis incididunt sint do proident enim dolore.</h6>
+      <h6>Confira as principais ofertas encontradas hoje em Espirito
+      Santo do Pinhal! As ofertas são atualizadas instantaneamente
+      a partir da divulgação das empresas associadas.</h6>
     </div>
     <div class="col-4 pt-5">
       <img class="w-75" src="https://ellevo.com/wp-content/uploads/2018/09/06-csc-em-grandes-empresas.jpg" alt="First slide">
@@ -187,7 +188,7 @@
       </div>
     </div>
     <div class="text-center pt-4 col-12">
-      <button type="button" class="myButton">Confira todas as ofertas</button>
+      <%= button_to  "Confira todas as ofertas", ofertas_path, method: :get, class: 'btn-home' %>
     </div>
   </div>
   <!-- Fim de ofertas do dia -->
@@ -240,8 +241,9 @@
       </div>
     </div>
     <div class="text-center pt-4 col-12">
-      <button type="button" class="myButton">Confira todas as ofertas</button>
+      <%= button_to  "Confira todos os cupons", cupons_path, method: :get, class: 'btn-home' %>
     </div>
   </div>
   <!-- Fim de Cupons -->
+</div>
 </div>
