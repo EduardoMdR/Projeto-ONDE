@@ -1,6 +1,13 @@
 // Place all the styles related to the Tests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$primary-color: #3e41cc;
+$secondary-color: #6439E3;
+$tertiary-color: #368ED9;
+$black-color: #1b1b1b;
+$white-color: #f1faee;
+
 .container{
   min-height: 735px;
 }
@@ -44,19 +51,19 @@
 }
 
 .footer-copyright{
-  background: linear-gradient(-45deg, #29688c, #f321d7);
+  background: linear-gradient(-45deg, $secondary-color, $primary-color);
   color: #fff;
   text-align: center;
 }
 
 .footer-text{
-  background: linear-gradient(-45deg, #29688c, #f321d7);
+  background: linear-gradient(-45deg, $secondary-color, $primary-color);
   color: #fff;
   text-align: center;
 }
 
 .navbar{
-  background-color: #29688c;
+  background: linear-gradient(-45deg, $secondary-color, $primary-color);
 }
 .botao{
   background-color: rgb(0, 150, 136);
@@ -549,8 +556,8 @@ section {
   margin-left:-250px;
 }
 
-/* Sidebar Styles */
 
+/* Sidebar Styles */
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -613,17 +620,16 @@ section {
 
   #wrapper.toggled #sidebar-wrapper {
       width: 40px;
-      
-      
   }
 
-#wrapper.toggled span {
+  #wrapper.toggled span {
       visibility:hidden;
       
   }
-#wrapper.toggled   i {
-float:right;
-} 
+
+  #wrapper.toggled   i {
+  float:right;
+  } 
 
   #page-content-wrapper {
       padding: 20px;
@@ -636,17 +642,15 @@ float:right;
   }
 }
 
-
 @media(max-width:768px) {
+  #wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right:60px;
+  }
 
-#wrapper.toggled #page-content-wrapper {
-  position: absolute;
-  margin-right:60px;
-}
-
-#wrapper.toggled {
-  padding-right: 60px;
-}
+  #wrapper.toggled {
+    padding-right: 60px;
+  }
 
 #wrapper {
       padding-left: 20px;
@@ -661,9 +665,7 @@ float:right;
   }
 
   #wrapper.toggled #sidebar-wrapper {
-      width: 140px;
-      
-      
+      width: 140px; 
   }
   
   #wrapper.toggled span {
@@ -671,20 +673,19 @@ float:right;
       position:relative;
       left:70px;
       bottom:13px;
-      
   }
 
-#wrapper span {
-      visibility:hidden;
-      
-  }
-#wrapper.toggled   i {
-float:right;
-} 
+  #wrapper span {
+        visibility:hidden; 
+    }
 
-#wrapper   i {
-float:right;
-} 
+  #wrapper.toggled   i {
+  float:right;
+  } 
+
+  #wrapper   i {
+  float:right;
+  } 
 
   #page-content-wrapper {
       padding: 5px;
@@ -695,8 +696,4 @@ float:right;
       position: relative;
       margin-right: 0;
   }
-
-
-
-
 }
