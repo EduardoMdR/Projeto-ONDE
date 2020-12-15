@@ -4,7 +4,7 @@
 
 $primary-color: #3e41cc;
 $secondary-color: #6439E3;
-$tertiary-color: #368ED9;
+$tertiary-color: #3e40cc21;
 $black-color: #1b1b1b;
 $white-color: #f1faee;
 
@@ -182,11 +182,9 @@ $white-color: #f1faee;
 }
 
 .menupesquisa {
-  border-radius: 2%;
-  color: #313131;
-  background-color: #29688c1a;
-  border-radius: 25px;
-
+  color: $black-color;
+  background-color: $tertiary-color;
+  border-radius: 5px;
 }
 
 .textreview {
