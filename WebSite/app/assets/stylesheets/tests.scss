@@ -10,6 +10,7 @@
 
 .titulo{
   text-align: center;
+
 }
 .imghome{
   width: 100%;
@@ -125,7 +126,7 @@
 .menupesquisa {
   border-radius: 2%;
   color: #313131;
-  background-color: #29688c1a;
+  background-color: #29688c1a;  //Esse é o famoso Verde - cinza
   border-radius: 25px;
 
 }
@@ -695,8 +696,10 @@ float:right;
       position: relative;
       margin-right: 0;
   }
-
-
-
+  u {
+    margin-top: 10px;
+  }
+  //estrelas
+  
 
 }

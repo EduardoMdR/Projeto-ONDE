@@ -106,3 +106,26 @@ $(document).on('turbolinks:load', async function () {
       }
   });
 });
+//Grafico das Reviews
+$(document).on('turbolinks:load', async function () { 
+var cty = document.getElementById('gra_reviews').getContext('2d');
+var gra_reviews = new Chart(cty, {
+    type: 'doughnut',
+    data: {
+        labels: ['Respondidas', "Sem respostas"],
+        datasets: [{
+            backgroundColor: ["green","red"],
+            borderColor: 'white',
+            borderWidth: 5,
+            data: [48, 10],
+        }]
+    },
+
+    // Configuration options go here
+    options:{
+        legend:{
+            display: false,
+        }
+    },
+  });
+});
