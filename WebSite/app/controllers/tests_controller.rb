@@ -1,6 +1,7 @@
 class TestsController < ApplicationController
   layout 'admin_page_layout', only: [:criaroferta, 
-                :review, :dashboard, :todasofertas, :editardados]
+              :review, :dashboard, :todasofertas, :editardados,
+              :criarcupom, :todoscupons, :editarcupom]
 
   # before_action :require_company, only: [:homeempresa]
   # before_action :restrict_access, only: [:cupons]
@@ -27,14 +28,25 @@ class TestsController < ApplicationController
   # empresas
   def homeempresa
   end
+
+  def todasofertas
+  end
+  def todoscupons
+  end
   def criaroferta
   end
+  def criarcupom
+  end
+  def editaroferta
+  end
+  def editarcupom
+  end
+  
   def review
   end
   def dashboard
   end
-  def todasofertas
-  end
+
   def editardados
   end
 
