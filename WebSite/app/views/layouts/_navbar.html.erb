@@ -1,53 +1,86 @@
-<nav class="navbar navbar-expand-lg navbar-light text-light">
-  <a class="navbar-brand text-light" href="/">Homepage</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <%= link_to 'Categorias', categorias_path, class: 'nav-item nav-link text-light'%>
+<div style="width:100%" class="navbar align-content-center flex-wrap justify-content-center">
+<div class="row text-light menu">
+    <!-- logo -->
+    <div class="col-2">
+      <a href="/"><img src="/assets/logo.png" class="m-3" style="width: 75px;"></a>
     </div>
-    <div class="navbar-nav">
-      <%= link_to 'Cupons', cupons_path, class: 'nav-item nav-link text-light'%>
-    </div>
-    <div class="navbar-nav">
-      <%= link_to 'Ofertas', ofertas_path, class: 'nav-item nav-link text-light'%>
-    </div>
-    <div class="navbar-nav">
-      <%= link_to 'Contato', contato_path, class: 'nav-item nav-link text-light'%>
-    </div>
-    <div class="navbar-nav">
-      <%= link_to 'Parceiros', parceiros_path, class: 'nav-item nav-link text-light'%>
-    </div>
-    <div class="navbar-nav">
-      <%= link_to 'Empresa', empresas_path, class: 'nav-item nav-link text-light'%>
-    </div>
-    <div class="navbar-nav">
-      <%= link_to 'Pesquisa', pesquisa_path, class: 'nav-item nav-link text-light'%>
-    </div>
-    <div class="navbar-nav">
-      <%= link_to 'Destaque', ofertasdestaque_path, class: 'nav-item nav-link text-light'%>
-    </div>
-    <div class="navbar-nav">
-      <%= link_to 'Admin', homeempresa_path, class: 'nav-item nav-link text-light'%>
-    </div>
-    <div class="navbar-nav">
-      <%= link_to "logout", logout_path, method: :delete, class: 'nav-item nav-link text-light' %>
-    </div>
-
-    <div class="navbar-nav">
-      <div class="text-center">
-        <a href="" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm">Login</a>
+    <div class="col-8">
+      <div class="row text-center">
+        <!-- Barra de pesquisa -->
+        <div class="col-12">
+          <% unless  current_page?(root_path) %>
+            <div class="searchbar_home">
+              <input type="text" placeholder="Procurar categoria" class="search_input_home">
+              <%= link_to "<i class='fa fa-search' ></i>".html_safe, pesquisa_path, class: 'search_icon_home' %>
+            </div>
+          <% else %>
+            <p></p>
+          <% end %>
+        </div>
+        <!-- Páginas -->
+        <div class="col-12">
+          <div class="row">
+            <div class="col">
+              <%= link_to 'Categorias', categorias_path, class: 'text-light'%>
+            </div>
+            <div class="col">
+              <%= link_to 'Ofertas', ofertas_path, class: 'text-light'%>
+            </div>
+            <div class="col">
+              <%= link_to 'Cupons', cupons_path, class: 'text-light'%>
+            </div>
+            <div class="col">
+              <%= link_to 'Parceiros', parceiros_path, class: 'text-light'%>
+            </div>
+            <div class="col">
+              <%= link_to 'Contato', contato_path, class: 'text-light'%>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class=navbar-nav>
-      <div class="text-center">
-        <a href="" class="btn btn-default" data-toggle="modal" data-target="#modalLRForm">Entre no site</a>
+    </div>  
+    <!-- Login -->
+    <div class="col-2">
+      <div class="row p-2">
+        <div class="col-12">
+          <i class="fa fa-user-plus text-center" aria-hidden="true">
+            <a href="" class="text-light" data-toggle="modal" data-target="#modalLRForm">Cadastro</a>
+          </i>
+        </div>
+        <div class="col-12">
+          <i class="fa fa-sign-in text-center" aria-hidden="true">
+            <a href="" class="text-light pl-1" data-toggle="modal" data-target="#elegantModalForm">Login</a> 
+          </i>
+        </div>
       </div>
     </div>
   </div>
-</nav>
+</div>
 
+
+<!--
+
+<%= link_to 'Categorias', categorias_path, class: 'nav-item nav-link text-light'%>
+
+<%= link_to 'Cupons', cupons_path, class: 'nav-item nav-link text-light'%>
+
+<%= link_to 'Ofertas', ofertas_path, class: 'nav-item nav-link text-light'%>
+
+<%= link_to 'Contato', contato_path, class: 'nav-item nav-link text-light'%>
+
+<%= link_to 'Parceiros', parceiros_path, class: 'nav-item nav-link text-light'%>
+
+<%= link_to 'Empresa', empresas_path, class: 'nav-item nav-link text-light'%>
+
+<%= link_to 'Pesquisa', pesquisa_path, class: 'nav-item nav-link text-light'%>
+
+<%= link_to 'Destaque', ofertasdestaque_path, class: 'nav-item nav-link text-light'%>
+
+<%= link_to 'Admin', homeempresa_path, class: 'nav-item nav-link text-light'%>
+
+<%= link_to "logout", logout_path, method: :delete, class: 'nav-item nav-link text-light' %>
+
+-->
 <%= render 'layouts/login-modal' %>
 <%= render 'layouts/register-modal' %>
 <%= render 'layouts/password-modal' %>
