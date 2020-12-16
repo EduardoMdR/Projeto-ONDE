@@ -7,6 +7,7 @@ $secondary-color: #6439E3;
 $tertiary-color: #3e40cc21;
 $black-color: #1b1b1b;
 $white-color: #f1faee;
+$admin-primary-color: #312A25;
 
 .container{
   min-height: 735px;
@@ -154,12 +155,48 @@ $white-color: #f1faee;
   border: 0;
   outline: 0;
 }
-
 .searchbar_home:hover {
   opacity: 1;
   transition: .5s;
   .search_icon_home {
     background: $secondary-color;
+    color: white;
+  }
+}
+
+// barra de pesquisa admin
+.searchbar_admin{
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+  border: 2px solid $admin-primary-color;
+  opacity: .8;
+}
+.search_icon_admin{
+  height: 28px;
+  width: 28px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: $admin-primary-color;
+  text-decoration:none;
+  background-color: #ffffff;
+  border: 0;
+}
+.search_input_admin{
+  color: $admin-primary-color;
+  width: 85%;
+  border: 0;
+  outline: 0;
+}
+.searchbar_admin:hover {
+  opacity: 1;
+  transition: .5s;
+  .search_icon_admin {
+    background: $admin-primary-color;
     color: white;
   }
 }
