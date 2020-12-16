@@ -2,14 +2,18 @@
 <%= flash[:success] %>
 <%= flash[:error] %>
 
-<div class="imghome">
-  <h1 class="display-3 text-light text-center pt-5 pb-4">
-  Bem Vindo ao <strong>ONDE Pinhal</strong>
-  </h1>
-  <div class="d-flex justify-content-center">
-    <div class="searchbar">
-      <input type="text" placeholder="Procurar categoria" class="search_input">
-      <%= link_to "<i class='fa fa-search' ></i>".html_safe, root_path, class: 'search_icon' %>
+<div class="home">
+  <div class="homeimg">
+  <div class="hometext">
+    <h1 class="display-3 text-light text-center pt-5 pb-4">
+    Bem Vindo ao <strong>ONDE Pinhal</strong>
+    </h1>
+    <div class="d-flex justify-content-center">
+      <div class="searchbar">
+        <input type="text" placeholder="Procurar categoria" class="search_input">
+        <%= link_to "<i class='fa fa-search' ></i>".html_safe, root_path, class: 'search_icon' %>
+      </div>
+    </div>
     </div>
   </div>
 </div>
