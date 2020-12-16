@@ -11,11 +11,17 @@ Rails.application.routes.draw do
     get 'empresas', to: "tests#empresas", as: :empresas
     get 'pesquisa', to: "tests#pesquisa", as: :pesquisa
     get 'ofertasdestaque', to: "tests#ofertasdestaque", as: :ofertasdestaque
+
+    # admin
     get 'homeempresa', to: "tests#homeempresa", as: :homeempresa
-    get 'criaroferta', to: "tests#criaroferta", as: :criaroferta
+    get 'todasofertas', to: "tests#todasofertas", as: :todasofertas
+    get 'todoscupons', to: "tests#todoscupons", as: :todoscupons
+    get 'criaroferta', to: "tests#criaroferta", as: :criaroferta 
+    get 'criarcupom', to: "tests#criarcupom", as: :criarcupom
+    get 'editaroferta', to: "tests#editaroferta", as: :editaroferta
+    get 'editarcupom', to: "tests#editarcupom", as: :editarcupom
     get 'review', to: "tests#review", as: :review
     get 'dashboard', to: "tests#dashboard", as: :dashboard
-    get 'todasofertas', to: "tests#todasofertas", as: :todasofertas
     get 'editardados', to: "tests#editardados", as: :editardados
     get 'hover', to: "tests#hover", as: :hover
   end
