@@ -17,6 +17,7 @@ $admin-primary-color: #312A25;
 }
 .titulo{
   text-align: center;
+
 }
 
 
@@ -870,5 +871,8 @@ section {
   #wrapper.toggled #page-content-wrapper {
       position: relative;
       margin-right: 0;
+  }
+  u {
+    margin-top: 10px;
   }
 }

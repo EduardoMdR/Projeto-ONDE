@@ -1,26 +1,38 @@
 <%= render 'layouts/navbar' %>
 <div class="container">
   <div class="pt-4">
-    <h1 class="titulo">Pesquise um categorias</h1>
+    <h1 class="titulo">Pesquise uma categoria</h1>
   </div>
   	
   <!-- Melhorar barra de pesquisa -->
-  <div class="text-light pt-5 text-center pb-5">
-      <div class="row justify-content-center mb-2">
-        <input class="form-control form-control-lg textos" type="text" placeholder="Digitar categoria ...">
+  <div class="text-light pt-5 pb-3">
+      <div class="row mb-2 justify-content-center">
+        <input class="form-control form-control-lg col-8" type="text" placeholder="Buscar uma categoria...">
+          <button class="btn-primary col-2 text-center">Pesquisar</button>
       </div>
       <button type="button" class="">Pesquisar</button>
   </div>
 
   <!-- Inicio da linha -->
   <div class="row pb-5">
+  <!-- Cardizinhos -->
+    <!-- Itens Cards -->
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
       <div class="card-deck">
         <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
+            <%=image_tag("imagens_category/academia.png", class: "card-img-top", alt: "Card_Top")%>
           <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title text-center">Academias (14)</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+            <%=image_tag("imagens_category/lojaRoupa.png", class: "card-img-top", alt: "Card_Top")%>
+          <div class="card-body">
+            <h5 class="card-title text-center">Loja de Roupas (8)</h5>
           </div>
         </div>
       </div>
@@ -28,90 +40,23 @@
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
       <div class="card-deck">
         <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
+            <%=image_tag("imagens_category/postoDeGasolina.png", class: "card-img-top", alt: "Card_Top")%>
           <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title text-center">Posto de gasolina (7)</h5>
           </div>
         </div>
       </div>
-    </div>
+     </div>
     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
       <div class="card-deck">
         <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
+            <%=image_tag("imagens_category/mercado.jpg", class: "card-img-top", alt: "Card_Top")%>
           <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title text-center">Supermercado (4)</h5>
           </div>
         </div>
       </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
+     </div>
     </div>
   </div>
   <%= render 'layouts/pagination' %>
