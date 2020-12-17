@@ -1,11 +1,11 @@
 <div class="container">
   <h1 class="titulo pt-4 pb-3">Todas minhas ofertas</h1>
 
-  <div class="text-light text-center pb-5">
-    <div class="row justify-content-center mb-2">
-      <input class="form-control form-control-lg textos" type="text" placeholder="Digitar categoria ...">
+  <div class="d-flex justify-content-center pt-1 pb-5">
+    <div class="searchbar_admin">
+      <input type="text" placeholder="Procurar oferta" class="search_input_admin">
+      <%= link_to "<i class='fa fa-search' ></i>".html_safe, pesquisa_path, class: 'search_icon_admin' %>
     </div>
-    <button type="button" class="btnempresas">Pesquisar</button>
   </div>
 
   <div class="table-responsive text-nowrap">
