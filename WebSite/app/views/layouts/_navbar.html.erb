@@ -9,9 +9,9 @@
         <!-- Barra de pesquisa -->
         <div class="col-12">
           <% unless  current_page?(root_path) %>
-            <div class="searchbar_home">
-              <input type="text" placeholder="Procurar lojas hoteis, e muito mais ..." class="search_input_home">
-              <%= link_to "<i class='fa fa-search' ></i>".html_safe, pesquisa_path, class: 'search_icon_home' %>
+            <div class="searchbar_menu">
+              <input type="text" placeholder="Procurar lojas hoteis, e muito mais ..." class="search_input_menu">
+              <%= link_to "<i class='fa fa-search' ></i>".html_safe, pesquisa_path, class: 'search_icon_menu' %>
             </div>
           <% else %>
             <p></p>
