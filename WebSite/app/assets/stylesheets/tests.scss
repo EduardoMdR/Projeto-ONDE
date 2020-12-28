@@ -325,7 +325,7 @@ $admin-primary-color: #312A25;
   color: $black-color;
   background-color: $tertiary-color;
   border: 1px solid $primary-color;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 // ranger
@@ -361,25 +361,26 @@ $admin-primary-color: #312A25;
 }
 
 /* cards pesquisa (display) */
-.descricao{
-  display: none;
-}
-.item:hover .descricao{
-  display: block;
-}
-.hoverWrapper:hover #hoverShow1 {
+// .descricao{
+//   display: none;
+// }
+// .item:hover .descricao{
+//   display: block;
+// }
+.item:hover #descricao {
   display: block;
   transition: .5s;
  }
- .hoverWrapper #hoverShow1 {
+ .item #descricao {
   display: none;
-  position: absolute;
-  background-color: $tertiary-color;
+  position: relative;
+  background-color: white;
+  color: $black-color;
+  border-radius: 5px;
   border: 1px solid $primary-color;
-  width: 250px;
-  height: 250px;
-  left: 200px;
-  top: 100px;
+  width: 70vh;
+  top: -10px;
+  left: -150px;
   transition: .5s;
  }
 
@@ -890,4 +891,20 @@ section {
   u {
     margin-top: 10px;
   }
+
+  // .item:hover #descricao {
+  //   display: block;
+  //   transition: .5s;
+  //  }
+  //  .item #descricao {
+  //   display: none;
+  //   position: relative;
+  //   background-color: $white-color;
+  //   border: 1px solid $primary-color;
+  //   width: 35vh;
+  //   height: 250px;
+  //   top: -10px;
+  //   left: -10px;
+  //   transition: .5s;
+  //  }
 }
