@@ -74,12 +74,14 @@ $admin-primary-color: #312A25;
 .searchbar{
   margin-bottom: auto;
   margin-top: auto;
-  height: 50px;
+  height: 42px;
+  width: 450px;
   background-color: white;
   border-radius: 30px;
   padding: 5px;
   border: 2px solid $primary-color;
-  opacity: .8;
+  opacity: .6;
+  padding: 0 20px;
 }
 .search_icon{
   height: 38px;
@@ -111,7 +113,6 @@ $admin-primary-color: #312A25;
 
 .searchbar:hover {
   .search_input {
-    padding: 0 20px;
     width: 250px;
     caret-color: $secondary-color;
     transition: width 0.4s linear;
@@ -122,7 +123,6 @@ $admin-primary-color: #312A25;
   }
 }
 .search_input:focus {
-  padding: 0 20px;
   width: 250px;
   caret-color: $secondary-color;
   transition: width 0.4s linear;
@@ -147,8 +147,22 @@ $admin-primary-color: #312A25;
   border-radius: 50%;
   color: $primary-color;
   text-decoration:none;
+  border: none;
   background-color: #ffffff;
   border: 0;
+}
+.pesquisar_icon_menu{
+  justify-content: center;
+  align-items: center;
+  color: $primary-color;
+  text-decoration:none;
+  border: none;
+  background-color: #ffffff;
+}
+.pesquisar_icon_menu:hover{
+  background: $secondary-color;
+  color: white;
+  transition: .5s;
 }
 .search_input_menu{
   color: $primary-color;
@@ -229,6 +243,7 @@ $admin-primary-color: #312A25;
 
 .navbar{
   background: linear-gradient(-45deg, $secondary-color, $primary-color);
+  border-bottom: 1px solid wheat;
 }
 .menu {
   max-width: 1024px;
