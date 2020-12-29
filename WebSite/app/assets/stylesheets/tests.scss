@@ -181,7 +181,7 @@ $admin-primary-color: #312A25;
 
 // barra de pesquisa admin
 .searchbar_admin{
-  width: 50%;
+  width: 100%;
   background-color: white;
   border-radius: 10px;
   padding: 5px;
@@ -414,7 +414,7 @@ $admin-primary-color: #312A25;
 }
 .btn-empresas {
   border-color: #312A25;
-  color: black;
+  color: $black-color;
   background-image: -webkit-linear-gradient(45deg, #312A25 50%, transparent 50%);
   background-image: linear-gradient(45deg, #312A25 50%, transparent 50%);
   background-position: 100%;
