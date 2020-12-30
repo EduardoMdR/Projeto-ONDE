@@ -35,3 +35,17 @@ $("#menu-toggle").click(function(e) {
   e.preventDefault();
   $("#wrapper").toggleClass("toggled");
 });
+
+//Slick slide
+$(document).ready(function(){
+
+  $('.items').slick({
+  dots: true,
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 3
+  });
+  });
+
+
+  

@@ -123,10 +123,15 @@
 
 .menupesquisa {
   border-radius: 2%;
-  color: #313131;
+  color: #ffffff;
   background-color: #29688c1a;
   border-radius: 25px;
 
+}
+
+.menupesquisa2{
+  color:#ffffff;
+  background-color:#999999;
 }
 
 .textreview {
@@ -695,7 +700,63 @@ float:right;
       margin-right: 0;
   }
 
+  .items {
+    width: 100%;
+    margin: 0px auto;
+    margin-top: 100px
+  }
 
 
+}
 
+body {
+  background-color: #039BE5
+}
+
+.items {
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 100px
+}
+
+.slick-slide {
+  margin: 10px
+}
+
+.slick-slide img {
+  width: 100%;
+  border: 0px solid #fff
+}
+
+/*slide*/
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%
+}
+
+#custCarousel .carousel-indicators {
+  position: static;
+  margin-top: 20px
+}
+
+#custCarousel .carousel-indicators>li {
+  width: 100px
+}
+
+#custCarousel .carousel-indicators li img {
+  display: block;
+  opacity: 0.5
+}
+
+#custCarousel .carousel-indicators li.active img {
+  opacity: 1
+}
+
+#custCarousel .carousel-indicators li:hover img {
+  opacity: 0.75
+}
+
+.carousel-item img {
+  width: 100%
 }
