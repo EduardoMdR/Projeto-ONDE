@@ -1,0 +1,41 @@
+<div class="container pt-4 pb-5 text-center">
+  <h1 class="titulo pt-4 pb-1">Criar cupons</h1>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <h4 class="pt-5">Cupom</h4>
+        <div class="searchbar_admin ml-1 mr-1">
+          <input type="text" placeholder="Nome do cupom" class="search_input_admin">
+        </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <h4 class="pt-5">Valor do desconto</h4>
+      <input class="inputtext w-25" type="number" step="any" min="0" value="0">%
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <h4 class="pt-5">Validade do cupom</h4>
+      <input class="inputtext w-50" type="date">
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="d-flex justify-content-around">
+        <h4 class="pt-5">Inserir fotos
+        <small class="h6"><input type="file" class="form-control-file mt-1 ml-1" id="exampleFormControlFile1"></small>
+        </h4>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="pt-5">Descrição</h4>
+  <div class="searchbar_admin ml-1 mr-1">
+    <textarea class="search_input_admin" style="max-height:260px; min-height:40px" id="exampleFormControlTextarea1" rows="2" placeholder="Marca confiavel com preços inperdiveis ..."></textarea>
+  </div>
+
+  <div class="text-center pt-5 pb-3">
+      <%= button_to  "Cadastrar nova oferta", criaroferta_path, method: :get, class: 'btn-empresas' %>
+  </div>
+</div>
+
+<%= render 'layouts/preview-modal' %>

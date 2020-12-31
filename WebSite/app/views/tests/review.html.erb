@@ -1,74 +1,57 @@
+<head>
+  <style>
+    .checked {
+       color: orange;
+      }
+  </style>
+</head>
 <div class="container">
-  <h1 class="titulo pb-5 pt-3">Review</h1>
+  <h1 class="titulo pb-4 pt-3">Central de Reviews</h1>
 
-  <div class="row textreview text-center mb-3 ml-1 mr-1">
-    <div class="col-12 col-md-5 col-lg-4 col-xl-3 pt-3 pb-3">
-      <h6>Amanda T.</h6>
-      <p>
-        <i class="fa fa-star " aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-        <i class="fa fa-star-o" aria-hidden="true"></i>
-      </p>
-      <p>12 de Março de 2020</p>
-
-      <h4 class="pt-3">Aro 15 Pneu Michellin</h4>
+  <div class="row col-13 justify-content-center ml-1 mr-1">
+  <!-- Nota da Empresa -->
+    <div class="col-12 pb-5 text-center col-sm-6 ">
+        <h2> Classificação </h2>
+        <div class="pt-4">
+          <h1> 4,1 </h1>
+          <!-- Estrelas -->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>    
+        </div>
+        <div>( 78 Reviews) </div>
     </div>
-    <div class="col-12 col-md-7 col-lg-8 col-xl-9 pb-5 pt-5">
-      <p>Labore labore officia dolore duis sunt ad. Enim duis elit ipsum 
-      voluptate sit ut minim. Officia id non eu esse irure proident.
-       Nulla fugiat ea Lorem consectetur deserunt nostrud.
-       </p>
-
-    </div>
-  </div>
-
-  <div class="row textreview text-center mb-3 ml-1 mr-1">
-    <div class="col-12 col-md-5 col-lg-4 col-xl-3 pt-3 pb-3">
-      <h6>Mauricio F.</h6>
-      <p>
-        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-        <i class="fa fa-star-o" aria-hidden="true"></i>
-        <i class="fa fa-star-o" aria-hidden="true"></i>
-        <i class="fa fa-star-o" aria-hidden="true"></i>
-        <i class="fa fa-star-o" aria-hidden="true"></i>
-      </p>
-      <p>12 de Março de 2020</p>
-
-      <h4 class="pt-3">Aro 15 Pneu Michellin</h4>
-    </div>
-    <div class="col-12 col-md-7 col-lg-8 col-xl-9 pb-5 pt-5">
-      <p>Achei uma bela de uma bosta, passar bem.
-       </p>
+  <!-- Reviwes sobre a empresa-->
+    <div class= "col-12 col-sm-6 text-center mb-2"> 
+      <h2> Reviews Respondidas</h2>
+      <div>
+        <%= javascript_include_tag "chart" %>
+        <canvas id="gra_reviews"></canvas>
+      </div>
     </div>
   </div>
 
   <div class="row textreview text-center mb-3 ml-1 mr-1">
-    <div class="col-12 col-md-5 col-lg-4 col-xl-3 pt-3 pb-3">
-      <h6>Amanda T.</h6>
+    <div class="col-12 col-md-5 col-lg-4 col-xl-3 pt-4 pb-3">
+      <h4>Clayton P.</h4>
       <p>
-        <i class="fa fa-star " aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-        <i class="fa fa-star-o" aria-hidden="true"></i>
+        <div class="rating">
+          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        </div>
       </p>
       <p>12 de Março de 2020</p>
 
-      <h4 class="pt-3">Aro 15 Pneu Michellin</h4>
+      <h5 class="pt-3">Produto/Serviço/Loja</h5>
     </div>
-    <div class="col-12 col-md-7 col-lg-8 col-xl-9 pb-5 pt-5">
-      <p>
-        Magna Lorem sit consequat adipisicing nisi irure aute pariatur 
-        cupidatat esse ea pariatur. Laborum magna do nisi fugiat 
-        consequat duis sit reprehenderit cupidatat deserunt ullamco
-         eiusmod est eu. Proident incididunt voluptate commodo anim 
-         nisi nostrud nostrud id aliquip dolor velit enim ullamco do. 
-         Minim anim et Lorem non Lorem occaecat veniam incididunt est 
-         laboris ea labore. Duis ut dolor cillum mollit deserunt minim. 
-         Eu ad fugiat consectetur ex magna.
-      </p>
+    <div class="col-12 col-md-7 col-lg-8 col-xl-9 pb-5 pt-5 text-center">
+      <p>Pneu apresentou problemas no segundo dia não recomenndo comprar este material
+       </p>
+       <!-- resposta -->
+       <div class="mt-5">
+       <button class="btn btn-primary"> Responder </button>
+       </div>
     </div>
   </div>
 
