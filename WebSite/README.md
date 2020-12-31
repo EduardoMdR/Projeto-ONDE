@@ -1,24 +1,53 @@
-# README
+# WebSite ONDE Pinhal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Algumas configurações importantes
 
-Things you may want to cover:
+* Ruby version 2.6.6
 
-* Ruby version
+* Rails version 5.2.3
 
-* System dependencies
+* Database Postgres
 
-* Configuration
 
-* Database creation
+# Procedimentos para inicialização do projeto
 
-* Database initialization
+Preciso da versão do ruby e do rails instaladas no meu computador (e qualquer versão do postgreSQL serve), e toda vez que for alterado alguma
+coisa no arquivo Gemfile, preciso repetir esses procedimentos de Instalação.
 
-* How to run the test suite
+## Instalação
 
-* Services (job queues, cache servers, search engines, etc.)
+Para atualizar as depêndencias criadas por outra pessoa preciso rodar um:
 
-* Deployment instructions
+```bash
+bundle install
+```
 
-* ...
+e para garantir (caso alguem tenha criado) que todas as migrações criadas rodem normalmente no seu servidor:
+
+```bash
+rails db:migrate
+```
+
+## Configuração
+
+Como foi utilizado uma gem chamada [figaro](https://github.com/laserlemon/figaro) preciso rodar um comando deles para que consiga configurar seu banco de dados:
+Nota importante: caso eu ja tenha feito isso no meu computador, não preciso fazer novamente. So vou precisar repetir esses mesmo passos caso eu apagar o repositorio do meu computador e clonar ele novamente
+
+```bash
+bundle exec figaro install
+```
+
+E no arquivo application.yml (ele vai criar quando rodar o comando), preciso colocar:
+
+```bash
+database_username: "seu usuário"
+database_password: "sua senha"
+```
+
+
+## Para iniciar
+Com tudo configurado corretamente, basta iniciar o servidor:
+```bash
+rails s
+```
+E abrir seu navegador no url http://localhost:3000/
