@@ -11,7 +11,7 @@
     <div class="d-flex justify-content-center">
       <div class="searchbar">
         <input type="text" placeholder="Procurar categoria ..." class="search_input">
-        <%= link_to "<i class='fa fa-search' ></i>".html_safe, root_path, class: 'search_icon' %>
+        <%= link_to "<i class='fa fa-search' ></i>".html_safe, pesquisa_path, class: 'search_icon' %>
       </div>
     </div>
     </div>
@@ -93,25 +93,25 @@
 <hr class="my-5">
 <!-- Ofertas do dia -->
   <div class="row">
-    <div class="col-8 pt-5">
+    <div class="col-7 pt-5">
       <h2>Ofertas do dia</h2>
       <h6>Confira as principais ofertas encontradas hoje em Espirito
       Santo do Pinhal! As ofertas são atualizadas instantaneamente
       a partir da divulgação das empresas associadas.</h6>
     </div>
-    <div class="col-4 pt-5">
-      <img class="w-75" src="https://ellevo.com/wp-content/uploads/2018/09/06-csc-em-grandes-empresas.jpg" alt="First slide">
+    <div class="col-5 pt-5">
+      <img class="w-75" src="https://www.printebrindes.com.br/wp-content/uploads/2020/11/imperdivel.png" alt="First slide">
     </div>
   </div>
   <div class="row pb-5">
     <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
       <div class="card-deck">
         <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
+            <img class="card-img-top img-fluid" src="https://a-static.mlcdn.com.br/1500x1500/batata-frita-peito-peru-45g-elma-chips/docemalu/1467/7f512b84a084e6433396b334c703cc2f.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title text-center">batatinha</h5>
-            <footer class="blockquote-footer">Supermecado Ampeão</footer>
-            <h3>De:   R$ 19,99<br/> Por: R$ 15,99</h3>
+            <h4 class="card-title text-center">batatinha</h4>
+            <footer class="blockquote-footer font-italic font-weight-bold">Supermecado Campeão</footer>
+            <h6>De <s class="text-danger">R$19,99</s>. Por <span class="h4 text-success">R$15,99</span></h6>
           </div>
         </div>
       </div>
@@ -121,8 +121,33 @@
         <div class="card">
             <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title text-center">Lojinha da Ju</h5>
-            <footer class="blockquote-footer">Preço R$ <cite title="Source Title">19,99</cite></footer>
+            <h4 class="card-title text-center">Mensalidade</h4>
+            <footer class="blockquote-footer font-weight-bold">Academia SJ</footer>
+            <h6>De <s class="text-danger">R$99,99</s>. Por <span class="h4 text-success">R$75,99</span></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="https://images-submarino.b2w.io/produtos/01/00/item/124828/5/124828563_1GG.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title text-center">Pneu aro 15</h4>
+            <footer class="blockquote-footer font-weight-bold">Michellan</footer>
+            <h6>De <s class="text-danger">R$195,99</s>. Por <span class="h4 text-success">R$99,10</span></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/BR/sobremesas/casquinhas_new.png" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title text-center">Casquinha</h4>
+            <footer class="blockquote-footer font-weight-bold">Chiquinho</footer>
+            <h6>De <s class="text-danger">R$2,99</s>. Por <span class="h4 text-success">R$2,00</span></h6>
           </div>
         </div>
       </div>
@@ -132,8 +157,9 @@
         <div class="card">
             <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title text-center">Lojinha da Ju</h5>
-            <footer class="blockquote-footer">Preço R$ <cite title="Source Title">19,99</cite></footer>
+            <h4 class="card-title text-center">Anuidade</h4>
+            <footer class="blockquote-footer font-weight-bold">Academia SJ</footer>
+            <h6>De <s class="text-danger">R$999,99</s>. Por <span class="h4 text-success">R$900</span></h6>
           </div>
         </div>
       </div>
@@ -141,10 +167,11 @@
     <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
       <div class="card-deck">
         <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQuVaNgf6IFefSwKceEBOgkPdhs2iUiNF2LYb7jzumOpRxYYOhyKNR6ECA1Q42Qv0YUZ_rlqUK&usqp=CAc" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title text-center">Lojinha da Ju</h5>
-            <footer class="blockquote-footer">Preço R$ <cite title="Source Title">19,99</cite></footer>
+            <h4 class="card-title text-center">Calça Jeans 37</h4>
+            <footer class="blockquote-footer font-weight-bold">Lojinha da Ju</footer>
+            <h6>De <s class="text-danger">R$90,99</s>. Por <span class="h4 text-success">R$70,99</span></h6>
           </div>
         </div>
       </div>
@@ -152,10 +179,11 @@
     <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
       <div class="card-deck">
         <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
+            <img class="card-img-top" src="https://www.socialbauru.com.br/wp-content/uploads/2020/09/seu-joao-barbearia-bauru-3-1024x768.jpg" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title text-center">Lojinha da Ju</h5>
-            <footer class="blockquote-footer">Preço R$ <cite title="Source Title">19,99</cite></footer>
+            <h4 class="card-title text-center">Corte de cabelo</h4>
+            <footer class="blockquote-footer font-weight-bold">Barbearia Sr. Miguel</footer>
+            <h6>De <s class="text-danger">R$ 19,99</s>. Por <span class="h4 text-success">R$ 15,99</span></h6>
           </div>
         </div>
       </div>
@@ -163,32 +191,11 @@
     <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
       <div class="card-deck">
         <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
+            <img class="card-img-top" src="https://www.cidademarketing.com.br/marketing/wp-content/uploads/2020/01/popsubs_subway.png" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title text-center">Lojinha da Ju</h5>
-            <footer class="blockquote-footer">Preço R$ <cite title="Source Title">19,99</cite></footer>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Lojinha da Ju</h5>
-            <footer class="blockquote-footer">Preço R$ <cite title="Source Title">19,99</cite></footer>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Lojinha da Ju</h5>
-            <footer class="blockquote-footer">Preço R$ <cite title="Source Title">19,99</cite></footer>
+            <h4 class="card-title text-center">2 po 1 Subway</h4>
+            <footer class="h6 text-dark font-italic text-center">Subway</footer>
+            <h6>De <s class="text-danger">R$19,99</s>. Por <span class="h4 text-success">R$12,90</span></h6>
           </div>
         </div>
       </div>
