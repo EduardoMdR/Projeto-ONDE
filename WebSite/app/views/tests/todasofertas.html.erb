@@ -2,7 +2,7 @@
   <h1 class="titulo pt-4 pb-3">Todas minhas ofertas</h1>
 
   <div class="d-flex justify-content-center pt-1 pb-5">
-    <div class="searchbar_admin w-50">
+    <div class="searchbar_admin">
       <input type="text" placeholder="Procurar oferta" class="search_input_admin">
       <%= link_to "<i class='fa fa-search' ></i>".html_safe, pesquisa_path, class: 'search_icon_admin' %>
     </div>
@@ -25,38 +25,85 @@
           <td>R$ 19,99</td>
           <td>
           <div class="progress">
-              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>1D 10H</b></div>
-            </div>
+            <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated te" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>1h 20m</b></div>
+          </div>
           </td>
           <td class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></td>
-          <td class="text-center"><i class="fa fa-trash" aria-hidden="true"></i></td>
+          <td class="text-center"><i class="fa fa-trash text-danger" aria-hidden="true"></i></td>
         </tr>
         <tr>
           <td>Pneu Michellin aro 15</td>
           <td>R$ 227 ,99</td>
           <td>
             <div class="progress">
-                <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning " role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"><b>10h e 20m</b></div>
+              <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning " role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"><b>10h e 20m</b></div>
             </div>
           </td>
           <td class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></td>
-          <td class="text-center"><i class="fa fa-trash" aria-hidden="true"></i></td>
+          <td class="text-center"><i class="fa fa-trash text-danger" aria-hidden="true"></i></td>
         </tr>
         <tr>
           <td>Pneu Michellin aro 15</td>
           <td>R$ 227 ,99</td>
           <td>
-           <div class="progress">
-              <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated te" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>1h 20m</b></div>
-            </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>1D 10H</b></div>
+          </div>
           </td>
           <td class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></td>
-          <td class="text-center"d><i class="fa fa-trash" aria-hidden="true"></i></td>
+          <td class="text-center"d><i class="fa fa-trash text-danger" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td>Pneu Michellin aro 15</td>
+          <td>R$ 227 ,99</td>
+          <td>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>1D 10H</b></div>
+          </div>
+          </td>
+          <td class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></td>
+          <td class="text-center"d><i class="fa fa-trash text-danger" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td>Pneu Michellin aro 15</td>
+          <td>R$ 227 ,99</td>
+          <td>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>1D 10H</b></div>
+          </div>
+          </td>
+          <td class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></td>
+          <td class="text-center"d><i class="fa fa-trash text-danger" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td>Pneu Michellin aro 15</td>
+          <td>R$ 227 ,99</td>
+          <td>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>1D 10H</b></div>
+          </div>
+          </td>
+          <td class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></td>
+          <td class="text-center"d><i class="fa fa-trash text-danger" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td>Pneu Michellin aro 15</td>
+          <td>R$ 227 ,99</td>
+          <td>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>1D 10H</b></div>
+          </div>
+          </td>
+          <td class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></td>
+          <td class="text-center"d><i class="fa fa-trash text-danger" aria-hidden="true"></i></td>
         </tr>
         <tr>
       </tbody>
     </table>
   </div>
+
+  <%= render 'layouts/pagination' %>
+
   <div class="text-center pt-3">
     <%= button_to  "Cadastrar nova oferta", criaroferta_path, method: :get, class: 'btn-empresas' %>
   </div>

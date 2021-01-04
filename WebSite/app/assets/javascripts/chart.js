@@ -114,7 +114,7 @@ var gra_reviews = new Chart(cty, {
     data: {
         labels: ['Respondidas', "Sem respostas"],
         datasets: [{
-            backgroundColor: ["green","red"],
+            backgroundColor: ["rgb(62, 221, 56)","#dd3838"],
             borderColor: 'white',
             borderWidth: 5,
             data: [48, 10],

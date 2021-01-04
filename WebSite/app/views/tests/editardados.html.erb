@@ -1,16 +1,41 @@
 <div class="container pt-4 pb-5 text-center">
   <h1 class="titulo pt-4 pb-1">Editar dados</h1>
 
-  <h4 class="pt-5">Nome da empresa</h4>
-  <input class="inputtext" type="text" value="Lojinha da Ju">
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <h4 class="pt-5">Email</h4>
+      <div class="searchbar_admin ml-1 mr-1">
+        <input type="text" value="lojinhadaju@gmail.com" class="search_input_admin">
+      </div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <h4 class="pt-5">Maps</h4>
+      <input class="inputtext" type="text" value="https://goo.gl/maps/FkiTaZs8uPDQt3odA">
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+    </div>
+  </div>
+
+  <div class="row d-flex">
+    <div class="col-12 col-sm-6">
+      <h4 class="pt-5">Facebook</h4>
+      <input class="inputtext w-50" type="text" value="facebook.com/lojinha_ju">
+    </div>
+    <div class="col-12 col-sm-6">
+      <h4 class="pt-5">Telefone</h4>
+      <input class="inputtext w-25" type="text" value="(19) 99999 9999">
+    </div>
+  </div>
 
   <h4 class="pt-5">Descrição</h4>
-  <textarea class="inputtext" style="max-height:260px; min-height:40px" rows="3">
-   ojinha da Ju foi fundada em 1888, data que hoje, só esta na memoria de dona neide. Tem a visão de oferecer quase os melhores produtos, por quase os melhores preços
+  <textarea class="searchbar_admin" style="max-height:260px; min-height:40px" rows="3">
+    Lojinha da Ju foi fundada em 1888, data que hoje, só esta na memoria de dona neide. Tem a visão de oferecer quase os melhores produtos, por quase os melhores preços
   </textarea>
 
-  <h4 class="pt-5">Inserir fotos</h4>
-  <input class="inputtext w-50" type="file" value="ola">
+  <div class="d-flex justify-content-around">
+    <h4 class="pt-5">Inserir fotos
+    <small class="h6"><input type="file" class="form-control-file mt-1 ml-1" id="exampleFormControlFile1"></small>
+    </h4>
+  </div>
 
   <h4 class="pt-5">Remover alguma foto?</h4>
   <ul class="ulimg">
