@@ -4,34 +4,31 @@
     <i class="fa fa-home" aria-hidden="true"></i>Lojinha da Neide
   </h1>
 
-  <div class="row pt-4">
-    <div class="col-md-0 col-lg-1"></div>
-    <div class="col-6 col-sm-4 col-md-3 col-lg-2 texthome text-center pt-1">
+  <div class="row pt-4 d-flex justify-content-center">
+    <div class="col-6 col-sm-6 col-md-3 col-lg-2 texthome text-center pt-1 m-2">
       <i class="fa fa-building-o fa-5x"></i>
       <h6 class="textohome mt-1"><a href ="./empresas" class="text-light">Página da empresa</a></h6>
     </div>
 
-
-    <div class="col-6 col-sm-4 col-md-3 col-lg-2 texthome text-center pt-1">
+    <div class="col-4 col-sm-4 col-md-3 col-lg-2 texthome text-center pt-1 m-2">
       <i class="fa fa-money fa-5x"></i>
       <h6 class="textohome mt-1"><a href ="./todasofertas" class="text-light">Gerenciar ofertas</a></h6>
     </div>
 
-    <div class="col-6 col-sm-4 col-md-3 col-lg-2 texthome text-center pt-1">
+    <div class="col-4 col-sm-4 col-md-3 col-lg-2 texthome text-center pt-1 m-2">
       <i class="fa fa-ticket fa-5x"></i>
       <h6 class="textohome mt-1"><a href ="" class="text-light">Gerenciar cupons</a></h6>
     </div>
 
-    <div class="col-6 col-sm-6 col-md-3 col-lg-2 texthome text-center pt-1">
+    <div class="col-6 col-sm-6 col-md-3 col-lg-2 texthome text-center pt-1 m-2">
       <i class="fa fa-comment-o fa-5x"></i>
       <h6 class="textohome mt-1"><a href ="./review" class="text-light">Review</a></h6>
     </div>
 
-    <div class="col-12 col-sm-6 col-md-12 col-lg-2 texthome text-center pt-1">
+    <div class="col-10 col-sm-6 col-md-3 col-lg-2 texthome text-center pt-1 m-2">
       <i class="fa fa-bar-chart fa-5x"></i>
       <h6 class="textohome mt-1"><a href ="./dashboard" class="text-light">Estatísticas</a></h6>
     </div>
-    <div class="col-md-0 col-lg-1"></div>
   </div>
 
   <div class="row pt-5 text-center">
@@ -47,15 +44,20 @@
       </h5>
     </div>
     <div class="col-12 col-md-8 col-lg-6">
+      <h4 class="pb-2">Ultimas Reviews</h4>
       <%= render 'layouts/carousel-simples' %>
     </div>
   </div>
 
-  <div class="pt-5 pb-5">
-    <h4>Total de visualização</h4>
+  <div class="pt-5 pb-5 text-center">
+    <h4>Visualizações em suas páginas</h4>
     <!-- Melhorar o grafico quando está em uma tela grande -->
-    <%= javascript_include_tag "chart" %>
-    <canvas id="myChart"></canvas>
+    <div class="d-flex justify-content-center">
+      <div class="col-12 col-sm-12 col-md-10 col-lg-8">
+        <%= javascript_include_tag "chart" %>
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
   </div>
 
   <div class="row pt-5 text-center">

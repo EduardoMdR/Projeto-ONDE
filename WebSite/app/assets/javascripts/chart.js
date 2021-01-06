@@ -1,7 +1,7 @@
 $(document).on('turbolinks:load', async function () { 
   var ctx = document.getElementById('myChart').getContext('2d');
   var myChart = new Chart(ctx, {
-      type: 'bar',
+      type: 'line',
       data: {
           labels: ['22/11', '23/11', '24/11', '25/11', '26/11', '27/11', '28/11', '29/11', '30/11', '01/12' ],
           datasets: [{
