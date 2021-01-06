@@ -2,7 +2,7 @@
 <div class="container">
 
   <div class="row pt-3">
-    <div class="col-12 col-md-6 col-lg-5 pt-3 pb-5 menulateral-destaque" style="justify-content: center;flex : 1;">
+    <div class="col-12 col-md-5 col-lg-5 pt-3 pb-5 menulateral-destaque" style="justify-content: center;flex : 1;">
       <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
         <div class="carousel-inner">
           <div class="carousel-item active"> <img src="https://dju62cr0hx23m.cloudfront.net/Custom/Content/Products/99/37/993761_pneu-225-50r17-michelin-primacy-4-98v_m3_636806438449880562.jpg" alt="Hills"> </div>
@@ -21,10 +21,14 @@
       </div>
     </div>
 
-    <div class="col-12 col-md-6 col-lg-7 menupesquisa2 pt-3 pb-3">
+    <div class="col-12 col-md-7 col-lg-7 menupesquisa2 pt-3 pb-3">
       <h2>Conjunto 4 pneu Michellin</h2>
-      <strong class="pt-3 float-right">De <s>R$1196,99</s> Por R$999,99</strong>
+      <span class="h6 pt-3 float-right">De <s class="text-danger">R$1099,99</s>. Por <span class="h4 text-success">R$999,99</span></span>
       <h4 class="pt-3">Descrição</h4>
+      
+      <button class="btn btn-outline-success float-right m-3" type="button" class="">
+      Calcular Rota <i class="fa fa-map-marker mr-2 text-success"></i>
+      </button>
       
       <p>A Michelin é uma das marcas mais famosas e reconhecidas do mundo
        no segmento de pneus. Presente em mais de 170 países, a empresa 
@@ -32,37 +36,140 @@
     </div>
   </div>
 
-    <div class="row">
-      <div class="col-12 col-lg-5 text-center menulateral-destaque">
-        <h4 class="pt-3">Ofertado por</h4>
-        <img src="https://blog.empresometro.com.br/wp-content/uploads/2017/03/33-1171x417.png" width="80%">
-        <h4 class="pt-3">Lojinha da Ju</h4>
-        <h5>
-          <i class="fa fa-star " aria-hidden="true"></i>
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <i class="fa fa-star" aria-hidden="true"></i>
-          <i class="fa fa-star-half-o" aria-hidden="true"></i>
-          <i class="fa fa-star-o" aria-hidden="true"></i>
-        </h5>
-        <h6>(3,9)<h6>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.372689007904!2d-46.748700385096136!3d-22.187938585382042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c9ae09bf22398b%3A0x235d993ca1cef5b1!2sLojinha%20da%20Ju!5e0!3m2!1spt-BR!2sbr!4v1606923293698!5m2!1spt-BR!2sbr" width="80%" height="225" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      </div>
-      <div class="col-12 col-lg-7 menupesquisa2">
-        <h4>Garantia</h4>
-        <p>Todos os Pneus Michelin são uma merda e não tem garantia</p>
-      </div>
+  <div class="row">
+    <div class="col-12 col-lg-5 text-center menulateral-destaque">
+      <h4 class="pt-3">Ofertado por</h4>
+      <img src="https://blog.empresometro.com.br/wp-content/uploads/2017/03/33-1171x417.png" width="80%">
+      <h4 class="pt-3">Lojinha da Ju</h4>
+      <h5>
+        <i class="fa fa-star " aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+        <i class="fa fa-star-o" aria-hidden="true"></i>
+      </h5>
+      <h6>(3,9)<h6>
+      <h6 class="pt-1">
+        <i class="fa fa-1x fa-whatsapp"></i> (35) 99999-9999
+      </h6>
+      <h6 class="pb-1">
+        <i class="fa fa-1x fa-envelope-o"></i>lojinhadaju@gmail.com
+      </h6>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.372689007904!2d-46.748700385096136!3d-22.187938585382042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c9ae09bf22398b%3A0x235d993ca1cef5b1!2sLojinha%20da%20Ju!5e0!3m2!1spt-BR!2sbr!4v1606923293698!5m2!1spt-BR!2sbr" width="80%" height="225" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
-  <div class="row ">
-    <div class="col-12 col-lg-5 pt-3 pb-3 bg-dark">
-      <div class="text-center">
-        
+    <div class="col-12 col-lg-7 menupesquisa2 pt-3 pb-3">
+
+      <!-- Exemplo 1
+      <p>
+        <a class="h4 text-dark pl-5" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Garantia</a>
+        <a class="h4 text-dark float-right pr-5" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Desempenho</a>
+      </p>
+      <div class="row">
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+              <p>Todos os Pneus Michelin são uma merda e não tem garantia.
+              Msa com um pouco de briga e alguns processos no Procon, essa 
+              data pode variar entre 6 mêses até 1 ano.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card-body">
+              <p>Um bom desempenho com média de duração de 3 anos e meio.
+              è muito importante lembrar que isso se aplica em condições 
+              normais, caso um cacchoro decida comer seu pneu nos não 
+              nos responsabilizamos</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-group">
-        <button type="button" class="">Calcular Rota</button>
+      -->
+
+      <!-- Exemplo 2 -->
+      <div id="accordion">
+        <div class="">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <a class="h4 text-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Garantia
+              </a>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <p>Todos os Pneus Michelin são uma merda e não tem garantia.
+              Msa com um pouco de briga e alguns processos no Procon, essa 
+              data pode variar entre 6 mêses até 1 ano.</p>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <a class="h4 text-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Desempenho
+              </a>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <p>Um bom desempenho com média de duração de 3 anos e meio.
+              è muito importante lembrar que isso se aplica em condições 
+              normais, caso um cacchoro decida comer seu pneu nos não 
+              nos responsabilizamos</p>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- -->
+
+      <!-- Exemplo 3
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link h4 text-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Garantia
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              Todos os Pneus Michelin são uma merda e não tem garantia.
+              Msa com um pouco de briga e alguns processos no Procon, essa 
+              data pode variar entre 6 mêses até 1 ano.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link h4 text-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Desempenho
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              Um bom desempenho com média de duração de 3 anos e meio.
+              è muito importante lembrar que isso se aplica em condições 
+              normais, caso um cacchoro decida comer seu pneu nos não 
+              nos responsabilizamos
+            </div>
+          </div>
+        </div>
+      </div>
+      -->
+
     </div>
   </div>
-  <div class="row bg-dark">
+
+  <h4 class="text-center pt-4">Produtos relacionado</h4>
+  <div class="row text-dark">
     <div class="col-12">
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
