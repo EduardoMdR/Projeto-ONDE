@@ -1,3 +1,4 @@
+/*
 $(document).on('turbolinks:load', async function () { 
   var ctx = document.getElementById('myChart').getContext('2d');
   var myChart = new Chart(ctx, {
@@ -129,3 +130,4 @@ var gra_reviews = new Chart(cty, {
     },
   });
 });
+*/

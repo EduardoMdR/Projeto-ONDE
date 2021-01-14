@@ -44,7 +44,7 @@ gem 'font-awesome-rails'
 gem 'jquery-rails'
 
 # graficos pelo charts js
-gem 'chartjs-ror'
+# gem 'chartjs-ror'
 
 # autenticação do usuario
 gem 'sorcery'
