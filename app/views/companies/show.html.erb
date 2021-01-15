@@ -1,0 +1,9 @@
+<h2>Nome: <%= @company.name %></h2>
+<h4>Descrição: <%= @company.description %></h4>
+<h4>Telefone: <%= @company.phone %></h4>
+<h4>Facebook: <%= @company.fb_link %></h4>
+<h4>Maps: <%= @company.maps %></h4>
+
+<%= button_to "Voltar para companias", companies_path, method: :get %>
+<%= button_to "Editar compania", edit_company_path(@company), method: :get %>
+<%= button_to 'Remover compania', company_path(@company), method: 'delete', data: { confirm: 'Você tem certeza?' } %>

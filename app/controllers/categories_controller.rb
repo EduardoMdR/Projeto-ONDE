@@ -37,13 +37,12 @@ class CategoriesController < ApplicationController
   def update
     @category = Category.find(params[:id])
     begin
-        @category.update!(category_params)
-        flash[:notice] = "Categoria #{@category.name} atualizada com sucesso"
+      @category.update!(category_params)
+      flash[:notice] = "Categoria #{@category.name} atualizada com sucesso"
     rescue => exc
-        puts exc
-        flash[:notice] = exc
+      flash[:notice] = exc
     ensure
-        redirect_to categories_path
+      redirect_to categories_path
     end
   end
 
@@ -51,17 +50,16 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     begin
-        @category.destroy!
-        flash[:notice] = "Categoria #{@category.name} apagada com sucesso"
+      @category.destroy!
+      flash[:notice] = "Categoria #{@category.name} apagada com sucesso"
     rescue => exc
-      puts exc
       flash[:notice] = exc
     ensure
       redirect_to categories_path
     end
   end
 
-  # ADD IN A PRIVATE METHOD FOR PLAYLISTs_PARAMS
+  # ADD IN A PRIVATE METHOD FOR CATEGORIES_PARAMS
   private
     def category_params
       params.require(:category).permit(:name, :description)

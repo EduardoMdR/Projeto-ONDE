@@ -1,0 +1,10 @@
+<h3>Editar categoria <%= @company.name %></h3>
+<%= form_for @company do |form| %>
+    <p>Novo nome: <%= form.text_field :name %></p>
+    <p>Nova descrição: <%= form.text_field :description %></p>
+    <p>Telefone: <%= form.text_field :phone %></p>
+    <p>Facebook: <%= form.text_field :fb_link %></p>
+    <p>Maps: <%= form.text_field :maps %></p>
+
+    <%= form.submit "Editar" %>
+<% end %>

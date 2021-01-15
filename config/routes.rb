@@ -50,4 +50,6 @@ Rails.application.routes.draw do
   #   delete '/delete/:id', to: 'categories#destroy', as: :delete_category
   # end
 
+  resources :companies
+
 end

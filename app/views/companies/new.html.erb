@@ -1,0 +1,11 @@
+<h3>Criar compania</h3>
+<%= form_for @company do |form| %>
+    <p>Nome da compania: <%= form.text_field :name, placeholder: "Academia ..." %></p>
+    <p>Descrição: <%= form.text_field :description, placeholder: "Precisa de um local para ..." %></p>
+    <p>Telefone: <%= form.text_field :phone %></p>
+    <p>Facebook: <%= form.text_field :fb_link %></p>
+    <p>Maps: <%= form.text_field :maps %></p>
+    <!--<p>Usuário: <%= form.hidden_field :artist_id, :value => current_user %></p>-->
+
+    <%= form.submit "Criar" %>
+<% end %>
