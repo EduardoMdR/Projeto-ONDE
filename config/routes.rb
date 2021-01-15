@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories
+  resources :subcategories
   # scope 'categorias' do
   #   get '/new', to: 'categories#new', as: :new_category
   #   post '/new', to: 'categories#create'

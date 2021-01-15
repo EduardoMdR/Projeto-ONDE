@@ -10,6 +10,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    @subcategories = Subcategory.where(category: @category)
   end
 
   ###### CREATE #####
@@ -22,9 +23,9 @@ class CategoriesController < ApplicationController
     begin
       @category.save!
       flash[:notice] = "Categoria #{@category.name} criada com sucesso"
+      redirect_to category_path(@category)
     rescue => exception
       flash[:notice] = exception
-    ensure
       redirect_to categories_path
     end
   end
@@ -39,9 +40,9 @@ class CategoriesController < ApplicationController
     begin
       @category.update!(category_params)
       flash[:notice] = "Categoria #{@category.name} atualizada com sucesso"
+      redirect_to category_path(@category)
     rescue => exc
       flash[:notice] = exc
-    ensure
       redirect_to categories_path
     end
   end

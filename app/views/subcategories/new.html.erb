@@ -1,0 +1,8 @@
+<h3>Criar sub categoria</h3>
+<%= form_for @subcategory do |form| %>
+    <p>Nome da categoria: <%= form.text_field :name, placeholder: "Academia ..." %></p>
+    <p>Descrição: <%= form.text_field :description, placeholder: "Precisa de um local para ..." %></p>
+    <p>Categoria: <%= form.collection_select(:category_id, Category.all, :id, :name) %></p>
+
+    <%= form.submit "Criar" %>
+<% end %>

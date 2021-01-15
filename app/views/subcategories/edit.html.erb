@@ -1,0 +1,8 @@
+<h3>Editar sub categoria <%= @subcategory.name %></h3>
+<%= form_for @subcategory do |form| %>
+    <p>Novo nome: <%= form.text_field :name %></p>
+    <p>Nova descrição: <%= form.text_field :description %></p>
+    <p>Categoria: <%= form.collection_select(:category_id, Category.all, :id, :name) %></p>
+
+    <%= form.submit "Editar" %>
+<% end %>

@@ -1,8 +1,16 @@
 <h2>Nome: <%= @category.name %></h2>
 <h4>Descrição: "<%= @category.description %>"</h4>
 
-<h4> Empresas participantes desta categoria </h4>
-<h6> Nenhuma ainda </h6>
+<% @subcategories.each do |form| %>
+  <tr>
+    <td><%= link_to form.name, subcategory_path(form) %></td>
+    <td><%= form.description %></td>
+    <td><%= button_to 'Editar', edit_subcategory_path(form), method: 'get'%></td>
+    <td><%= button_to 'Remover', subcategory_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+  </tr>
+<% end %>
+
+<p> <%= link_to "Adicionar nova categoria", new_subcategory_path %> </p>
 
 <%= button_to "Voltar para categorias", categories_path, method: :get %>
 <%= button_to "Editar categoria", edit_category_path(@category), method: :get %>
