@@ -1,0 +1,7 @@
+<h3>Editar categoria <%= @category.name %></h3>
+<%= form_for @category do |form| %>
+    <p>Novo nome: <%= form.text_field :name %></p>
+    <p>Nova descrição: <%= form.text_field :description %></p>
+
+    <%= form.submit %>
+<% end %>

@@ -1,0 +1,9 @@
+<h2>Nome: <%= @category.name %></h2>
+<h4>Descrição: "<%= @category.description %>"</h4>
+
+<h4> Empresas participantes desta categoria </h4>
+<h6> Nenhuma ainda </h6>
+
+<%= button_to "Voltar para categorias", categories_path, method: :get %>
+<%= button_to "Editar categoria", edit_category_path(@category), method: :get %>
+<%= button_to 'Remover categoria', category_path(@category), method: 'delete', data: { confirm: 'Você tem certeza?' } %>

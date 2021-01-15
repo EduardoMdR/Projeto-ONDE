@@ -38,4 +38,16 @@ Rails.application.routes.draw do
     post 'login', to: 'sessions#create'
     delete 'logout', to: 'sessions#destroy', as: :logout
   end
+
+  resources :categories
+  # scope 'categorias' do
+  #   get '/new', to: 'categories#new', as: :new_category
+  #   post '/new', to: 'categories#create'
+  #   get '/show/:id', to: 'categories#show', as: :show_category
+  #   get '/', to: 'categories#index', as: :categories
+  #   get '/edit/:id', to: 'categories#edit', as: :edit_category
+  #   patch '/edit/:id', to: 'categories#update'
+  #   delete '/delete/:id', to: 'categories#destroy', as: :delete_category
+  # end
+
 end
