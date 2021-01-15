@@ -3,6 +3,7 @@
 <h4>Telefone: <%= @company.phone %></h4>
 <h4>Facebook: <%= @company.fb_link %></h4>
 <h4>Maps: <%= @company.maps %></h4>
+<h4>Categoria: <%= @company.subcategory.name %></h4>
 
 <%= button_to "Voltar para companias", companies_path, method: :get %>
 <%= button_to "Editar compania", edit_company_path(@company), method: :get %>

@@ -2,6 +2,12 @@ class SubcategoriesController < ApplicationController
 
   ##### Autenticação #####
 
+  ###### SHOW #####
+  def show
+    @subcategory = Subcategory.find(params[:id])
+    @companies = Company.where(subcategory: @subcategory)
+  end
+
   ###### CREATE #####
   def new
     @subcategory = Subcategory.new

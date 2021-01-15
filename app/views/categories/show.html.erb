@@ -6,7 +6,7 @@
     <td><%= link_to form.name, subcategory_path(form) %></td>
     <td><%= form.description %></td>
     <td><%= button_to 'Editar', edit_subcategory_path(form), method: 'get'%></td>
-    <td><%= button_to 'Remover', subcategory_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+    <td><%= button_to 'Remover', subcategory_path(form), method: 'delete', data: { confirm: 'Você tem certeza? Algumas empresas podem ter essa subcategoria, e acabariam ficando sem, tome cuidado !' } %></td>
   </tr>
 <% end %>
 

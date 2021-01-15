@@ -62,6 +62,6 @@ class CompaniesController < ApplicationController
   # ADD IN A PRIVATE METHOD FOR COMPANIES_PARAMS
   private
     def company_params
-      params.require(:company).permit(:name, :description, :phone, :fb_link, :maps)
+      params.require(:company).permit(:name, :description, :phone, :fb_link, :maps, :subcategory_id)
     end
 end

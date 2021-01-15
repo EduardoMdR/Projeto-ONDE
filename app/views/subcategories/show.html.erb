@@ -1,0 +1,12 @@
+<h2>Nome: <%= @subcategory.name %></h2>
+<h4>Descrição: "<%= @subcategory.description %>"</h4>
+
+<br/>
+<h4> Empresas que fazem parte desta categoria</h4>
+<% @companies.each do |form| %>
+  <tr>
+    <td><%= link_to form.name, company_path(form) %></td>
+  </tr>
+<% end %>
+
+<p> <%= link_to "Adicionar nova categoria", new_company_path %> </p>
