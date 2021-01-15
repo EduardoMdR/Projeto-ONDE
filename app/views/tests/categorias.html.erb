@@ -1,0 +1,117 @@
+<%= render 'layouts/navbar' %>
+<div class="container">
+  <div class="pt-4">
+    <h1 class="titulo">Pesquise uma categoria</h1>
+  </div>
+  	
+  <div class="text-light pt-5 pb-3">
+      <div class="row mb-2 justify-content-center">
+        <input class="form-control form-control-lg col-8" type="text" placeholder="Buscar uma categoria...">
+          <a href="./pesquisa" class="btn-primary col-2 text-center pt-2">Pesquisar</a>
+      </div>
+  </div>
+
+  <!-- Inicio da linha -->
+  <div class="row pb-5">
+  <!-- Cardizinhos -->
+    <!-- Itens Cards -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+          <%=image_tag("imagens_categoria/academia.png", class: "card-img-top", alt: "Card_Top")%>
+          <div class="card-body">
+            <h5 class="card-title text-center">Academias (8)</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+     <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+            <%=image_tag("imagens_categoria/lojaRoupa.png", class: "card-img-top", alt: "Card_Top")%>
+          <div class="card-body">
+            <h5 class="card-title text-center">Loja de Roupas (14)</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+            <%=image_tag("imagens_categoria/gas.png", class: "card-img-top p-3", alt: "Card_Top")%>
+          <div class="card-body">
+            <h5 class="card-title text-center">Posto de gasolina (7)</h5>
+          </div>
+        </div>
+      </div>
+     </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+          <%=image_tag("imagens_categoria/supermercado.png", class: "card-img-top", alt: "Card_Top")%>
+          <div class="card-body">
+            <h5 class="card-title text-center">Supermercado (4)</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+          <%=image_tag("imagens_categoria/eletronica.png", class: "card-img-top", alt: "Card_Top")%>
+          <div class="card-body">
+            <h5 class="card-title text-center">Eletronicos (9)</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+            <%=image_tag("imagens_categoria/calendario.png", class: "card-img-top", alt: "Card_Top")%>
+          <div class="card-body">
+            <h5 class="card-title text-center">Eventos (3)</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+            <%=image_tag("imagens_categoria/saude.png", class: "card-img-top p-3", alt: "Card_Top")%>
+          <div class="card-body">
+            <h5 class="card-title text-center">Saúde (12)</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+            <%=image_tag("imagens_categoria/transporte.png", class: "card-img-top p-3", alt: "Card_Top")%>
+          <div class="card-body">
+            <h5 class="card-title text-center">Transporte (11)</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
+      <div class="card-deck">
+        <div class="card">
+            <%=image_tag("imagens_categoria/cinema.png", class: "card-img-top p-3", alt: "Card_Top")%>
+          <div class="card-body">
+            <h5 class="card-title text-center">lazer (15)</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'layouts/pagination' %>
+  <!-- fim da linha -->
+</div>

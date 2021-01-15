@@ -1,0 +1,101 @@
+<head>
+  <style>
+    .checked {
+       color: orange;
+      }
+  </style>
+</head>
+<div class="container">
+  <h1 class="titulo pb-4 pt-3">Central de Reviews</h1>
+
+  <div class="row col-13 justify-content-center ml-1 mr-1">
+  <!-- Nota da Empresa -->
+    <div class="col-12 pb-5 text-center col-sm-6 ">
+        <h2> Classificação </h2>
+        <div class="pt-4">
+          <h1> 4,1 </h1>
+          <!-- Estrelas -->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>    
+        </div>
+        <div>( 78 Reviews) </div>
+    </div>
+  <!-- Reviwes sobre a empresa-->
+    <div class= "col-12 col-sm-6 text-center mb-5"> 
+      <h2> Reviews Respondidas</h2>
+      <div>
+        <!--
+        <%= javascript_include_tag "chart" %>
+        <canvas id="gra_reviews"></canvas>
+        -->
+      </div>
+    </div>
+  </div>
+
+  <div class="row textreview text-center mb-2 ml-1 mr-1">
+    <div class="col-12 col-md-5 col-lg-4 col-xl-3 pt-2 pb-2">
+      <h4>Jeosvando A.</h4>
+      <p>
+        <div>
+          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        </div>
+      </p>
+      <p>12 de Março de 2020</p>
+      <h5 class="pt-1">Pneu Michellin Aro 15</h5>
+    </div>
+    <div class="col-12 col-md-7 col-lg-8 col-xl-9 pb-3 pt-3 text-center">
+      <p>Pneu apresentou problemas no segundo dia não recomenndo comprar este material
+      </p>
+      <!-- resposta -->
+      <button class="btn btn-primary btn-review"> Responder </button>
+    </div>
+  </div>
+
+  <div class="row textreview text-center mb-2 ml-1 mr-1">
+    <div class="col-12 col-md-5 col-lg-4 col-xl-3 pt-2 pb-2">
+      <h4>José H.</h4>
+      <p>
+        <div>
+          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        </div>
+      </p>
+      <p>12 de Março de 2020</p>
+      <h5 class="pt-1">Amortecedor Chevet 87</h5>
+    </div>
+    <div class="col-12 col-md-7 col-lg-8 col-xl-9 pb-3 pt-3 text-center">
+      <p>Atendeu aos meus requisitos, mas não obtive nenhuma vantagem comparadas
+      a outras marcas. Acho bom, mas poderia ser muito melhor
+      </p>
+      <!-- resposta -->
+      <button class="btn btn-primary btn-review"> Responder </button>
+    </div>
+  </div>
+
+  <div class="row textreview text-center mb-2 ml-1 mr-1">
+    <div class="col-12 col-md-5 col-lg-4 col-xl-3 pt-2 pb-2">
+      <h4>Clayton P.</h4>
+      <p>
+        <div>
+          <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        </div>
+      </p>
+      <p>04 de janeiro de 2021</p>
+      <h5 class="pt-1">Lojinha da Ju</h5>
+    </div>
+    <div class="col-12 col-md-7 col-lg-8 col-xl-9 pb-3 pt-3 text-center">
+      <p>Acho a loja muito boa, sempre comprei aqui
+      e sempre tive otimos preços. OS vendedosres são muitos amigaveis
+      e os prazos de pagamento são bem acessiveis, daria até mais estrelas
+      fosse possivel. Desejo toda a sorte do mundo para vocês.
+      </p>
+      <!-- resposta -->
+      <button class="btn btn-success btn-review"> Ver Resposta </button>
+    </div>
+  </div>
+
+  <%= render 'layouts/pagination' %>
+
+</div>
