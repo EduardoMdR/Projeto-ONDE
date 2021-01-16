@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     get 'criarcupom', to: "tests#criarcupom", as: :criarcupom
     get 'editaroferta', to: "tests#editaroferta", as: :editaroferta
     get 'editarcupom', to: "tests#editarcupom", as: :editarcupom
-    get 'review', to: "tests#review", as: :review
+    # get 'review', to: "tests#review", as: :review
     get 'dashboard', to: "tests#dashboard", as: :dashboard
     get 'editardados', to: "tests#editardados", as: :editardados
     get 'hover', to: "tests#hover", as: :hover
@@ -52,5 +52,6 @@ Rails.application.routes.draw do
   # end
 
   resources :companies
+  resources :reviews
 
 end

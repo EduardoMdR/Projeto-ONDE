@@ -1,7 +1,6 @@
 class CompaniesController < ApplicationController
   ##### Autenticação #####
 
-
   ##### SHOW #####
   def index
     @companies = Company.all
@@ -9,6 +8,8 @@ class CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
+    @reviews = Review.where(company: @company)
+    @score, @price = calc_score(@company, @review)
   end
 
   ###### CREATE #####

@@ -3,7 +3,26 @@
 <h4>Telefone: <%= @company.phone %></h4>
 <h4>Facebook: <%= @company.fb_link %></h4>
 <h4>Maps: <%= @company.maps %></h4>
-<h4>Categoria: <%= @company.subcategory.name %></h4>
+<h4>Categoria: <%= link_to @company.subcategory.name, subcategory_path(@company.subcategory) %></h4>
+<h4>QtdScore: <%= @company.qtdscore %></h4>
+<h4>Nota: <%= @score %></h4>
+<h4>Preço: <%= @price %></h4>
+
+
+<br/>
+<h4>Reviews</h4>
+<% @reviews.each do |form| %>
+  <tr>
+    <td>Nota<%= form.score %></td>
+    <td>Preço<%= form.price %></td>
+    <td>Descrição<%= form.description %></td>
+    <td><%= button_to 'Editar', edit_review_path(form), method: 'get'%></td>
+    <td><%= button_to 'Remover', review_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+  </tr>
+  <br/>
+<% end %>
+
+<p> <%= link_to "Adicionar nova review", new_review_path %> </p>
 
 <%= button_to "Voltar para companias", companies_path, method: :get %>
 <%= button_to "Editar compania", edit_company_path(@company), method: :get %>

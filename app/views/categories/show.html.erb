@@ -1,6 +1,8 @@
 <h2>Nome: <%= @category.name %></h2>
 <h4>Descrição: "<%= @category.description %>"</h4>
 
+<br/>
+<h4>Sub Categorias</h4>
 <% @subcategories.each do |form| %>
   <tr>
     <td><%= link_to form.name, subcategory_path(form) %></td>
