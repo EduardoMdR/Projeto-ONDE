@@ -1,0 +1,11 @@
+<h3>Criar cupom</h3>
+<%= form_for @coupon do |form| %>
+    <p>Nome do cupom: <%= form.text_field :name %></p>
+    <p>Valor: <%= form.number_field :value %>%</p>
+    <p>Descrição: <%= form.text_field :code %></p>
+    <p>Data de inicio: <%= form.datetime_field :start_time %></p>
+    <p>Data de termino: <%= form.datetime_field :end_time %></p>
+    <p>Companhia: <%= form.collection_select(:company_id, Company.all, :id, :name) %></p>
+
+    <%= form.submit "Criar" %>
+<% end %>

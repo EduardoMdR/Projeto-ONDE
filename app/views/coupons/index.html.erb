@@ -1,0 +1,12 @@
+<h1> Categorias </h1>
+
+<table>
+  <% @coupons.each do |form| %>
+    <tr>
+    <td>Nome: <%= form.name %></td>
+    <td>Valor: <%= form.value %></td>
+    <td><%= button_to 'Editar', edit_coupon_path(form), method: 'get'%></td>
+    <td><%= button_to 'Remover', coupon_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+  <% end %>
+</table>
+<p> <%= link_to "Adicionar novo cupom", new_coupon_path %> </p>
