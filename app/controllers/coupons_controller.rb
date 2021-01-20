@@ -15,7 +15,6 @@ class CouponsController < ApplicationController
     @coupon = Coupon.new(coupon_params)
     begin
       @coupon.save!
-      code(@coupon)
       flash[:notice] = "Cupom #{@coupon.name} criado com sucesso"
     rescue => exception
       flash[:notice] = exception

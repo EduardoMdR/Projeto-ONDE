@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   # Database relationships:
   belongs_to :role
+  has_one :company
 
   # Model methods:
   def admin?
