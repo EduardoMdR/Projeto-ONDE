@@ -22,6 +22,7 @@ class CompaniesController < ApplicationController
     @current_user = current_user
     begin
       @company.save!
+      @company.update(qtdscore: 0)
       flash[:notice] = "Compania #{@company.name} criada com sucesso"
     rescue => exception
       flash[:notice] = exception
@@ -63,6 +64,6 @@ class CompaniesController < ApplicationController
   # ADD IN A PRIVATE METHOD FOR COMPANIES_PARAMS
   private
     def company_params
-      params.require(:company).permit(:name, :description, :phone, :fb_link, :maps, :subcategory_id)
+      params.require(:company).permit(:name, :description, :user_id, :phone, :fb_link, :maps, :subcategory_id)
     end
 end

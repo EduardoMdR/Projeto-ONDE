@@ -1,9 +1,19 @@
 <h3>Criar review</h3>
 <%= form_for @review do |form| %>
-    <p>Nota: <%= form.number_field :score %></p>
-    <p>Preço: <%= form.number_field :price %></p>
-    <p>Descrição: <%= form.text_field :description %></p>
-    <p>Empresa: <%= form.collection_select(:company_id, Company.all, :id, :name) %> </p>
+<!--
+  <div class="rating">
+    <input type="radio" id="star5" name="score" value="5" onclick="myRating(this.value)" /><label class="full" for="star5" title="Otimo - 5 estrelas"></label>
+    <input type="radio" id="star4" name="score" value="4" onclick="myRating(this.value)" /><label class="full" for="star4" title="Muito bom - 4 estrelas"></label>
+    <input type="radio" id="star3" name="score" value="3" onclick="myRating(this.value)" /><label class="full" for="star3" title="Bom - 3 estrelas"></label>
+    <input type="radio" id="star2" name="score" value="2" onclick="myRating(this.value)" /><label class="full" for="star2" title="Poderia ser melhor - 2 estrelas"></label>
+    <input type="radio" id="star1" name="score" value="1" onclick="myRating(this.value)" /><label class="full" for="star1" title="Ruim - 1 estrelas"></label>
+  </div>
+-->
 
-    <%= form.submit "Criar" %>
+  <p>Nota: <%= form.number_field :score %></p>
+  <p>Preço: <%= form.number_field :price %></p>
+  <p>Descrição: <%= form.text_field :description %></p>
+  <p>Empresa: <%= form.collection_select(:company_id, Company.all, :id, :name) %> </p>
+
+  <%= form.submit "Criar" %>
 <% end %>
