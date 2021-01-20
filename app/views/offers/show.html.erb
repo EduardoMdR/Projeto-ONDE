@@ -1,0 +1,19 @@
+<h2>Nome: <%= @offer.name %></h2>
+<h4>Descrição: <%= @offer.description %></h4>
+<h4>Preço antigo: <%= @offer.old_price %></h4>
+<h4>Novo preço: <%= @offer.new_price %></h4>
+<h4>Empresa: <%= link_to @offer.company.name, company_path(@offer.company) %></h4>
+<h4>Inicio: <%= @offer.start_time %></h4>
+<h4>Fim: <%= @offer.end_time %></h4>
+<h4>Parcelado: <%= @offer.parceled %></h4>
+<h4>Quantas vezes: <%= @offer.qtd_parcel %></h4>
+<h4>Dinheiro: <%= @offer.cash %></h4>
+<h4>Cartão: <%= @offer.credit_card %></h4>
+<h4>Nota: <%= @offer.qtdscore %></h4>
+
+
+<br/>
+
+<%= button_to "Voltar para ofertas", offers_path, method: :get %>
+<%= button_to "Editar oferta", edit_offer_path(@offer), method: :get %>
+<%= button_to 'Remover oferta', offer_path(@offer), method: 'delete', data: { confirm: 'Você tem certeza?' } %>

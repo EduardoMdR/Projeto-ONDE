@@ -53,7 +53,7 @@ Rails.application.routes.draw do
 
   resources :companies
   resources :reviews
-
   resources :coupons
+  resources :offers
 
 end
