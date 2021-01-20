@@ -61,7 +61,7 @@ class ReviewsController < ApplicationController
     end
   end
 
-  # ADD IN A PRIVATE METHOD FOR COMPANIES_PARAMS
+  # ADD IN A PRIVATE METHOD FOR REVIEW_PARAMS
   private
     def review_params
       params.require(:review).permit(:score, :price, :description, :company_id)

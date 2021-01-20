@@ -55,5 +55,6 @@ Rails.application.routes.draw do
   resources :reviews
   resources :coupons
   resources :offers
+  resources :review_offers
 
 end

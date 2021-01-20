@@ -1,0 +1,7 @@
+<h3>Editar review</h3>
+<%= form_for @review_offer do |form| %>
+    <p>Nota: <%= form.number_field :score %></p>
+    <p>Descrição: <%= form.text_field :description %></p>
+
+    <%= form.submit "Editar" %>
+<% end %>

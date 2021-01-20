@@ -27,4 +27,17 @@ class ApplicationController < ActionController::Base
     price = qtd_price / company.qtdscore
     return [score.round(1), price.round(1)]
   end
+
+  def calc_score_offer(offer)
+    if offer.qtdscore == 0
+      return 5
+    end
+    qtd_score = 0.0
+    review = ReviewOffer.where(offer: offer)
+    review.each do |item|
+      qtd_score = qtd_score + item.score
+    end
+    score = qtd_score / offer.qtdscore
+    return score.round(1)
+  end
 end

@@ -1,7 +1,7 @@
 class Subcategory < ApplicationRecord
   # Database relationships:
   belongs_to :category
-  has_many :companies
+  has_many :companies, dependent: :destroy
 
   # Database validations:
   validates :name, uniqueness: { 

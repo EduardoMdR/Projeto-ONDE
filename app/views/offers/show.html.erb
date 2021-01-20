@@ -9,10 +9,19 @@
 <h4>Quantas vezes: <%= @offer.qtd_parcel %></h4>
 <h4>Dinheiro: <%= @offer.cash %></h4>
 <h4>Cartão: <%= @offer.credit_card %></h4>
-<h4>Nota: <%= @offer.qtdscore %></h4>
+<h4>Nota: <%= @score %></h4>
 
 
 <br/>
+<h4>Reviews</h4>
+<% @review_offers.each do |form| %>
+  <tr>
+    <td>Nota<%= form.score %></td>
+    <td>Descrição<%= form.description %></td>
+  </tr>
+  <br/>
+<% end %>
+<p> <%= link_to "Adicionar nova review", new_review_offer_path %> </p>
 
 <%= button_to "Voltar para ofertas", offers_path, method: :get %>
 <%= button_to "Editar oferta", edit_offer_path(@offer), method: :get %>

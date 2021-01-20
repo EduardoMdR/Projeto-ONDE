@@ -8,8 +8,8 @@ class OffersController < ApplicationController
 
   def show
     @offer = Offer.find(params[:id])
-    # @reviews = Review.where(company: @company)
-    # @score, @price = calc_score(@company, @review)
+    @review_offers = ReviewOffer.where(offer: @offer)
+    @score = calc_score_offer(@offer)
   end
 
   ###### CREATE #####

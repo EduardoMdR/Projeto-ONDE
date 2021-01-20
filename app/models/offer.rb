@@ -1,6 +1,7 @@
 class Offer < ApplicationRecord
   # Database relationships:
   belongs_to :company
+  has_many :review_offers, dependent: :destroy
 
   # Database validations:
   validates :name, length: {

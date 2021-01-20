@@ -1,0 +1,9 @@
+<h3>Criar review</h3>
+<%= form_for @review_offer do |form| %>
+  <p>Nota: <%= form.number_field :score %></p>
+  <p>Descrição: <%= form.text_field :description %></p>
+  <p>Oferta: <%= form.collection_select(:offer_id, Offer.all, :id, :name) %> </p>
+  <p>Usuário: <%= form.collection_select(:user_id, User.all, :id, :name) %> </p>
+
+  <%= form.submit "Criar" %>
+<% end %>
