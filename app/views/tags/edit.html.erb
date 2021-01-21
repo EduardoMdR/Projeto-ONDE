@@ -1,0 +1,7 @@
+<h3>Editar tag</h3>
+<%= form_for @tag do |form| %>
+  <p>Nome: <%= form.text_field :name %></p>
+  <p>Descrição: <%= form.text_field :description %></p>
+
+  <%= form.submit "Editar" %>
+<% end %>

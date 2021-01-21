@@ -11,7 +11,7 @@
     <p>Em dinheiro: <%= form.check_box :cash %></p>
     <p>Cartão: <%= form.check_box :credit_card %></p>
     <p>Empresa: <%= form.collection_select(:company_id, Company.all, :id, :name) %></p>
-    
+    <p>Tag: <%= form.collection_select(:tag_id, Tag.all, :id, :name) %></p>
 
     <%= form.submit "Criar" %>
 <% end %>

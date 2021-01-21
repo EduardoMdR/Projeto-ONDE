@@ -1,0 +1,7 @@
+<h3>Criar tag</h3>
+<%= form_for @tag do |form| %>
+  <p>Nome: <%= form.text_field :name, placeholder: "Calçados" %></p>
+  <p>Descrição: <%= form.text_field :description, placeholder: "Precisa de um local para ..." %></p>
+
+  <%= form.submit "Criar" %>
+<% end %>
