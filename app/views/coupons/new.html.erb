@@ -1,11 +1,11 @@
-<h3>Criar cupom</h3>
-<%= form_for @coupon do |form| %>
-    <p>Nome do cupom: <%= form.text_field :name %></p>
-    <p>Valor: <%= form.number_field :value %>%</p>
-    <p>Descrição: <%= form.text_field :description %></p>
-    <p>Data de inicio: <%= form.datetime_field :start_time %></p>
-    <p>Data de termino: <%= form.datetime_field :end_time %></p>
-    <p>Empresa: <%= form.collection_select(:company_id, Company.all, :id, :name) %></p>
+<div class="container border shadow-sm bg-light p-5 my-3">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Adicione um cupom
+  </h1>
 
-    <%= form.submit "Criar" %>
-<% end %>
+  <%= render 'form', coupon: @coupon, url: new_coupon_path, m: :post %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

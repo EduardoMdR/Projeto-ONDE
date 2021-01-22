@@ -1,10 +1,11 @@
-<h3>Editar cupom <%= @coupon.name %></h3>
-<%= form_for @coupon do |form| %>
-    <p>Nome do cupom: <%= form.text_field :name %></p>
-    <p>Valor: <%= form.number_field :value %>%</p>
-    <p>Descrição: <%= form.text_field :description %></p>
-    <p>Data de inicio: <%= form.datetime_field :start_time %></p>
-    <p>Data de termino: <%= form.datetime_field :end_time %></p>
+<div class="container border my-3 shadow-sm bg-light p-5">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Atualizar Cupom
+  </h1>
 
-    <%= form.submit "Editar" %>
-<% end %>
+  <%= render 'form', coupon: @coupon, url: edit_coupon_path, m: :patch %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

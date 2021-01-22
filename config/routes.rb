@@ -61,7 +61,7 @@ Rails.application.routes.draw do
   end
 
   # Empresa (company)
-  scope 'companies' do
+  scope 'empresas' do
     get '/new', to: 'companies#new', as: :new_company
     post '/new', to: 'companies#create'
     get '/:id/edit', to: 'companies#edit', as: :edit_company
@@ -70,8 +70,26 @@ Rails.application.routes.draw do
     delete '/:id', to: 'companies#destroy', as: :delete_company
     get '/', to: 'companies#index', as: :companies
   end
-  
+
+  # Review (review)
+  # scope 'reviews' do
+  #   get '/new', to: 'reviews#new', as: :new_review
+  #   post '/new', to: 'reviews#create'
+  #   get '/:id/edit', to: 'reviews#edit', as: :edit_review
+  #   patch '/:id/edit', to: 'reviews#update'
+  #   delete '/:id', to: 'reviews#destroy', as: :delete_review
+  # end
   resources :reviews
+
+  # Cupons (coupon)
+  scope 'cupons' do
+    get '/new', to: 'coupons#new', as: :new_coupon
+    post '/new', to: 'coupons#create'
+    get '/:id/edit', to: 'coupons#edit', as: :edit_coupon
+    patch '/:id/edit', to: 'coupons#update'
+    delete '/:id', to: 'coupons#destroy', as: :delete_coupon
+    get '/', to: 'coupons#index', as: :coupons
+  end
   resources :coupons
   resources :offers
   resources :review_offers
