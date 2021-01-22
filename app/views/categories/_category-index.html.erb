@@ -11,10 +11,10 @@
     <tbody>
       <% @categories&.each do |form| %>
         <tr class="text-center">
-          <td class="align-middle"><%= form.name %></td>
+          <td class="align-middle"><%= link_to form.name, show_category_path(form), class: 'text-dark' %></td>
           <td class="align-middle"><%= form.description %></td>
-            <td class="align-middle"><%= button_to 'Editar', edit_category_path(form), method: 'get'%></td>
-            <td class="align-middle"><%= button_to 'Remover', delete_category_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+          <td class="align-middle"><%= button_to 'Editar', edit_category_path(form), method: 'get'%></td>
+          <td class="align-middle"><%= button_to 'Remover', delete_category_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
         </tr>
       <% end %>
     </tbody>

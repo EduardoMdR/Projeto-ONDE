@@ -39,7 +39,7 @@ Rails.application.routes.draw do
     delete 'logout', to: 'sessions#destroy', as: :logout
   end
 
-  scope 'categories' do
+  scope 'categorias' do
     get '/new', to: 'categories#new', as: :new_category
     post '/new', to: 'categories#create'
     get '/:id/edit', to: 'categories#edit', as: :edit_category
@@ -49,7 +49,15 @@ Rails.application.routes.draw do
     get '/', to: 'categories#index', as: :categories
   end
 
-  resources :subcategories
+  scope 'sub_categorias' do
+    get '/new', to: 'subcategories#new', as: :new_subcategory
+    post '/new', to: 'subcategories#create'
+    get '/:id/edit', to: 'subcategories#edit', as: :edit_subcategory
+    patch '/:id/edit', to: 'subcategories#update'
+    get '/:id', to: 'subcategories#show', as: :show_subcategory
+    delete '/:id', to: 'subcategories#destroy', as: :delete_subcategory
+    get '/', to: 'subcategories#index', as: :subcategories
+  end
 
   resources :companies
   resources :reviews
