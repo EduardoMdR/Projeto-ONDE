@@ -23,7 +23,7 @@ class CategoriesController < ApplicationController
     begin
       @category.save!
       flash[:notice] = "Categoria #{@category.name} criada com sucesso"
-      redirect_to category_path(@category)
+      redirect_to show_category_path(@category)
     rescue => exception
       flash[:notice] = exception
       redirect_to categories_path
@@ -40,7 +40,7 @@ class CategoriesController < ApplicationController
     begin
       @category.update!(category_params)
       flash[:notice] = "Categoria #{@category.name} atualizada com sucesso"
-      redirect_to category_path(@category)
+      redirect_to show_category_path(@category)
     rescue => exc
       flash[:notice] = exc
       redirect_to categories_path

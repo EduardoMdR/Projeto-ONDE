@@ -21,7 +21,7 @@ class SubcategoriesController < ApplicationController
     rescue => exception
       flash[:notice] = exception
     ensure
-      redirect_to category_path(@subcategory.category)
+      redirect_to show_category_path(@subcategory.category)
     end
   end
 
@@ -38,7 +38,7 @@ class SubcategoriesController < ApplicationController
     rescue => exc
       flash[:notice] = exc
     ensure
-      redirect_to category_path(@subcategory.category)
+      redirect_to show_category_path(@subcategory.category)
     end
   end
 
@@ -51,7 +51,7 @@ class SubcategoriesController < ApplicationController
     rescue => exc
       flash[:notice] = exc
     ensure
-      redirect_to category_path(@subcategory.category)
+      redirect_to delete_category_path(@subcategory.category)
     end
   end
 

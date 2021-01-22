@@ -1,7 +1,13 @@
-<h3>Criar categoria</h3>
-<%= form_for @category do |form| %>
-    <p>Nome da categoria: <%= form.text_field :name, placeholder: "Academia ..." %></p>
-    <p>Descrição: <%= form.text_field :description, placeholder: "Precisa de um local para ..." %></p>
+<% @title = 'Nova Categoria' %>
 
-    <%= form.submit "Criar" %>
-<% end %>
+<div class="container border shadow-sm bg-light p-5 my-3">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Adicione uma categoria
+  </h1>
+
+  <%= render 'form', category: @category, url: new_category_path, m: :post %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

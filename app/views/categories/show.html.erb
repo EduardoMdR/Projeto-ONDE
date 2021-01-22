@@ -16,4 +16,4 @@
 
 <%= button_to "Voltar para categorias", categories_path, method: :get %>
 <%= button_to "Editar categoria", edit_category_path(@category), method: :get %>
-<%= button_to 'Remover categoria', category_path(@category), method: 'delete', data: { confirm: 'Você tem certeza?' } %>
+<%= button_to 'Remover categoria', delete_category_path(@category), method: 'delete', data: { confirm: 'Você tem certeza?' } %>
