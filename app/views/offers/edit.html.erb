@@ -1,16 +1,11 @@
-<h3>Editar oferta <%= @offer.name %></h3>
-<%= form_for @company do |form| %>
-    <p>Nome da oferta: <%= form.text_field :name %></p>
-    <p>Descrição: <%= form.text_field :description %></p>
-    <p>Preço antigo: <%= form.number_field :old_price %></p>
-    <p>Novo preço: <%= form.number_field :new_price %></p>
-    <p>Data de inicio: <%= form.datetime_field :start_time %></p>
-    <p>Data de termino: <%= form.datetime_field :end_time %></p>
-    <p>Parcelado? <%= form.check_box :parceled %></p>
-    <p>Em quantas vezes: <%= form.number_field :qtd_parcel %></p>
-    <p>Em dinheiro: <%= form.check_box :cash %></p>
-    <p>Cartão: <%= form.check_box :credit_card %></p>
-    <p>Empresa: <%= form.collection_select(:company_id, Company.all, :id, :name) %></p>
+<div class="container border my-3 shadow-sm bg-light p-5">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Atualizar oferta
+  </h1>
 
-    <%= form.submit "Editar" %>
-<% end %>
+  <%= render 'form', offer: @offer, url: edit_offer_path, m: :patch %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

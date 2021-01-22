@@ -81,7 +81,7 @@ Rails.application.routes.draw do
   # end
   resources :reviews
 
-  # Cupons (coupon)
+  # Cupon (coupon)
   scope 'cupons' do
     get '/new', to: 'coupons#new', as: :new_coupon
     post '/new', to: 'coupons#create'
@@ -90,8 +90,18 @@ Rails.application.routes.draw do
     delete '/:id', to: 'coupons#destroy', as: :delete_coupon
     get '/', to: 'coupons#index', as: :coupons
   end
-  resources :coupons
-  resources :offers
+
+  # Oferta (offer)
+  scope 'offers' do
+    get '/new', to: 'offers#new', as: :new_offer
+    post '/new', to: 'offers#create'
+    get '/:id/edit', to: 'offers#edit', as: :edit_offer
+    patch '/:id/edit', to: 'offers#update'
+    get '/:id', to: 'offers#show', as: :show_offer
+    delete '/:id', to: 'offers#destroy', as: :delete_offer
+    get '/', to: 'offers#index', as: :offers
+  end
+
   resources :review_offers
   resources :tags
 

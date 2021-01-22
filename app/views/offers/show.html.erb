@@ -25,4 +25,4 @@
 
 <%= button_to "Voltar para ofertas", offers_path, method: :get %>
 <%= button_to "Editar oferta", edit_offer_path(@offer), method: :get %>
-<%= button_to 'Remover oferta', offer_path(@offer), method: 'delete', data: { confirm: 'Você tem certeza?' } %>
+<%= button_to 'Remover oferta', delete_offer_path(@offer), method: 'delete', data: { confirm: 'Você tem certeza?' } %>

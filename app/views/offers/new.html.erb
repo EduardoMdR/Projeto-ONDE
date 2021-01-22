@@ -1,17 +1,11 @@
-<h3>Criar oferta</h3>
-<%= form_for @offer do |form| %>
-    <p>Nome da oferta: <%= form.text_field :name, placeholder: "Oculos, corte de cabelo ..." %></p>
-    <p>Descrição: <%= form.text_field :description, placeholder: "não perca essa incluvel ..." %></p>
-    <p>Preço antigo: <%= form.number_field :old_price %></p>
-    <p>Novo preço: <%= form.number_field :new_price %></p>
-    <p>Data de inicio: <%= form.datetime_field :start_time %></p>
-    <p>Data de termino: <%= form.datetime_field :end_time %></p>
-    <p>Parcelado? <%= form.check_box :parceled %></p>
-    <p>Em quantas vezes: <%= form.number_field :qtd_parcel %></p>
-    <p>Em dinheiro: <%= form.check_box :cash %></p>
-    <p>Cartão: <%= form.check_box :credit_card %></p>
-    <p>Empresa: <%= form.collection_select(:company_id, Company.all, :id, :name) %></p>
-    <p>Tag: <%= form.collection_select(:tag_id, Tag.all, :id, :name) %></p>
+<div class="container border shadow-sm bg-light p-5 my-3">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Adicione uma oferta
+  </h1>
 
-    <%= form.submit "Criar" %>
-<% end %>
+  <%= render 'form', offer: @offer, url: new_offer_path, m: :post %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

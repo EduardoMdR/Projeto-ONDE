@@ -1,12 +1,2 @@
-<h1> Ofertas </h1>
-
-<table>
-  <% @offers.each do |form| %>
-    <tr>
-      <td><%= link_to form.name, offer_path(form) %></td>
-      <td><%= form.new_price %></td>
-      <td><%= button_to 'Editar', edit_offer_path(form), method: 'get'%></td>
-      <td><%= button_to 'Remover', offer_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
-  <% end %>
-</table>
-<p> <%= link_to "Adicionar nova oferta", new_offer_path %> </p>
+<% @title = 'Categorias' %>
+<%= render 'layouts/card-form-layout', title: 'Cupons', content: render('offer-index') %>

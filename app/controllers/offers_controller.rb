@@ -63,7 +63,7 @@ class OffersController < ApplicationController
   # ADD IN A PRIVATE METHOD FOR OFFERS_PARAMS
   private
     def offer_params
-      params.require(:offer).permit(:name, :description, :old_price,:new_price, :start_time, 
+      params.require(:offer).permit(:name, :description, :old_price, :new_price, :start_time, 
          :end_time, :company_id, :parceled, :qtd_parcel, :cash, :credit_card, :tag_id)
     end
 end

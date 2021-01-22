@@ -6,7 +6,7 @@
 
   <div class="form-group">
     <%= form.label :value, 'Valor' %>
-    <%= form.text_field :value, class: 'form-control', required: true %>
+    <%= form.number_field :value, class: 'form-control', required: true %>
   </div>
 
   <div class="form-group">
@@ -16,12 +16,9 @@
 
   <div class="form-group">
     <%= form.label :start_time, 'Inicio' %>
-    <%= form.datetime_field :start_time, class: 'form-control', required: true  %>
-  </div>
-
-  <div class="form-group">
-    <%= form.label :end_time, 'Fim' %>
-    <%= form.datetime_field :end_time, class: 'form-control', required: true %>
+    <%= form.datetime_field :start_time, required: true  %>
+    <%= form.label :end_time, '- Fim' %>
+    <%= form.datetime_field :end_time, required: true %>
   </div>
 
   <div class="form-group">
