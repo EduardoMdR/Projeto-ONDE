@@ -92,7 +92,7 @@ Rails.application.routes.draw do
   end
 
   # Oferta (offer)
-  scope 'offers' do
+  scope 'ofertas' do
     get '/new', to: 'offers#new', as: :new_offer
     post '/new', to: 'offers#create'
     get '/:id/edit', to: 'offers#edit', as: :edit_offer
@@ -103,6 +103,15 @@ Rails.application.routes.draw do
   end
 
   resources :review_offers
-  resources :tags
 
+  # Oferta (offer)
+  scope 'tags' do
+    get '/new', to: 'tags#new', as: :new_tag
+    post '/new', to: 'tags#create'
+    get '/:id/edit', to: 'tags#edit', as: :edit_tag
+    patch '/:id/edit', to: 'tags#update'
+    get '/:id', to: 'tags#show', as: :show_tag
+    delete '/:id', to: 'tags#destroy', as: :delete_tag
+    get '/', to: 'tags#index', as: :tags
+  end
 end

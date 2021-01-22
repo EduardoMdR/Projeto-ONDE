@@ -1,7 +1,11 @@
-<h3>Criar tag</h3>
-<%= form_for @tag do |form| %>
-  <p>Nome: <%= form.text_field :name, placeholder: "Calçados" %></p>
-  <p>Descrição: <%= form.text_field :description, placeholder: "Precisa de um local para ..." %></p>
+<div class="container border shadow-sm bg-light p-5 my-3">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Adicione uma Tag
+  </h1>
 
-  <%= form.submit "Criar" %>
-<% end %>
+  <%= render 'form', tag: @tag, url: new_tag_path, m: :post %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

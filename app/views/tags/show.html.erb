@@ -11,4 +11,4 @@
 
 <%= button_to "Voltar para tags", tags_path, method: :get %>
 <%= button_to "Editar tag", edit_tag_path(@tag), method: :get %>
-<%= button_to 'Remover tag', tag_path(@tag), method: 'delete', data: { confirm: 'Você tem certeza?' } %>
+<%= button_to 'Remover tag', delete_tag_path(@tag), method: 'delete', data: { confirm: 'Você tem certeza?' } %>

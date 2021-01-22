@@ -21,7 +21,7 @@ class TagsController < ApplicationController
     begin
       @tag.save!
       flash[:notice] = "Tag #{@tag.name} criada com sucesso"
-      redirect_to tag_path(@tag)
+      redirect_to show_tag_path(@tag)
     rescue => exception
       flash[:notice] = exception
       redirect_to tags_path
@@ -38,7 +38,7 @@ class TagsController < ApplicationController
     begin
       @tag.update!(tag_params)
       flash[:notice] = "Tag #{@tag.name} atualizada com sucesso"
-      redirect_to tag_path(@tag)
+      redirect_to show_tag_path(@tag)
     rescue => exc
       flash[:notice] = exc
       redirect_to tags_path

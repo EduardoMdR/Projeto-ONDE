@@ -1,7 +1,11 @@
-<h3>Editar tag</h3>
-<%= form_for @tag do |form| %>
-  <p>Nome: <%= form.text_field :name %></p>
-  <p>Descrição: <%= form.text_field :description %></p>
+<div class="container border my-3 shadow-sm bg-light p-5">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Atualizar tag
+  </h1>
 
-  <%= form.submit "Editar" %>
-<% end %>
+  <%= render 'form', tag: @tag, url: edit_tag_path, m: :patch %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

@@ -1,12 +1,2 @@
-<h1> Tags </h1>
-
-<table>
-  <% @tags.each do |form| %>
-    <tr>
-      <td><%= link_to form.name, tag_path(form) %></td>
-      <td><%= form.description %></td>
-      <td><%= button_to 'Editar', edit_tag_path(form), method: 'get'%></td>
-      <td><%= button_to 'Remover', tag_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
-  <% end %>
-</table>
-<p> <%= link_to "Adicionar nova tag", new_tag_path %> </p>
+<% @title = 'Tags' %>
+<%= render 'layouts/card-form-layout', title: 'Categorias', content: render('tag-index') %>
