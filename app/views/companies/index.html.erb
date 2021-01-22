@@ -1,12 +1,2 @@
-<h1> Companhias </h1>
-
-<table>
-  <% @companies.each do |form| %>
-    <tr>
-      <td><%= link_to form.name, company_path(form) %></td>
-      <td><%= form.description %></td>
-      <td><%= button_to 'Editar', edit_company_path(form), method: 'get'%></td>
-      <td><%= button_to 'Remover', company_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
-  <% end %>
-</table>
-<p> <%= link_to "Adicionar nova comapnia", new_company_path %> </p>
+<% @title = 'Categorias' %>
+<%= render 'layouts/card-form-layout', title: 'Empresas', content: render('company-index') %>

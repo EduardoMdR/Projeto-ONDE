@@ -1,14 +1,11 @@
-<h3>Criar companhia</h3>
-<%= form_for @company do |form| %>
-    <p>Nome da companhia: <%= form.text_field :name, placeholder: "Academia ..." %></p>
-    <p>Descrição: <%= form.text_field :description, placeholder: "Precisa de um local para ..." %></p>
-    <p>Telefone: <%= form.text_field :phone %></p>
-    <p>Facebook: <%= form.text_field :fb_link %></p>
-    <p>Maps: <%= form.text_field :maps %></p>
-    <p>Categoria: <%= form.collection_select(:subcategory_id, Subcategory.all, :id, :name) %></p>
-    <p>Usuário: <%= form.collection_select(:user_id, User.all, :id, :name) %> </p>
-    <!--<p>Usuário: <%= form.hidden_field :artist_id, :value => current_user %></p>-->
-    
+<div class="container border shadow-sm bg-light p-5 my-3">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Adicione uma empresa
+  </h1>
 
-    <%= form.submit "Criar" %>
-<% end %>
+  <%= render 'form', company: @company, url: new_company_path, m: :post %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

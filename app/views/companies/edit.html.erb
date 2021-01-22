@@ -1,11 +1,11 @@
-<h3>Editar categoria <%= @company.name %></h3>
-<%= form_for @company do |form| %>
-    <p>Novo nome: <%= form.text_field :name %></p>
-    <p>Nova descrição: <%= form.text_field :description %></p>
-    <p>Telefone: <%= form.text_field :phone %></p>
-    <p>Facebook: <%= form.text_field :fb_link %></p>
-    <p>Maps: <%= form.text_field :maps %></p>
-    <p>Categoria: <%= form.collection_select(:subcategory_id, Subcategory.all, :id, :name) %></p>
+<div class="container border my-3 shadow-sm bg-light p-5">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Atualizar Empresa
+  </h1>
 
-    <%= form.submit "Editar" %>
-<% end %>
+  <%= render 'form', company: @company, url: edit_company_path, m: :patch %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

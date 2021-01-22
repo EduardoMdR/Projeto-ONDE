@@ -2,7 +2,7 @@
 <h4>Descrição: <%= @offer.description %></h4>
 <h4>Preço antigo: <%= @offer.old_price %></h4>
 <h4>Novo preço: <%= @offer.new_price %></h4>
-<h4>Empresa: <%= link_to @offer.company.name, company_path(@offer.company) %></h4>
+<h4>Empresa: <%= link_to @offer.company.name, show_company_path(@offer.company) %></h4>
 <h4>Inicio: <%= @offer.start_time %></h4>
 <h4>Fim: <%= @offer.end_time %></h4>
 <h4>Parcelado: <%= @offer.parceled %></h4>

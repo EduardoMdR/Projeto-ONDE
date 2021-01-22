@@ -5,7 +5,7 @@
 <h4> Empresas que fazem parte desta categoria</h4>
 <% @companies.each do |form| %>
   <tr>
-    <td><%= link_to form.name, company_path(form) %></td>
+    <td><%= link_to form.name, show_company_path(form) %></td>
   </tr>
 <% end %>
 

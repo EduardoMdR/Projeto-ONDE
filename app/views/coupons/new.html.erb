@@ -5,7 +5,7 @@
     <p>Descrição: <%= form.text_field :description %></p>
     <p>Data de inicio: <%= form.datetime_field :start_time %></p>
     <p>Data de termino: <%= form.datetime_field :end_time %></p>
-    <p>Companhia: <%= form.collection_select(:company_id, Company.all, :id, :name) %></p>
+    <p>Empresa: <%= form.collection_select(:company_id, Company.all, :id, :name) %></p>
 
     <%= form.submit "Criar" %>
 <% end %>

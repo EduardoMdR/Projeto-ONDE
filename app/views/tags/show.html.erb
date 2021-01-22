@@ -5,7 +5,7 @@
 <h4> ofertas que fazem parte desta tag</h4>
 <% @offers.each do |form| %>
   <tr>
-    <td><%= link_to form.name, company_path(form.company) %></td>
+    <td><%= link_to form.name, show_company_path(form.company) %></td>
   </tr>
 <% end %>
 

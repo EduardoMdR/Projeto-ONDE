@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
     rescue => exception
       flash[:notice] = exception
     ensure
-      redirect_to company_path(@review.company)
+      redirect_to show_company_path(@review.company)
     end
   end
 
@@ -43,7 +43,7 @@ class ReviewsController < ApplicationController
     rescue => exc
       flash[:notice] = exc
     ensure
-      redirect_to company_path(@review.company)
+      redirect_to show_company_path(@review.company)
     end
   end
 
@@ -57,7 +57,7 @@ class ReviewsController < ApplicationController
     rescue => exc
       flash[:notice] = exc
     ensure
-      redirect_to company_path(@review.company)
+      redirect_to show_company_path(@review.company)
     end
   end
 

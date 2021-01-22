@@ -10,23 +10,45 @@
 
 
 <br/>
-<h4>Reviews</h4>
-<% @reviews.each do |form| %>
-  <tr>
-    <td>Nota<%= form.score %></td>
-    <td>Preço<%= form.price %></td>
-    <td>Descrição<%= form.description %></td>
-    <td><%= button_to 'Editar', edit_review_path(form), method: 'get'%></td>
-    <td><%= button_to 'Remover', review_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
-  </tr>
-  <br/>
-<% end %>
+<div class="mx-auto col-md-8 py-5 col-8">
+  <div class="shadow mb-4">
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+      <h3 class="m-0 text-primary text-center">Review</h3>
+    </div>
 
-<p> <%= link_to "Adicionar nova review", new_review_path %> </p>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped align-middle" >
+          <thead>
+          <tr class="text-center">
+            <th>Nota</th>
+            <th>Preço</th>
+            <th>Descrição</th>
+            <th>Editar</th>
+            <th>Deletar</th>
+          </tr>
+          </thead>
+          <tbody>
+            <% @reviews&.each do |form| %>
+              <tr class="text-center">
+                <td class="align-middle"><%= form.score %></td>
+                <td class="align-middle"><%= form.price %></td>
+                <td class="align-middle"><%= form.description %></td>
+                <td class="align-middle"><%= button_to 'Editar', edit_review_path(form), method: 'get'%></td>
+                <td class="align-middle"><%= button_to 'Remover', review_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+      <p> <%= link_to "Adicionar nova categoria", new_review_path %> </p>
+    </div>
+  </div>
+</div>
 
-<%= button_to "Voltar para companhias", companies_path, method: :get %>
-<%= button_to "Editar companhia", edit_company_path(@company), method: :get %>
-<%= button_to 'Remover companhia', company_path(@company), method: 'delete', data: { confirm: 'Você tem certeza?' } %>
+<%= button_to "Voltar para empresas", companies_path, method: :get %>
+<%= button_to "Editar empresa", edit_company_path(@company), method: :get %>
+<%= button_to 'Remover empresa', delete_company_path(@company), method: 'delete', data: { confirm: 'Você tem certeza?' } %>
 
 <!-- Review -->
 <div class="cont">

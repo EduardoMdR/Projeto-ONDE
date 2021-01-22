@@ -23,7 +23,7 @@ class CompaniesController < ApplicationController
     begin
       @company.save!
       @company.update(qtdscore: 0)
-      flash[:notice] = "Companhia #{@company.name} criada com sucesso"
+      flash[:notice] = "Empresa #{@company.name} criada com sucesso"
     rescue => exception
       flash[:notice] = exception
     ensure
@@ -40,7 +40,7 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
     begin
       @company.update!(company_params)
-      flash[:notice] = "Companhia #{@company.name} atualizada com sucesso"
+      flash[:notice] = "Empresa #{@company.name} atualizada com sucesso"
     rescue => exc
       flash[:notice] = exc
     ensure
@@ -53,7 +53,7 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
     begin
       @company.destroy!
-      flash[:notice] = "Companhia #{@company.name} apagada com sucesso"
+      flash[:notice] = "Empresa #{@company.name} apagada com sucesso"
     rescue => exc
       flash[:notice] = exc
     ensure

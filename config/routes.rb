@@ -39,6 +39,7 @@ Rails.application.routes.draw do
     delete 'logout', to: 'sessions#destroy', as: :logout
   end
 
+  # Categorias (category)
   scope 'categorias' do
     get '/new', to: 'categories#new', as: :new_category
     post '/new', to: 'categories#create'
@@ -49,6 +50,7 @@ Rails.application.routes.draw do
     get '/', to: 'categories#index', as: :categories
   end
 
+  # Sub Categoria (subcategory)
   scope 'sub_categorias' do
     get '/new', to: 'subcategories#new', as: :new_subcategory
     post '/new', to: 'subcategories#create'
@@ -56,10 +58,19 @@ Rails.application.routes.draw do
     patch '/:id/edit', to: 'subcategories#update'
     get '/:id', to: 'subcategories#show', as: :show_subcategory
     delete '/:id', to: 'subcategories#destroy', as: :delete_subcategory
-    get '/', to: 'subcategories#index', as: :subcategories
   end
 
-  resources :companies
+  # Empresa (company)
+  scope 'companies' do
+    get '/new', to: 'companies#new', as: :new_company
+    post '/new', to: 'companies#create'
+    get '/:id/edit', to: 'companies#edit', as: :edit_company
+    patch '/:id/edit', to: 'companies#update'
+    get '/:id', to: 'companies#show', as: :show_company
+    delete '/:id', to: 'companies#destroy', as: :delete_company
+    get '/', to: 'companies#index', as: :companies
+  end
+  
   resources :reviews
   resources :coupons
   resources :offers
