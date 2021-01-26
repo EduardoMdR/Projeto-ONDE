@@ -1,5 +1,3 @@
-<h3>Criar review</h3>
-<%= form_for @review do |form| %>
 <!--
   <div class="rating">
     <input type="radio" id="star5" name="score" value="5" onclick="myRating(this.value)" /><label class="full" for="star5" title="Otimo - 5 estrelas"></label>
@@ -9,11 +7,14 @@
     <input type="radio" id="star1" name="score" value="1" onclick="myRating(this.value)" /><label class="full" for="star1" title="Ruim - 1 estrelas"></label>
   </div>
 -->
+<div class="container border shadow-sm bg-light p-5 my-3">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Adicione uma review
+  </h1>
 
-  <p>Nota: <%= form.number_field :score %></p>
-  <p>Preço: <%= form.number_field :price %></p>
-  <p>Descrição: <%= form.text_field :description %></p>
-  <p>Empresa: <%= form.collection_select(:company_id, Company.all, :id, :name) %> </p>
+  <%= render 'form', review: @review, url: new_review_path, m: :post %>
+</div>
 
-  <%= form.submit "Criar" %>
-<% end %>
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

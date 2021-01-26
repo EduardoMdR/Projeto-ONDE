@@ -35,7 +35,7 @@
                 <td class="align-middle"><%= form.price %></td>
                 <td class="align-middle"><%= form.description %></td>
                 <td class="align-middle"><%= button_to 'Editar', edit_review_path(form), method: 'get'%></td>
-                <td class="align-middle"><%= button_to 'Remover', review_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+                <td class="align-middle"><%= button_to 'Remover', delete_review_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
               </tr>
             <% end %>
           </tbody>
@@ -79,7 +79,7 @@
         </div>
 
         <textarea class="review" col="30" name="review"></textarea>
-        <label class="review" for="review">Enviar</label>
+        <label class="review" style="color: #Fd4;" for="review">Enviar</label>
       </div>
     </form>
   </div>

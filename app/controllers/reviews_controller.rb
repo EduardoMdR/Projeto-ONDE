@@ -3,11 +3,14 @@ class ReviewsController < ApplicationController
 
   ###### CREATE #####
   def new
+    restrain_new_review(Company.find params[:id])
     @review = Review.new
   end
   
   def create
     @review = Review.new(review_params)
+    @review.user_id = current_user.id
+    @review.company = Company.find params[:id]
     begin
       @review.save!
       qtd_review(@review, 1)
@@ -16,6 +19,14 @@ class ReviewsController < ApplicationController
       flash[:notice] = exception
     ensure
       redirect_to show_company_path(@review.company)
+    end
+  end
+
+  def restrain_new_review(company)
+    review = Review.where(:user_id => current_user.id, :company => company).first
+    puts "\n\nCatapimbas#{review}\n\n"
+    if review.present?
+      redirect_to edit_review_path(review.id)
     end
   end
 
@@ -64,6 +75,6 @@ class ReviewsController < ApplicationController
   # ADD IN A PRIVATE METHOD FOR REVIEW_PARAMS
   private
     def review_params
-      params.require(:review).permit(:score, :price, :description, :company_id)
+      params.require(:review).permit(:score, :price, :description)
     end
 end

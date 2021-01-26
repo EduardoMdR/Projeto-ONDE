@@ -69,17 +69,17 @@ Rails.application.routes.draw do
     get '/:id', to: 'companies#show', as: :show_company
     delete '/:id', to: 'companies#destroy', as: :delete_company
     get '/', to: 'companies#index', as: :companies
+    # get ':id/review', to: 'companies#review', as: :review_company
   end
 
   # Review (review)
-  # scope 'reviews' do
-  #   get '/new', to: 'reviews#new', as: :new_review
-  #   post '/new', to: 'reviews#create'
-  #   get '/:id/edit', to: 'reviews#edit', as: :edit_review
-  #   patch '/:id/edit', to: 'reviews#update'
-  #   delete '/:id', to: 'reviews#destroy', as: :delete_review
-  # end
-  resources :reviews
+  scope 'reviews' do
+    get ':id/new', to: 'reviews#new', as: :new_review
+    post ':id/new', to: 'reviews#create'
+    get '/:id/edit', to: 'reviews#edit', as: :edit_review
+    patch '/:id/edit', to: 'reviews#update'
+    delete '/:id', to: 'reviews#destroy', as: :delete_review
+  end
 
   # Cupon (coupon)
   scope 'cupons' do
