@@ -1,9 +1,11 @@
-<h3>Criar review</h3>
-<%= form_for @review_offer do |form| %>
-  <p>Nota: <%= form.number_field :score %></p>
-  <p>Descrição: <%= form.text_field :description %></p>
-  <p>Oferta: <%= form.collection_select(:offer_id, Offer.all, :id, :name) %> </p>
-  <p>Usuário: <%= form.collection_select(:user_id, User.all, :id, :name) %> </p>
+<div class="container border shadow-sm bg-light p-5 my-3">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Adicione uma review
+  </h1>
 
-  <%= form.submit "Criar" %>
-<% end %>
+  <%= render 'form', review_offer: @review_offer, url: new_review_offer_path, m: :post %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

@@ -3,16 +3,19 @@ class ReviewOffersController < ApplicationController
 
   ##### SHOW #####
   def index
-    @review_offers = ReviewOffer.all
+    @review_offers = ReviewOffer.where(user_id: current_user.id)
   end
 
   ###### CREATE #####
   def new
+    restrain_new_review(Offer.find params[:id])
     @review_offer = ReviewOffer.new
   end
   
   def create
     @review_offer = ReviewOffer.new(review_offer_params)
+    @review_offer.user_id = current_user.id
+    @review_offer.offer = Offer.find params[:id]
     begin
       @review_offer.save!
       qtd_review_offer(@review_offer, 1)
@@ -20,7 +23,14 @@ class ReviewOffersController < ApplicationController
     rescue => exception
       flash[:notice] = exception
     ensure
-      redirect_to review_offers_path
+      redirect_to show_offer_path(@review_offer.offer)
+    end
+  end
+
+  def restrain_new_review(offer)
+    review = ReviewOffer.where(:user_id => current_user.id, :offer => offer).first
+    if review.present?
+      redirect_to edit_review_offer_path(review.id)
     end
   end
 
@@ -69,6 +79,6 @@ class ReviewOffersController < ApplicationController
   # ADD IN A PRIVATE METHOD FOR REVIEW_OFFER_PARAMS
   private
     def review_offer_params
-      params.require(:review_offer).permit(:score, :user_id, :description, :offer_id)
+      params.require(:review_offer).permit(:score, :description)
     end
 end

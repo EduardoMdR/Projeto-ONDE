@@ -1,0 +1,24 @@
+<div class="table-responsive">
+  <table class="table table-striped align-middle" >
+    <thead>
+    <tr class="text-center">
+      <th>Nota</th>
+      <th>Produto</th>
+      <th>Descrição</th>
+      <th>Editar</th>
+      <th>Deletar</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @review_offers&.each do |form| %>
+        <tr class="text-center">
+          <td class="align-middle"><%= form.score %></td>
+          <td class="align-middle"><%= link_to form.offer.name, show_offer_path(form), class: 'text-dark' %></td>
+          <td class="align-middle"><%= form.description %></td>
+          <td class="align-middle"><%= button_to 'Editar', edit_review_offer_path(form), method: 'get'%></td>
+          <td class="align-middle"><%= button_to 'Remover', delete_review_offer_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

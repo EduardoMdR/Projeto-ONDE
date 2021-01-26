@@ -33,7 +33,7 @@ Rails.application.routes.draw do
     get '/:id/activate', to: 'users#activate', as: :activate
   end
 
-  scope 'auth' do
+  scope '' do
     get 'login', to: 'sessions#new', as: :login
     post 'login', to: 'sessions#create'
     delete 'logout', to: 'sessions#destroy', as: :logout
@@ -72,7 +72,7 @@ Rails.application.routes.draw do
     # get ':id/review', to: 'companies#review', as: :review_company
   end
 
-  # Review (review)
+  # Review das empresas (review)
   scope 'reviews' do
     get ':id/new', to: 'reviews#new', as: :new_review
     post ':id/new', to: 'reviews#create'
@@ -102,7 +102,15 @@ Rails.application.routes.draw do
     get '/', to: 'offers#index', as: :offers
   end
 
-  resources :review_offers
+  # Review das ofertas (review_offer)
+  scope 'review-ofertas' do
+    get ':id/new', to: 'review_offers#new', as: :new_review_offer
+    post ':id/new', to: 'review_offers#create'
+    get '/:id/edit', to: 'review_offers#edit', as: :edit_review_offer
+    patch '/:id/edit', to: 'review_offers#update'
+    delete '/:id', to: 'review_offers#destroy', as: :delete_review_offer
+    get '/', to: 'review_offers#index', as: :review_offers
+  end
 
   # Oferta (offer)
   scope 'tags' do

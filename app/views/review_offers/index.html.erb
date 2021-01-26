@@ -1,14 +1,1 @@
-<h1> Review </h1>
-
-<table>
-  <% @review_offers.each do |form| %>
-    <tr>
-      <td><%= form.score %></td>
-      <td><%= form.description %></td>
-      <td><%= form.offer.name %></td>
-      <td><%= form.user.name %></td>
-      <td><%= button_to 'Editar', edit_review_offer_path(form), method: 'get'%></td>
-      <td><%= button_to 'Remover', review_offer_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
-  <% end %>
-</table>
-<p> <%= link_to "Adicionar nova review", new_review_offer_path %> </p>
+<%= render 'layouts/card-form-layout', title: 'Suas Reviews', content: render('review-offer-index') %>

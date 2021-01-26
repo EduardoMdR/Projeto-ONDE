@@ -24,7 +24,6 @@ class ReviewsController < ApplicationController
 
   def restrain_new_review(company)
     review = Review.where(:user_id => current_user.id, :company => company).first
-    puts "\n\nCatapimbas#{review}\n\n"
     if review.present?
       redirect_to edit_review_path(review.id)
     end
