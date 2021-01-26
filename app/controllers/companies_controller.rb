@@ -10,6 +10,7 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
     @reviews = Review.where(company: @company)
     @offers = Offer.where(company: @company)
+    @coupons = Coupon.where(company: @company)
     @score, @price = calc_score(@company, @review)
   end
 

@@ -6,6 +6,8 @@ class CouponsController < ApplicationController
     @coupons = Coupon.all
   end
 
+
+
   ###### CREATE #####
   def new
     @coupon = Coupon.new
@@ -13,6 +15,7 @@ class CouponsController < ApplicationController
   
   def create
     @coupon = Coupon.new(coupon_params)
+    @coupon.company = Company.find params[:id]
     begin
       @coupon.save!
       flash[:notice] = "Cupom #{@coupon.name} criado com sucesso"
@@ -56,6 +59,6 @@ class CouponsController < ApplicationController
   # ADD IN A PRIVATE METHOD FOR COUPONS_PARAMS
   private
     def coupon_params
-      params.require(:coupon).permit(:name, :value, :description, :company_id, :start_time, :end_time)
+      params.require(:coupon).permit(:name, :value, :description, :start_time, :end_time)
     end
 end

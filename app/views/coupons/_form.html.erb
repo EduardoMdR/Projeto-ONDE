@@ -21,11 +21,6 @@
     <%= form.datetime_field :end_time, required: true %>
   </div>
 
-  <div class="form-group">
-    <%= form.label :company_id, 'Empresa' %>
-    <%= form.collection_select(:company_id, Company.all, :id, :name) %>
-  </div>
-
   <div class="text-center">
     <%= form.submit 'Adicionar', class: 'btn btn-outline-primary' %>
   </div>

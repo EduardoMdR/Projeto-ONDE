@@ -83,8 +83,8 @@ Rails.application.routes.draw do
 
   # Cupon (coupon)
   scope 'cupons' do
-    get '/new', to: 'coupons#new', as: :new_coupon
-    post '/new', to: 'coupons#create'
+    get ':id/new', to: 'coupons#new', as: :new_coupon
+    post ':id/new', to: 'coupons#create'
     get '/:id/edit', to: 'coupons#edit', as: :edit_coupon
     patch '/:id/edit', to: 'coupons#update'
     delete '/:id', to: 'coupons#destroy', as: :delete_coupon
