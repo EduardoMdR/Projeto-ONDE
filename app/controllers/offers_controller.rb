@@ -19,6 +19,7 @@ class OffersController < ApplicationController
   
   def create
     @offer = Offer.new(offer_params)
+    @offer.company = Company.find params[:id]
     begin
       @offer.save!
       @offer.update(qtdscore: 0)
@@ -64,6 +65,6 @@ class OffersController < ApplicationController
   private
     def offer_params
       params.require(:offer).permit(:name, :description, :old_price, :new_price, :start_time, 
-         :end_time, :company_id, :parceled, :qtd_parcel, :cash, :credit_card, :tag_id)
+         :end_time, :parceled, :qtd_parcel, :cash, :credit_card, :tag_id)
     end
 end

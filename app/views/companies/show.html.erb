@@ -41,10 +41,20 @@
           </tbody>
         </table>
       </div>
-      <p> <%= link_to "Adicionar nova categoria", new_review_path %> </p>
+      <p> <%= link_to "Adicionar uma avaliação", new_review_path %> </p>
     </div>
   </div>
 </div>
+
+<h4>Ofertas</h4>
+<% @offers.each do |form| %>
+  <tr>
+    <td>Nome<%= form.name %></td>
+    <td>Preço<%= form.new_price %></td>
+  </tr>
+  <br/>
+<% end %>
+<p> <%= link_to "Adicionar nova oferta", new_offer_path %> </p>
 
 <%= button_to "Voltar para empresas", companies_path, method: :get %>
 <%= button_to "Editar empresa", edit_company_path(@company), method: :get %>

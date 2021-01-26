@@ -9,6 +9,7 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find(params[:id])
     @reviews = Review.where(company: @company)
+    @offers = Offer.where(company: @company)
     @score, @price = calc_score(@company, @review)
   end
 
@@ -19,7 +20,7 @@ class CompaniesController < ApplicationController
   
   def create
     @company = Company.new(company_params)
-    @current_user = current_user
+    @company.user_id = current_user.id
     begin
       @company.save!
       @company.update(qtdscore: 0)

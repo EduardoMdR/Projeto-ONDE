@@ -52,8 +52,8 @@ Rails.application.routes.draw do
 
   # Sub Categoria (subcategory)
   scope 'sub_categorias' do
-    get '/new', to: 'subcategories#new', as: :new_subcategory
-    post '/new', to: 'subcategories#create'
+    get ':id/new', to: 'subcategories#new', as: :new_subcategory
+    post ':id/new', to: 'subcategories#create'
     get '/:id/edit', to: 'subcategories#edit', as: :edit_subcategory
     patch '/:id/edit', to: 'subcategories#update'
     get '/:id', to: 'subcategories#show', as: :show_subcategory
@@ -93,8 +93,8 @@ Rails.application.routes.draw do
 
   # Oferta (offer)
   scope 'ofertas' do
-    get '/new', to: 'offers#new', as: :new_offer
-    post '/new', to: 'offers#create'
+    get ':id/new', to: 'offers#new', as: :new_offer
+    post ':id/new', to: 'offers#create'
     get '/:id/edit', to: 'offers#edit', as: :edit_offer
     patch '/:id/edit', to: 'offers#update'
     get '/:id', to: 'offers#show', as: :show_offer

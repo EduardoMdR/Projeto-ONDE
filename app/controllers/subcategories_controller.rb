@@ -15,6 +15,7 @@ class SubcategoriesController < ApplicationController
   
   def create
     @subcategory = Subcategory.new(subcategory_params)
+    @subcategory.category = Category.find params[:id]
     begin
       @subcategory.save!
       flash[:notice] = "Sub Categoria #{@subcategory.name} criada com sucesso"
@@ -58,6 +59,6 @@ class SubcategoriesController < ApplicationController
   # ADD IN A PRIVATE METHOD FOR CATEGORIES_PARAMS
   private
     def subcategory_params
-      params.require(:subcategory).permit(:name, :description, :category_id)
+      params.require(:subcategory).permit(:name, :description)
     end
 end

@@ -29,11 +29,6 @@
     <%= form.collection_select(:subcategory_id, Subcategory.all, :id, :name) %>
   </div>
 
-  <div class="form-group">
-    <%= form.label :user_id, 'Usuário' %>
-    <%= form.collection_select(:user_id, User.all, :id, :name) %>
-  </div>
-
   <div class="text-center">
     <%= form.submit 'Adicionar', class: 'btn btn-outline-primary' %>
   </div>
