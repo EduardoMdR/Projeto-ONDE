@@ -1,10 +1,10 @@
 <p><%= flash[:error] %></p>
-<div class="container border shadow-sm bg-light p-5 my-3">
+<div class="container border my-3 shadow-sm bg-light p-5">
   <h1 class="d-flex justify-content-between text-secondary">
-    Cadastrar
+    Editar dados
   </h1>
 
-  <%= render 'form', user: @user, url: new_user_path, m: :post %>
+  <%= render 'form', user: @user, url: edit_user_path, m: :patch %>
 </div>
 
 <div class="back-button d-flex justify-content-center p-3">

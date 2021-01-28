@@ -1,0 +1,23 @@
+<div class="table-responsive">
+  <table class="table table-striped align-middle" >
+    <thead>
+    <tr class="text-center">
+      <th>Empresas</th>
+      <th>Descrição</th>
+      <th>Editar</th>
+
+    </tr>
+    </thead>
+    <tbody>
+      <% @users&.each do |form| %>
+        <tr class="text-center">
+          <td class="align-middle"><%= form.name %></td>
+          <td class="align-middle"><%= form.email %></td>
+          <td class="align-middle"><%= button_to 'Editar', edit_user_path(form), method: 'get'%></td>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<p> <%= link_to "Adicionar novo usuário", new_user_path %> </p>

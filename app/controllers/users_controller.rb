@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @user = User.all
+    @users = User.all
   end
 
   def new
@@ -9,8 +9,25 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(users_params)
+    @user.role_id = 3
     begin
       @user.save!
+      flash[:success] = 'Cadastro realizado com sucesso!'
+      redirect_to root_path
+    rescue => exception
+      flash[:error] = exception.message
+      redirect_back fallback_location: new_user_path
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+  
+  def update
+    @user = User.find(params[:id])
+    begin
+      @user.update!(users_params)
       flash[:success] = 'Cadastro realizado com sucesso!'
       redirect_to root_path
     rescue => exception
