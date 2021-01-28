@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     restrict_access unless current_user&.company?
   end
 
+  # calcular pontuação
   def calc_score(company, review)
     if company.qtdscore == 0
       return [5, 3]

@@ -26,8 +26,8 @@ Rails.application.routes.draw do
     get 'hover', to: "tests#hover", as: :hover
   end
 
-  scope 'users' do
-    get 'index', to: 'users#index', as: :user_index
+  scope 'usuario' do
+    get '/', to: 'users#index', as: :user_index
     get 'novo_usuario', to: 'users#new', as: :new_user
     post 'novo_usuario', to: 'users#create'
     get '/:id/activate', to: 'users#activate', as: :activate

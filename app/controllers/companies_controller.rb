@@ -16,6 +16,7 @@ class CompaniesController < ApplicationController
 
   ###### CREATE #####
   def new
+    restrain_new_company(current_user.id)
     @company = Company.new
   end
   
@@ -30,6 +31,13 @@ class CompaniesController < ApplicationController
       flash[:notice] = exception
     ensure
       redirect_to companies_path
+    end
+  end
+
+  def restrain_new_company(user)
+    company = Company.where(:user_id => user).first
+    if company.present?
+      redirect_to edit_company_path(company)
     end
   end
 
