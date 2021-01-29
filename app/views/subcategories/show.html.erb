@@ -9,4 +9,13 @@
   </tr>
 <% end %>
 
-<p> <%= link_to "Adicionar nova categoria", new_company_path %> </p>
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>
+
+<% if current_user&.role_id == 1 %>
+<p> <%= link_to "Adicionar nova empresa", new_company_path %> </p>
+
+<%= button_to "Editar sub categoria", edit_subcategory_path(@subcategory), method: :get %>
+<%= button_to 'Remover', delete_subcategory_path(@subcategory), method: 'delete', data: { confirm: 'Você tem certeza? Algumas empresas podem ter essa subcategoria, e acabariam ficando sem, tome cuidado !' } %>
+<% end %>

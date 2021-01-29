@@ -1,6 +1,6 @@
 class SubcategoriesController < ApplicationController
-
   ##### Autenticação #####
+  before_action :require_admin, only: %i[new create edit update destroy]
 
   ###### SHOW #####
   def show
@@ -22,7 +22,7 @@ class SubcategoriesController < ApplicationController
     rescue => exception
       flash[:notice] = exception
     ensure
-      redirect_to show_category_path(@subcategory.category)
+      redirect_to show_subcategory_path(@subcategory)
     end
   end
 
@@ -39,7 +39,7 @@ class SubcategoriesController < ApplicationController
     rescue => exc
       flash[:notice] = exc
     ensure
-      redirect_to show_category_path(@subcategory.category)
+      redirect_to show_subcategory_path(@subcategory)
     end
   end
 

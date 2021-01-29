@@ -1,7 +1,6 @@
 class CategoriesController < ApplicationController
-
   ##### Autenticação #####
-
+  before_action :require_admin, only: %i[new create edit update destroy]
 
   ##### SHOW #####
   def index

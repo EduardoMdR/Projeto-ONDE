@@ -15,8 +15,6 @@
           <tr class="text-center">
             <th>Nome</th>
             <th>Descrição</th>
-            <th>Editar</th>
-            <th>Deletar</th>
           </tr>
           </thead>
           <tbody>
@@ -24,19 +22,22 @@
               <tr class="text-center">
                 <td class="align-middle"><%= link_to form.name, show_subcategory_path(form), class: 'text-dark' %></td>
                 <td class="align-middle"><%= form.description %></td>
-                <td class="align-middle"><%= button_to 'Editar', edit_subcategory_path(form), method: 'get'%></td>
-                <td class="align-middle"><%= button_to 'Remover', delete_subcategory_path(form), method: 'delete', data: { confirm: 'Você tem certeza? Algumas empresas podem ter essa subcategoria, e acabariam ficando sem, tome cuidado !' } %></td>
               </tr>
             <% end %>
           </tbody>
         </table>
       </div>
-      <p> <%= link_to "Adicionar nova categoria", new_subcategory_path %> </p>
+      
     </div>
   </div>
 </div>
 
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', categories_path, class: 'btn btn-primary form-control w-50' %>
+</div>
 
-<%= button_to "Voltar para categorias", categories_path, method: :get %>
-<%= button_to "Editar categoria", edit_category_path(@category), method: :get %>
-<%= button_to 'Remover categoria', delete_category_path(@category), method: 'delete', data: { confirm: 'Você tem certeza?' } %>
+<% if current_user&.role_id == 1 %>
+<p> <%= link_to "Adicionar nova categoria", new_subcategory_path %> </p>
+  <%= button_to "Editar categoria", edit_category_path(@category), method: :get %>
+  <%= button_to 'Remover categoria', delete_category_path(@category), method: 'delete', data: { confirm: 'Você tem certeza? Algumas Sub categorias podem ter essa categoria, e acabariam ficando sem, tome cuidado !' } %>
+<% end %>
