@@ -1,0 +1,75 @@
+<h2>Nome: <%= @user.name %></h2>
+<h4>Fotinha:</h4>
+
+<br/>
+<div class="mx-auto col-md-8 py-5 col-8">
+  <div class="shadow mb-4">
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+      <h3 class="m-0 text-primary text-center">Reviews das empresas</h3>
+    </div>
+
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped align-middle" >
+          <thead>
+          <tr class="text-center">
+            <th>Nota</th>
+            <th>Preço</th>
+            <th>Empresa</th>
+            <th>Comentário</th>
+          </tr>
+          </thead>
+          <tbody>
+            <% @reviews&.each do |form| %>
+              <tr class="text-center">
+                <td class="align-middle"><%= form.score %></td>
+                <td class="align-middle"><%= form.price %></td>
+                <td class="align-middle"><%= form.company.name %></td>
+                <td class="align-middle"><%= form.description %></td>
+                <td class="align-middle"><%= button_to 'Editar', edit_review_path(form), method: 'get'%></td>
+                <td class="align-middle"><%= button_to 'Remover', delete_review_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br/>
+<div class="mx-auto col-md-8 py-5 col-8">
+  <div class="shadow mb-4">
+    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+      <h3 class="m-0 text-primary text-center">Reviews das ofertas</h3>
+    </div>
+
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped align-middle" >
+          <thead>
+          <tr class="text-center">
+            <th>Nota</th>
+            <th>Produto</th>
+            <th>Empresa</th>
+            <th>Comentário</th>
+          </tr>
+          </thead>
+          <tbody>
+            <% @review_offers&.each do |form| %>
+              <tr class="text-center">
+                <td class="align-middle"><%= form.score %></td>
+                <td class="align-middle"><%= form.offer.name %></td>
+                <td class="align-middle"><%= form.offer.company.name %></td>
+                <td class="align-middle"><%= form.description %></td>
+                <td class="align-middle"><%= button_to 'Editar', edit_review_offer_path(form), method: 'get'%></td>
+                <td class="align-middle"><%= button_to 'Remover', delete_review_offer_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

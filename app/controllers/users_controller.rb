@@ -1,6 +1,15 @@
 class UsersController < ApplicationController
+  before_action :require_self_or_admin, only: %i[edit update destroy]
+  before_action :require_admin, only: %i[index]
+
   def index
     @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @reviews = Review.where(user: @user)
+    @review_offers = ReviewOffer.where(user: @user)
   end
 
   def new
@@ -33,6 +42,18 @@ class UsersController < ApplicationController
     rescue => exception
       flash[:error] = exception.message
       redirect_back fallback_location: new_user_path
+    end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    begin
+      @user.destroy!
+      flash[:notice] = "Usuário #{@user.name} apagado com sucesso"
+    rescue => exc
+      flash[:notice] = exc
+    ensure
+      redirect_to root_path
     end
   end
 

@@ -32,6 +32,8 @@ Rails.application.routes.draw do
     post 'novo_usuario', to: 'users#create'
     get '/:id/edit', to: 'users#edit', as: :edit_user
     patch '/:id/edit', to: 'users#update'
+    delete '/:id', to: 'users#destroy', as: :delete_user
+    get '/:id', to: 'users#show', as: :show_user
     get '/:id/activate', to: 'users#activate', as: :activate
   end
 

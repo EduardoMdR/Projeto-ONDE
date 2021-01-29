@@ -1,14 +1,17 @@
 class ApplicationController < ActionController::Base
   def restrict_access
     flash[:error] = 'Você não tem permissão para acessar essa página!'
-    redirect_to login_path
+    redirect_to root_path
   end
-
   def require_admin
-    restrict_access unless current_user&.admin?
+    restrict_access unless current_user&.role_id == 1
   end
   def require_company
-    restrict_access unless current_user&.company?
+    restrict_access unless current_user&.role_id == 2
+  end
+  def require_self_or_admin
+    u = User.find(params[:id])
+    restrict_access unless (u == current_user) || current_user.role_id == 1
   end
 
   # calcular pontuação

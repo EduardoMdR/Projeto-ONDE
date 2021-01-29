@@ -58,7 +58,7 @@ class ReviewOffersController < ApplicationController
     rescue => exc
       flash[:notice] = exc
     ensure
-      redirect_to review_offers_path
+      redirect_to show_offer_path(@review_offer.offer)
     end
   end
 
@@ -72,7 +72,7 @@ class ReviewOffersController < ApplicationController
     rescue => exc
       flash[:notice] = exc
     ensure
-      redirect_to review_offers_path
+      redirect_to show_offer_path(@review_offer.offer)
     end
   end
 
