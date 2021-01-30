@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   ##### Autenticação #####
+  before_action :require_logged_in, only: %i[new create edit update destroy]
 
   ###### CREATE #####
   def new
@@ -14,7 +15,7 @@ class ReviewsController < ApplicationController
     begin
       @review.save!
       qtd_review(@review, 1)
-      flash[:notice] = "Review #{@review.name} criada com sucesso"
+      flash[:notice] = "Review criada com sucesso"
     rescue => exception
       flash[:notice] = exception
     ensure
@@ -23,7 +24,7 @@ class ReviewsController < ApplicationController
   end
 
   def restrain_new_review(company)
-    review = Review.where(:user_id => current_user.id, :company => company).first
+    review = Review&.where(:user_id => current_user.id, :company => company).first
     if review.present?
       redirect_to edit_review_path(review.id)
     end
@@ -42,6 +43,7 @@ class ReviewsController < ApplicationController
 
   ##### UPDATE #####
   def edit
+    restrain_review(Review.find params[:id])
     @review = Review.find(params[:id])
   end
   
@@ -49,12 +51,16 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     begin
       @review.update!(review_params)
-      flash[:notice] = "Review #{@review.name} atualizada com sucesso"
+      flash[:notice] = "Review atualizada com sucesso"
     rescue => exc
       flash[:notice] = exc
     ensure
       redirect_to show_company_path(@review.company)
     end
+  end
+
+  def restrain_review(review)
+    restrict_access unless review.user == current_user || current_user.role_id == 1
   end
 
   ##### DELETE #####

@@ -9,6 +9,9 @@ class ApplicationController < ActionController::Base
   def require_company
     restrict_access unless current_user&.role_id == 2 || current_user&.role_id == 1
   end
+  def require_logged_in
+    restrict_access unless current_user&.present?
+  end
   def require_self_or_admin
     u = User.find(params[:id])
     restrict_access unless (u == current_user) || current_user.role_id == 1

@@ -24,8 +24,6 @@
             <th>Nota</th>
             <th>Preço</th>
             <th>Descrição</th>
-            <th>Editar</th>
-            <th>Deletar</th>
           </tr>
           </thead>
           <tbody>
@@ -34,8 +32,10 @@
                 <td class="align-middle"><%= form.score %></td>
                 <td class="align-middle"><%= form.price %></td>
                 <td class="align-middle"><%= form.description %></td>
-                <td class="align-middle"><%= button_to 'Editar', edit_review_path(form), method: 'get'%></td>
-                <td class="align-middle"><%= button_to 'Remover', delete_review_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+                <% if current_user&.role_id == 1 || current_user == form.user %>
+                  <td class="align-middle"><%= button_to 'Editar', edit_review_path(form), method: 'get'%></td>
+                  <td class="align-middle"><%= button_to 'Remover', delete_review_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+                <% end %>
               </tr>
             <% end %>
           </tbody>
@@ -54,9 +54,6 @@
   </tr>
   <br/>
 <% end %>
-<% if current_user&.role_id == 1 || current_user == @company.user %>
-  
-<% end %>
 
 <h4>Cupons</h4>
 <% @coupons.each do |form| %>
@@ -65,9 +62,6 @@
     <td>Valor<%= form.value %></td>
   </tr>
   <br/>
-<% end %>
-<% if current_user&.role_id == 1 || current_user == @company.user %>
-  
 <% end %>
 
 <div class="back-button d-flex justify-content-center p-3">
