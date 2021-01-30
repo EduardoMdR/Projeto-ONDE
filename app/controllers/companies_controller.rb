@@ -1,5 +1,8 @@
 class CompaniesController < ApplicationController
   ##### Autenticação #####
+  before_action :require_company, only: %i[new create edit update destroy]
+  before_action :restrain_new_company, only: %i[new create]
+  before_action :require_owner_or_admin, only: %i[edit update destroy]
 
   ##### SHOW #####
   def index
@@ -16,7 +19,6 @@ class CompaniesController < ApplicationController
 
   ###### CREATE #####
   def new
-    restrain_new_company(current_user.id)
     @company = Company.new
   end
   
@@ -31,13 +33,6 @@ class CompaniesController < ApplicationController
       flash[:notice] = exception
     ensure
       redirect_to companies_path
-    end
-  end
-
-  def restrain_new_company(user)
-    company = Company.where(:user_id => user).first
-    if company.present?
-      redirect_to edit_company_path(company)
     end
   end
 

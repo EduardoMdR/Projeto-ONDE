@@ -7,11 +7,23 @@ class ApplicationController < ActionController::Base
     restrict_access unless current_user&.role_id == 1
   end
   def require_company
-    restrict_access unless current_user&.role_id == 2
+    restrict_access unless current_user&.role_id == 2 || current_user&.role_id == 1
   end
   def require_self_or_admin
     u = User.find(params[:id])
     restrict_access unless (u == current_user) || current_user.role_id == 1
+  end
+
+  def require_owner_or_admin
+    c = Company.find(params[:id])
+    restrict_access unless (c.user == current_user) || current_user.role_id == 1
+  end
+
+  def restrain_new_company
+    company = Company.where(:user_id => current_user).first
+    if company.present?
+      redirect_to edit_company_path(company)
+    end
   end
 
   # calcular pontuação

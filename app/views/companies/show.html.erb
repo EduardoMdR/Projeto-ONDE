@@ -54,7 +54,9 @@
   </tr>
   <br/>
 <% end %>
-<p> <%= link_to "Adicionar nova oferta", new_offer_path %> </p>
+<% if current_user&.role_id == 1 || current_user == @company.user %>
+  
+<% end %>
 
 <h4>Cupons</h4>
 <% @coupons.each do |form| %>
@@ -64,11 +66,23 @@
   </tr>
   <br/>
 <% end %>
-<p> <%= link_to "Adicionar novao cupon", new_coupon_path %> </p>
+<% if current_user&.role_id == 1 || current_user == @company.user %>
+  
+<% end %>
 
-<%= button_to "Voltar para empresas", companies_path, method: :get %>
-<%= button_to "Editar empresa", edit_company_path(@company), method: :get %>
-<%= button_to 'Remover empresa', delete_company_path(@company), method: 'delete', data: { confirm: 'Você tem certeza?' } %>
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', companies_path, class: 'btn btn-primary form-control w-50' %>
+</div>
+
+<% if current_user&.role_id == 1 || current_user == @company.user %>
+  <%= button_to "Editar empresa", edit_company_path(@company), method: :get %>
+  <%= button_to 'Remover empresa', delete_company_path(@company), method: 'delete', data: { confirm: 'Você tem certeza?' } %>
+
+  <div class="back-button d-flex justify-content-center p-3">
+    <%= link_to 'Adicionar novo cupon', new_coupon_path, class: 'btn btn-primary form-control w-25 m-3' %>
+    <%= link_to 'Adicionar nova oferta', new_offer_path, class: 'btn btn-primary form-control w-25 m-3' %>
+  </div>
+<% end %>
 
 <!-- Review -->
 <div class="cont">

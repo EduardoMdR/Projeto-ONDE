@@ -18,7 +18,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(users_params)
-    @user.role_id = 3
+    unless current_user&.role_id == 1
+      @user.role_id = 3
+    end
     begin
       @user.save!
       flash[:success] = 'Cadastro realizado com sucesso!'

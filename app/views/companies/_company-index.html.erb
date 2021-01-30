@@ -4,8 +4,6 @@
     <tr class="text-center">
       <th>Empresas</th>
       <th>Descrição</th>
-      <th>Editar</th>
-      <th>Deletar</th>
     </tr>
     </thead>
     <tbody>
@@ -13,8 +11,6 @@
         <tr class="text-center">
           <td class="align-middle"><%= link_to form.name, show_company_path(form), class: 'text-dark' %></td>
           <td class="align-middle"><%= form.description %></td>
-          <td class="align-middle"><%= button_to 'Editar', edit_company_path(form), method: 'get'%></td>
-          <td class="align-middle"><%= button_to 'Remover', delete_company_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
         </tr>
       <% end %>
     </tbody>
