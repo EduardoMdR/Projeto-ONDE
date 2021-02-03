@@ -8,6 +8,7 @@ $tertiary-color: #3e40cc21;
 $black-color: #1b1b1b;
 $white-color: #f1faee;
 $admin-primary-color: #312A25;
+$button-color: #fcbc24;
 
 .container{
   min-height: 735px;
@@ -65,9 +66,34 @@ $admin-primary-color: #312A25;
 }
 .hometexttext {
   border-radius: 10px;
-  width: auto;
+  width: 550px;
   background-color: rgba(255, 255, 255, 0.158);
   font-size: 21px
+}
+.botao-oferta {
+  background-color: $button-color;
+  border: 1px solid $black-color;
+  border-radius: 5px;
+  text-align: center;
+  width: 80%;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.ofertas {
+  background: linear-gradient(-45deg, #826DBF, #0D0524);
+  width: 92%;
+  height: 350px;
+  margin-left: 4%;
+  margin-right: 4%;
+  border-radius: 5px;
+}
+.ofertas-home {
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+.oferta-home {
+  width: 20%;
 }
 
 .card-img-top {
