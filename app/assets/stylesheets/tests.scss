@@ -63,12 +63,18 @@ $button-color: #fcbc24;
 .hometext {
   position: relative;
   padding-top: 115px;
+  text-shadow: 1px 1px 4px $primary-color
 }
 .hometexttext {
   border-radius: 10px;
-  width: 550px;
-  background-color: rgba(255, 255, 255, 0.158);
-  font-size: 21px
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.25);
+  font-size: 21px;
+  text-shadow: 1px 1px 4px $secondary-color;
+}
+.hometextcompany {
+  line-height: 1.2em;
+  min-height: 2.4em;
 }
 .botao-oferta {
   background-color: $button-color;
@@ -598,7 +604,6 @@ section {
 
 .card {
   position: relative;
-  min-width: 300px;
   height: auto;
   overflow: hidden;
   border-radius: 15px;
@@ -608,6 +613,15 @@ section {
 }
 .card:hover {
   transform:scale(1.1);
+}
+
+.cards {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0 auto;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 .card_red, .card_red .title .fa {
   background: linear-gradient(-45deg, #ffec61, #f321d7);
