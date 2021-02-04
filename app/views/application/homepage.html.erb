@@ -205,7 +205,7 @@
             <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
           </p>
           <div class="d-flex justify-content-center">
-          <button type="button" class="botao-oferta font-weight-bold mt-4">Ver Oferta</button>
+            <button type="button" class="botao-oferta font-weight-bold mt-4">Ver Oferta</button>
           </div>
         </div>
       </div>
@@ -229,7 +229,7 @@
             <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
           </p>
           <div class="d-flex justify-content-center">
-          <button type="button" class="botao-oferta font-weight-bold mt-4">Ver Oferta</button>
+            <button type="button" class="botao-oferta font-weight-bold mt-4">Ver Oferta</button>
           </div>
         </div>
       </div>
@@ -253,7 +253,7 @@
             <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
           </p>
           <div class="d-flex justify-content-center">
-          <button type="button" class="botao-oferta font-weight-bold mt-4">Ver Oferta</button>
+            <button type="button" class="botao-oferta font-weight-bold mt-4">Ver Oferta</button>
           </div>
         </div>
       </div>
@@ -277,7 +277,7 @@
             <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
           </p>
           <div class="d-flex justify-content-center">
-          <button type="button" class="botao-oferta font-weight-bold mt-4">Ver Oferta</button>
+            <button type="button" class="botao-oferta font-weight-bold mt-4">Ver Oferta</button>
           </div>
         </div>
       </div>
@@ -288,12 +288,17 @@
 <!-- Ofertas do dia -->
   <div class="cupons text-light pt-5">
     <div class="row">
-      <div class="col-6">
-      <h4>Economize seu dinheiro com nossos cupons</h4>
-        <p class="h6">São dezenas de cupons que nossos parceiros
-        disponibilizam diariamente.</p>
+      <div class="col-6 cupom-1">
+        <div class="positive cupom-1-bg">
+          <h4>Economize seu dinheiro com nossos cupons</h4>
+          <p class="h6">São dezenas de cupons que nossos parceiros
+          disponibilizam diariamente.</p>
+          <div class="d-flex justify-content-center w-75">
+            <button type="button" class="botao-oferta font-weight-bold mt-4 text-light">Garanta já o seu simples, rápido e facíl</button>
+          </div>
+        </div>
       </div>
-      <div class="col-6 oferta-confete">d
+      <div class="col-6 cupom-2 cupom-1-bg">d
       </div>
     </div>
   </div>
@@ -310,7 +315,7 @@
               </h5>
             </div>
             <div class=" m-1">
-              <p class="card-text">Toda a loja de Espirito Santo do Pinhal 30% OFF,
+              <p class="card-text hometextcupom text-justify">Toda a loja de Espirito Santo do Pinhal 30% OFF,
                 Compra limitadas 1 por pessoa.</p>
             </div>
           </div>
@@ -335,7 +340,31 @@
           <div class="cards">
             <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
             <div class=" m-1">
-              <p class="card-text">Toda a loja de Espirito Santo do Pinhal 30% OFF,
+              <p class="card-text hometextcupom text-justify">Toda a linha de notebook acer com 30%OFF.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="cards">
+            <img class="card-img-top" src="https://diariodorio.com/wp-content/uploads/2020/03/foto-americanas-1280x720.jpg" alt="Card image cap">
+            <div class="m-1">
+              <h5 class="card-title">Americanas</h5>
+              <p class="card-text">Valido até: <span class="text-success">27/12</span></p>
+              <div class="text-center pt-1 col">
+                <%= button_to  "Pegar Cupom", cupons_path, method: :get, class: 'btn-home' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flip-container m-2">
+      <div class="flipper">
+        <div class="front">
+          <div class="cards">
+            <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
+            <div class=" m-1">
+              <p class="card-text hometextcupom text-justify">Toda a loja de Espirito Santo do Pinhal 30% OFF,
                 Compra limitadas 1 por pessoa.</p>
             </div>
           </div>
@@ -360,32 +389,7 @@
           <div class="cards">
             <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
             <div class=" m-1">
-              <p class="card-text">Toda a loja de Espirito Santo do Pinhal 30% OFF,
-                Compra limitadas 1 por pessoa.</p>
-            </div>
-          </div>
-        </div>
-        <div class="back">
-          <div class="cards">
-            <img class="card-img-top" src="https://diariodorio.com/wp-content/uploads/2020/03/foto-americanas-1280x720.jpg" alt="Card image cap">
-            <div class="m-1">
-              <h5 class="card-title">Americanas</h5>
-              <p class="card-text">Valido até: <span class="text-success">27/12</span></p>
-              <div class="text-center pt-1 col">
-                <%= button_to  "Pegar Cupom", cupons_path, method: :get, class: 'btn-home' %>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="flip-container m-2">
-      <div class="flipper">
-        <div class="front">
-          <div class="cards">
-            <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
-            <div class=" m-1">
-              <p class="card-text">Toda a loja de Espirito Santo do Pinhal 30% OFF,
+              <p class="card-text hometextcupom text-justify">Toda a loja de Espirito Santo do Pinhal 30% OFF,
                 Compra limitadas 1 por pessoa.</p>
             </div>
           </div>

@@ -76,6 +76,10 @@ $button-color: #fcbc24;
   line-height: 1.2em;
   min-height: 2.4em;
 }
+.hometextcupom {
+  line-height: 1.2em;
+  min-height: 3.6em;
+}
 .botao-oferta {
   background-color: $button-color;
   border: 1px solid $black-color;
@@ -93,17 +97,66 @@ $button-color: #fcbc24;
   margin-right: 4%;
   border-radius: 5px;
 }
-.oferta-confete {
-  background-image: url("./Confetes.png");
-  width: 100%;
-}
+
 .cupons {
-  background-color: black;
   width: 92%;
-  height: 150px;
   margin-left: 4%;
   margin-right: 4%;
   border-radius: 5px;
+}
+.cupom-1 {
+  // background-color: black;
+  overflow: hidden;
+  -webkit-transform: skew(-18deg) translateX(-70px);
+      -ms-transform: skew(-18deg) translateX(-70px);
+          transform: skew(-18deg) translateX(-70px);
+}
+.cupom-1-bg {
+  background-color: black;
+  height: 150px;
+  left: 20px;
+}
+
+.logo {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: 5s poly infinite alternate ease-in-out;
+  margin: 1em auto;
+  display: block;
+}
+
+@keyframes poly {
+  from {
+      -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  
+  to {
+    -webkit-clip-path: polygon(44% 26%, 58% 38%, 58% 38%, 44% 81%, 44% 81%, 25% 49%);
+    clip-path: polygon(44% 26%, 58% 38%, 58% 38%, 44% 81%, 44% 81%, 25% 49%);
+  }
+}
+
+.positive {
+  -webkit-transform: skew(18deg) translateX(140px);
+      -ms-transform: skew(18deg) translateX(140px);
+          transform: skew(18deg) translateX(140px);
+}
+.negative {
+  -webkit-transform: skew(18deg) translateX(140px);
+      -ms-transform: skew(18deg) translateX(140px);
+          transform: skew(18deg) translateX(140px);
+}
+.cupom-2 {
+
+  background-color: black;
+  background-image: url("./confete.png");
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  -webkit-transform: skew(-18deg) translateX(-70px);
+      -ms-transform: skew(-18deg) translateX(-70px);
+          transform: skew(-18deg) translateX(-70px);
 }
 .ofertas-home {
   width: 92%;
