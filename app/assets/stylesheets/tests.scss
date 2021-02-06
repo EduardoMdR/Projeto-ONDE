@@ -6,9 +6,11 @@ $primary-color: #3e41cc;
 $secondary-color: #6439E3;
 $tertiary-color: #3e40cc21;
 $black-color: #1b1b1b;
-$white-color: #f1faee;
+// $white-color: #f1faee;
+$white-color: #fcfcfc;
 $admin-primary-color: #312A25;
 $button-color: #fcbc24;
+$menu-color: #ececf4;
 
 .container{
   min-height: 735px;
@@ -99,8 +101,8 @@ $button-color: #fcbc24;
 }
 
 .cupons {
-  width: 92%;
-  margin-left: 4%;
+  width: 91%;
+  margin-left: 5%;
   margin-right: 4%;
   border-radius: 5px;
 }
@@ -148,7 +150,6 @@ $button-color: #fcbc24;
           transform: skew(18deg) translateX(140px);
 }
 .cupom-2 {
-
   background-color: black;
   background-image: url("./confete.png");
   width: 100%;
@@ -205,6 +206,14 @@ $button-color: #fcbc24;
 
 .titulo-oferta {
 color: $white-color;
+}
+.pagina-ofertas {
+  background: linear-gradient(-45deg, #cc3ce4, #5c1c74);
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+  border-radius: 5px;
+  color: $white-color;
 }
 
 
@@ -510,8 +519,8 @@ color: $white-color;
 
 .menulateral {
   color: $black-color;
-  background-color: $tertiary-color;
-  border: 1px solid $primary-color;
+  background-color: $menu-color;
+  box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.68);
   border-radius: 5px;
 }
 
@@ -570,7 +579,7 @@ color: $white-color;
   background-color: white;
   color: $black-color;
   border-radius: 5px;
-  border: 1px solid $primary-color;
+  box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.68);
   width: 70vh;
   top: -25px;
   left: -150px;

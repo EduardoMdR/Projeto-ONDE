@@ -1,12 +1,29 @@
 <%= render 'layouts/navbar' %>
-<div class="container">
-  <h1 class="titulo">Pesquisa</h1>
 
+<div style="background-color: #fcfcfc">
+<div class="pagina-ofertas mt-1">
+  <h1 class="titulo pt-4">Milhares de Ofertas estão esperando você</h1>
+  <div class="row mb-2 mt-5 justify-content-center pb-4">
+    <input class="form-control col-5" type="text" placeholder="Buscar Roupa, comida e muito mais...">
+    <a href="./pesquisa" class="btn col-1 text-center pt-2" style="background-color: #2454fc;color: #FFF; font-weight: bold;">BUSCAR</a>
+  </div>
+</div>
+<div class="cupons">
   <div class="row">
-
     <!-- Menu -->
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 menulateral mb-3 pl-5 pr-5 mt-5">
-      <h3 class="text-center">Ordenar por:</h3>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-2 menulateral mb-3 mt-3">
+      <h5 class="text-center">Ordenar ofertas:</h5>
+        <div class="btn-group">
+          <button class="btn btn-secondary btn-sm" type="button">
+            Small split button
+          </button>
+          <button type="button" class="btn btn-sm btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <div class="dropdown-menu">
+            ...
+          </div>
+        </div>
       <hr class="my-4 w-75">
       <h5>Raio de busca:</h5>
       <div class="">
@@ -17,37 +34,28 @@
       <h6 class="pb-1">Lugares abertos<i class="fa fa-info-circle text-success float-right" aria-hidden="true"></i></h5>
       <h6>Lugares fechados<i class="fa fa-info-circle text-danger float-right" aria-hidden="true"></i></h5>
       <hr class="my-4 w-75">
-
-      <h5 class="pb-1">categorias</h5>
-      <div class="item pl-2">
-        <a href="" class="texto-secundario">Alimentação</a>
-        <div class="descricao pl-2"><i class="fa fa-square-o texto-secundario" aria-hidden="true"></i> Supermercado</div>
-        <div class="descricao pl-2"><i class="fa fa-square-o texto-secundario" aria-hidden="true"></i> Sorveteria</div>
-        <div class="descricao pl-2"><i class="fa fa-check-square texto-secundario" aria-hidden="true"></i> FastFood</div>
-        <div class="descricao pl-2"><i class="fa fa-check-square texto-secundario" aria-hidden="true"></i> Padaria</div>
+      <h5 class="pb-1">Preço</h5>
+      <div class="pl-2">
+        <h6>Até R$ 500 <small class="text-success">(12)</small></h6>
+        <h6>R$ 500 a R$ 1500 <small class="text-success">(92)</small></h6>
+        <h6>Acima de R$ 1500 <small class="text-success">(15)</small></h6>
       </div>
-      <div class="item pl-2">
-        <a href="" class="texto-secundario">Lazer</a>
-        <div class="descricao pl-2"><i class="fa fa-square-o texto-secundario" aria-hidden="true"></i> Pai d'Amanda</div>
-        <div class="descricao pl-2"><i class="fa fa-square-o texto-secundario" aria-hidden="true"></i> Spotifyyyy</div>
+      <hr class="my-4 w-75">
+      <h5 class="pb-1">Parcelas</h5>
+      <div class="pl-2">
+        <h6>Até 12x</h6>
+        <h6>10x a 5x</h6>
+        <h6>até 3x</h6>
+        <h6>3x</h6>
       </div>
-      <div class="item pl-2">
-        <a href="" class="texto-secundario">Saúde</a>
-        <div class="descricao pl-2"><i class="fa fa-square-o texto-secundario" aria-hidden="true"></i> Santa casa</div>
-        <div class="descricao pl-2"><i class="fa fa-square-o texto-secundario" aria-hidden="true"></i> drogaria A</div>
-      </div>
-      <div class="item pl-2">
-        <a href="" class="texto-secundario">Turismo</a>
-        <div class="descricao pl-2"><i class="fa fa-square-o texto-secundario" aria-hidden="true"></i> Aquela lá</div>
-        <div class="descricao pl-2"><i class="fa fa-square-o texto-secundario" aria-hidden="true"></i> Aquela outra</div>
-      </div>
+    
     </div>
 
     <!-- Pesquisa -->
-    <div class="col-12 col-sm-6 col-md-8 col-lg-9">
+    <div class="col-12 col-sm-6 col-md-8 col-lg-10">
       <div class="row">
         
-        <div class="col-6 col-sm-12 col-md-6 col-lg-4 mt-5 item">
+        <div class="col-6 col-sm-12 col-md-6 col-lg-3 mt-5 item">
           <div class="card-deck">
             <div class="card">
               <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
@@ -97,7 +105,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6 col-sm-12 col-md-6 col-lg-4 mt-5 item">
+        <div class="col-6 col-sm-12 col-md-6 col-lg-3 mt-5 item">
           <div class="card-deck">
             <div class="card">
               <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
@@ -147,7 +155,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6 col-sm-12 mt-5 col-md-6 col-lg-4 item">
+        <div class="col-6 col-sm-12 mt-5 col-md-6 col-lg-3 item">
           <div class="card-deck">
             <div class="card">
               <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
@@ -197,7 +205,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6 col-sm-12 mt-5 mb-1 col-md-6 col-lg-4 item">
+        <div class="col-6 col-sm-12 mt-5 mb-1 col-md-6 col-lg-3 item">
           <div class="card-deck">
             <div class="card">
               <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
