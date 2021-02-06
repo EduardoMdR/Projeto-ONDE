@@ -18,6 +18,8 @@ class TestsController < ApplicationController
   end
   def empresas
   end
+  def empresa
+  end
   def pesquisa
   end
   def ofertasdestaque
