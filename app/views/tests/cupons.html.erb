@@ -1,104 +1,118 @@
 <%= render 'layouts/navbar' %>
-<div class="container">
-  <h1 class="titulo pt-4">Cupons</h1>
 
-  <div class="text-light pt-5 pb-4">
-    <div class="row mb-2 justify-content-center">
-      <input class="form-control form-control-lg col-8" type="text" placeholder="Buscar uma categoria...">
-        <a href="./pesquisa" class="btn-primary col-2 text-center pt-2">Pesquisar</a>
-    </div>
+<div class="pagina-ofertas mt-1">
+  <h1 class="titulo pt-4">Encontre diversos cupons exclusivos de sua loja preferida</h1>
+  <div class="row mb-2 mt-5 justify-content-center pb-4">
+    <input class="form-control col-5" type="text" placeholder="Buscar Roupa, comida e muito mais...">
+    <a href="./pesquisa" class="btn col-1 text-center pt-2" style="background-color: #2454fc;color: #FFF; font-weight: bold;">BUSCAR</a>
   </div>
-
-  <div class="row pb-5">
-    <div class="card mb-3" style="max-width: 300px; max-height: 175px;">
-    <div class="row g-0">
-        <div class="col-md-4">
-          <img src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="...">
-        </div>
-        <div class="col-md-8 back-white">
-          <div class="card-body">
-            <h4 class="card-title text-dark"><span class="text-success">20%</span> em Calçados</h4>
-            <footer class="blockquote-footer font-italic font-weight-bold text-dark">Lojinha da ju</footer>
-            <p class="card-text pt-2"><span class="text-dark h6">Válido até: <span class="text-success h5">05/01</span></span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card mb-3" style="max-width: 300px; max-height: 175px;">
-    <div class="row g-0">
-        <div class="col-md-4">
-          <img src="https://static.tonolucro.com/images/empresa/B5e48006e72a55.png" alt="...">
-        </div>
-        <div class="col-md-8 back-white">
-          <div class="card-body">
-            <h4 class="card-title text-dark"><span class="text-success">15%</span> em casquinha de morango</h4>
-            <footer class="blockquote-footer font-italic font-weight-bold text-dark">Chiquinho</footer>
-            <p class="card-text pt-2"><span class="text-dark h6">Válido até: <span class="text-success h5">05/01</span></span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card mb-3" style="max-width: 300px; max-height: 175px;">
-    <div class="row g-0">
-        <div class="col-md-4">
-          <img src="https://marcusmattos.files.wordpress.com/2015/01/faixa_250x200.jpg" alt="...">
-        </div>
-        <div class="col-md-8 back-white">
-          <div class="card-body">
-            <h4 class="card-title text-dark"><span class="text-success">5%</span> em toda loja</h4>
-            <footer class="blockquote-footer font-italic font-weight-bold text-dark">Supermecado Campeão</footer>
-            <p class="card-text pt-2"><span class="text-dark h6">Válido até: <span class="text-success h5">15/01</span></span></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <%= render 'layouts/pagination' %>
 </div>
-    <!--<div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Nome cupon</h5>
-            <footer class="blockquote-footer">Válido até <cite title="Source Title">00/00/2020</cite></footer>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Nome cupon</h5>
-            <footer class="blockquote-footer">Válido até <cite title="Source Title">00/00/2020</cite></footer>
-          </div>
-        </div>
-      </div>
-    </div>    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Nome cupon</h5>
-            <footer class="blockquote-footer">Válido até <cite title="Source Title">00/00/2020</cite></footer>
-          </div>
-        </div>
-      </div>
-      
-    </div>    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Nome cupon</h5>
-            <footer class="blockquote-footer">Válido até <cite title="Source Title">00/00/2020</cite></footer>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>-->
 
-  
+<div class="ofertas-home pt-5 d-flex justify-content-center">
+    <div class="flip-container m-2">
+      <div class="flipper">
+        <div class="front">
+          <div class="cards">
+            <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
+            <div class="card-img-overlay">
+              <h5 class="float-left">
+                <img class="card-img-top img-cupom" src="https://pt.calcuworld.com/wp-content/uploads/sites/6/2019/11/30-por-cento.png" alt="Card image cap" style="width: 50px; heigth: 50px">
+              </h5>
+            </div>
+            <div class=" m-1">
+              <p class="card-text hometextcupom text-justify">Toda a loja de Espirito Santo do Pinhal 30% OFF,
+                Compra limitadas 1 por pessoa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="cards">
+            <img class="card-img-top" src="https://diariodorio.com/wp-content/uploads/2020/03/foto-americanas-1280x720.jpg" alt="Card image cap">
+            <div class="m-1">
+              <h5 class="card-title">Americanas</h5>
+              <p class="card-text">Valido até: <span class="text-success">27/12</span></p>
+              <div class="text-center pt-1 col">
+                <%= button_to  "Pegar Cupom", cupons_path, method: :get, class: 'btn-home' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flip-container m-2">
+      <div class="flipper">
+        <div class="front">
+          <div class="cards">
+            <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
+            <div class=" m-1">
+              <p class="card-text hometextcupom text-justify">Toda a linha de notebook acer com 30%OFF.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="cards">
+            <img class="card-img-top" src="https://diariodorio.com/wp-content/uploads/2020/03/foto-americanas-1280x720.jpg" alt="Card image cap">
+            <div class="m-1">
+              <h5 class="card-title">Americanas</h5>
+              <p class="card-text">Valido até: <span class="text-success">27/12</span></p>
+              <div class="text-center pt-1 col">
+                <%= button_to  "Pegar Cupom", cupons_path, method: :get, class: 'btn-home' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flip-container m-2">
+      <div class="flipper">
+        <div class="front">
+          <div class="cards">
+            <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
+            <div class=" m-1">
+              <p class="card-text hometextcupom text-justify">Toda a loja de Espirito Santo do Pinhal 30% OFF,
+                Compra limitadas 1 por pessoa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="cards">
+            <img class="card-img-top" src="https://diariodorio.com/wp-content/uploads/2020/03/foto-americanas-1280x720.jpg" alt="Card image cap">
+            <div class="m-1">
+              <h5 class="card-title">Americanas</h5>
+              <p class="card-text">Valido até: <span class="text-success">27/12</span></p>
+              <div class="text-center pt-1 col">
+                <%= button_to  "Pegar Cupom", cupons_path, method: :get, class: 'btn-home' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flip-container m-2">
+      <div class="flipper">
+        <div class="front">
+          <div class="cards">
+            <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
+            <div class=" m-1">
+              <p class="card-text hometextcupom text-justify">Toda a loja de Espirito Santo do Pinhal 30% OFF,
+                Compra limitadas 1 por pessoa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="cards">
+            <img class="card-img-top" src="https://diariodorio.com/wp-content/uploads/2020/03/foto-americanas-1280x720.jpg" alt="Card image cap">
+            <div class="m-1">
+              <h5 class="card-title">Americanas</h5>
+              <p class="card-text">Valido até: <span class="text-success">27/12</span></p>
+              <div class="text-center pt-1 col">
+                <%= button_to  "Pegar Cupom", cupons_path, method: :get, class: 'btn-home' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<%= render 'layouts/pagination' %>
