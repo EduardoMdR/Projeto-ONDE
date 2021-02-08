@@ -58,5 +58,23 @@
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
     <a class="text-light" href="#"> Onde Pinhal</a>
   </div>
+
+  <div class="footer-copyright text-center py-3">
+    <hr class="my-4 w-100">
+    Principais página do site:
+    <%= link_to 'Home', root_path, class: 'text-light'%> - 
+    <%= link_to 'Ofertas', ofertas_path, class: 'text-light'%> -
+    <%= link_to 'Página da oferta', ofertasdestaque_path, class: 'text-light'%> -
+    <%= link_to 'Empresas', pesquisa_path, class: 'text-light'%> -
+    <%= link_to 'Página da empresa', empresa_path, class: 'text-light'%> -
+    <%= link_to 'Contato', contato_path, class: 'text-light'%>
+    <br /><br />
+    Principais página de acesso da empresa:
+    <%= link_to 'Home da empresa', homeempresa_path, class: 'text-light'%> -
+    <%= link_to 'Ofertas', todasofertas_path, class: 'text-light'%> -
+    <%= link_to 'Criar oferta', criaroferta_path, class: 'text-light'%> -
+    <%= link_to 'Suas review', review_path, class: 'text-light'%> -
+    <%= link_to 'Editar dados', editardados_path, class: 'text-light'%>
+  </div>
 </footer>
 <!-- Footer  nav-item nav-link text-light-->
