@@ -18,9 +18,10 @@
 
 
 //Whatsapp
-$(function () {
+$(document).on('turbolinks:load', function() {
+
   $('[data-toggle="tooltip"]').tooltip()
-})
+});
 
 //Carousel
 $('#carouselExampleIndicators').on('slide.bs.carousel', function () {
@@ -36,15 +37,11 @@ $("#menu-toggle").click(function(e) {
 });
 
 //Slick slide
-$(document).ready(function(){
-
+$(document).on('turbolinks:load', function() {
   $('.items').slick({
   dots: true,
   infinite: true,
   slidesToShow: 5,
   slidesToScroll: 3
   });
-  });
-
-
-  
+});
