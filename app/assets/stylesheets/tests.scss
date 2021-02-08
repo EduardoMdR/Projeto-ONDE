@@ -17,26 +17,39 @@ $menu-color: #ececf4;
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
 
-@media(max-width:576px) { //col-
+@media(max-width:575px) { //col-
   .oferta-texto-1 {
     margin-right: 10px;
   }
-}
-@media(max-width: 767px) { //col-sm
-  .oferta-texto-3 {
+  .oferta-texto-2, .oferta-texto-3 {
     display: none;
   }
 }
-@media (max-width: 991px) { //col-md
+@media(max-width: 767px) and (min-width: 576px) { //col-sm
+  .oferta-texto-2, .oferta-texto-3 {
+    display: none;
+  }
+  .oferta-home {
+    width: 50%;
+  }
+}
+@media (max-width: 991px) and (min-width: 767px) { //col-md
   .oferta-texto-2 {
     display: none;
   }
+  .oferta-home {
+    width: 33%;
+  }
 }
-@media (min-width: 1119px) { //col-lg
-
+@media (max-width: 1199px) and (min-width: 992px) { //col-lg
+  .oferta-home {
+    width: 25%;
+  }
 }
 @media(min-width:1200px) { //col-xl
-
+  .oferta-home {
+    width: 20%;
+  }
 }
 
 .container{
@@ -215,9 +228,8 @@ $menu-color: #ececf4;
   margin-left: 4%;
   margin-right: 4%;
 }
-.oferta-home {
-  width: 20%;
-}
+
+
 .cupom-home {
   margin-left: 20px;
 }
