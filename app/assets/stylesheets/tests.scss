@@ -2,12 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// colors
 $primary-color: #3e41cc;
 $secondary-color: #6439E3;
 $tertiary-color: #3e40cc21;
 $black-color: #1b1b1b;
-$white-color: #f1faee;
+$white-color: #fcfcfc;
 $admin-primary-color: #312A25;
+$button-color: #fcbc24;
+$menu-color: #ececf4;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+
+@media(max-width:576px) { //col-
+  .oferta-texto-1 {
+    margin-right: 10px;
+  }
+  .oferta-texto-2, .oferta-texto-3 {
+    display: none;
+  }
+}
+@media(max-width: 767px) and (min-width: 576px) { //col-sm
+  .oferta-texto-2, .oferta-texto-3 {
+    display: none;
+  }
+  .oferta-home {
+    width: 50%;
+  }
+}
+@media (max-width: 992px) and (min-width: 767px) { //col-md
+  .oferta-texto-2 {
+    display: none;
+  }
+  .oferta-home {
+    width: 33%;
+  }
+}
+@media (max-width: 1199px) and (min-width: 992px) { //col-lg
+  .oferta-home {
+    width: 25%;
+  }
+}
+@media(min-width:1200px) { //col-xl
+  .oferta-home {
+    width: 20%;
+  }
+}
 
 .container{
   min-height: 735px;
@@ -17,7 +60,6 @@ $admin-primary-color: #312A25;
 }
 .titulo{
   text-align: center;
-
 }
 
 
@@ -26,24 +68,301 @@ $admin-primary-color: #312A25;
   overflow: hidden;
 }
 .homeimg{
+  position: relative;
   width: 100%;
   height: 100%;
   min-height: 89vh;
-  background-image: url("https://i.ytimg.com/vi/cmYNaVSdU5U/maxresdefault.jpg");
-  background-position: center top;
-  background-size:cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   max-width: 100%;
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
-	transition: all 5s;
+  transition: all 5s;
+  &::before {
+    content: '';
+    filter: brightness(75%);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("./home.png");
+    background-position: center top;
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+  }
 }
 .homeimg:hover {
-	-moz-transform: scale(1.1);
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+  &::before {
+    content: '';
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    transition-duration: 9s;
+    transition-delay: 1s;
+  }
 }
+.hometext {
+  position: relative;
+  padding-top: 115px;
+  text-shadow: 1px 1px 4px $primary-color
+}
+.oferta-texto-1 {
+  font-family: 'Days One', sans-serif;
+  font-size: 18px;
+  color: $white-color;
+}
+.oferta-texto-2 {
+  font-family: 'Aclonica', sans-serif;
+  font-size: 20px;
+  color: #6c8cf4;
+}
+.oferta-texto-3 {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 30px;
+  color: $white-color;
+}
+.porcentagem {
+  color: $white-color;
+  position: relative;
+  border: 3px solid $white-color;
+  width: 50px;
+  height: 50px;
+  top: -20px;
+  left: -20px;
+}
+.hometexttext {
+  border-radius: 10px;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.25);
+  font-size: 21px;
+  text-shadow: 1px 1px 4px $admin-primary-color;
+}
+.hometextcompany {
+  line-height: 1.2em;
+  min-height: 2.4em;
+}
+.hometextcupom {
+  line-height: 1.2em;
+  min-height: 3.6em;
+}
+.botao-oferta {
+  background-color: $button-color;
+  border: 1px solid $black-color;
+  border-radius: 5px;
+  text-align: center;
+  width: 80%;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+.ofertas {
+  background: linear-gradient(-45deg, #826DBF, #0D0524);
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+  border-radius: 5px;
+}
+
+.cupons {
+  width: 91%;
+  margin-left: 5%;
+  margin-right: 4%;
+  border-radius: 5px;
+}
+.cupom-1 {
+  // background-color: black;
+  overflow: hidden;
+  -webkit-transform: skew(-18deg) translateX(-70px);
+      -ms-transform: skew(-18deg) translateX(-70px);
+          transform: skew(-18deg) translateX(-70px);
+}
+.cupom-1-bg {
+  background-color: black;
+  height: 150px;
+  left: 20px;
+}
+
+.logo {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: 5s poly infinite alternate ease-in-out;
+  margin: 1em auto;
+  display: block;
+}
+
+@keyframes poly {
+  from {
+      -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+  
+  to {
+    -webkit-clip-path: polygon(44% 26%, 58% 38%, 58% 38%, 44% 81%, 44% 81%, 25% 49%);
+    clip-path: polygon(44% 26%, 58% 38%, 58% 38%, 44% 81%, 44% 81%, 25% 49%);
+  }
+}
+
+.positive {
+  -webkit-transform: skew(18deg) translateX(140px);
+      -ms-transform: skew(18deg) translateX(140px);
+          transform: skew(18deg) translateX(140px);
+}
+.negative {
+  -webkit-transform: skew(18deg) translateX(140px);
+      -ms-transform: skew(18deg) translateX(140px);
+          transform: skew(18deg) translateX(140px);
+}
+.cupom-2 {
+  background-color: black;
+  background-image: url("./confete.png");
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  -webkit-transform: skew(-18deg) translateX(-70px);
+      -ms-transform: skew(-18deg) translateX(-70px);
+          transform: skew(-18deg) translateX(-70px);
+}
+.ofertas-home {
+  width: 92%;
+  min-height: 350px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+
+.cupom-home {
+  margin-left: 20px;
+}
+.flip-container {
+  width: 300px;
+  // height: 200px;
+  perspective: 1000px;
+}
+
+.flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front {
+  width: auto;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.titulo-oferta {
+color: $white-color;
+}
+.pagina-ofertas {
+  background: linear-gradient(-45deg, #cc3ce4, #5c1c74);
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+  border-radius: 5px;
+  color: $white-color;
+}
+.cat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+// categorias
+.categorias {
+  position: relative;
+  display: flex;
+  justify-content: space-betweens;
+  align-items: center;
+}
+.categorias .box {
+  position: relative;
+  width: 450px;
+  height: 320px;
+  background-color: #000;
+}
+.categorias .box .videoBx {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.categorias .box .videoBx video {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  -webkit-transition: opacity .4s ease-in-out;
+  -moz-transition: opacity .4s ease-in-out;
+  -ms-transition: opacity .4s ease-in-out;
+  -o-transition: opacity .4s ease-in-out;
+  transition: opacity .4s ease-in-out;
+}
+.categorias .box:hover video {
+  filter: alpha(opacity=50);
+  opacity: 1;
+}
+.categorias .box .contentBX {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  right: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.95);
+  transition: transform .5s;
+  transform-origin: right;
+  transform: scaleX(0);
+}
+.categorias .box:hover .contentBX {
+  transition: transform .5s;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.categorias .box .contentBX .content {
+  position: relative;
+  padding: 20px 60px;
+  opacity: 0;
+}
+.categorias .box:hover .contentBX .content {
+  opacity: 1;
+  transition: .5;
+  transition-delay: .5s;
+}
+.categorias .box .contentBX .content h2 {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.categorias .box .contentBX .content p {
+  color: #fff;
+  font-weight: 300;
+}
+// fim de categorias
 
 .card-img-top {
   max-height: 165px;
@@ -58,8 +377,8 @@ $admin-primary-color: #312A25;
   background-size: 400%;
   -webkit-transition: background 300ms ease-in-out;
   transition: background 500ms ease-in-out;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
+  font-size: 16px;
+  padding: 2px 4px 2px 4px;
   text-decoration: none;
   border-radius: 12px;
   outline: 0;
@@ -73,18 +392,23 @@ $admin-primary-color: #312A25;
 	position:relative;
 	top:1px;
 }
+.img-cupom {
+  top: -15px;
+  left: -15px;
+  position: relative;
+}
 
 // barra de pesquisa home
 .searchbar{
+  position: relative;
   margin-bottom: auto;
   margin-top: auto;
   height: 42px;
-  width: 450px;
-  background-color: white;
+  width: 680px;
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 30px;
   padding: 5px;
   border: 2px solid $primary-color;
-  opacity: .6;
   padding: 0px 1px 0px 14px;
 }
 .search_icon{
@@ -97,16 +421,16 @@ $admin-primary-color: #312A25;
   border-radius: 50%;
   color: $primary-color;
   text-decoration:none;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.75);
   border: 0;
 }
 .search_input{
   color: $primary-color;
   width: 90%;
+  color: $black-color;
   border: 0;
   outline: 0;
   background: none;
-  width: 0;
   caret-color: transparent;
   line-height: 40px;
   transition: width 0.4s linear;
@@ -117,6 +441,7 @@ $admin-primary-color: #312A25;
 }
 
 .searchbar:hover {
+  background-color: rgba(255, 255, 255, 0.9);
   .search_input {
     width: 90%;
     caret-color: $secondary-color;
@@ -341,8 +666,8 @@ $admin-primary-color: #312A25;
 
 .menulateral {
   color: $black-color;
-  background-color: $tertiary-color;
-  border: 1px solid $primary-color;
+  background-color: $menu-color;
+  box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.68);
   border-radius: 5px;
 }
 
@@ -401,7 +726,7 @@ $admin-primary-color: #312A25;
   background-color: white;
   color: $black-color;
   border-radius: 5px;
-  border: 1px solid $primary-color;
+  box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.68);
   width: 70vh;
   top: -25px;
   left: -150px;
@@ -546,7 +871,6 @@ section {
 
 .card {
   position: relative;
-  min-width: 300px;
   height: auto;
   overflow: hidden;
   border-radius: 15px;
@@ -556,6 +880,16 @@ section {
 }
 .card:hover {
   transform:scale(1.1);
+}
+
+.cards {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0 auto;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  background-color: $white-color;
 }
 .card_red, .card_red .title .fa {
   background: linear-gradient(-45deg, #ffec61, #f321d7);
