@@ -16,6 +16,7 @@ $menu-color: #ececf4;
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
 
 @media(max-width:576px) { //col-
   .oferta-texto-1 {
@@ -122,6 +123,16 @@ $menu-color: #ececf4;
   font-size: 30px;
   color: $white-color;
 }
+.cupon-texto-1 {
+  font-family: 'Rammetto One', cursive;
+  font-size: 20px;
+  color: $white-color;
+}
+.cupon-texto-2 {
+  font-family: 'Days One', sans-serif;
+  font-size: 17px;
+  color: $white-color;
+}
 .porcentagem {
   color: $white-color;
   position: relative;
@@ -157,6 +168,7 @@ $menu-color: #ececf4;
   width: 80%;
   padding-top: 0px;
   margin-top: 0px;
+  font-size: 16px;
 }
 .ofertas {
   background: linear-gradient(-45deg, #826DBF, #0D0524);
@@ -173,13 +185,45 @@ $menu-color: #ececf4;
   border-radius: 5px;
   background-color: black;
 }
+.fundo {
+  width: 91%;
+  margin-left: 5%;
+  margin-right: 4%;
+  border-radius: 5px;
+}
 .cupom-1 {
-  // background-color: black;
+  border-top: 0px solid #ffffff;
+  border-right: 10px solid #ffffff;
+  border-bottom: 0px solid #ffffff;
+  border-left: 0px solid #ffffff;
   overflow: hidden;
   -webkit-transform: skew(-18deg) translateX(-70px);
       -ms-transform: skew(-18deg) translateX(-70px);
           transform: skew(-18deg) translateX(-70px);
 }
+
+.oferta-titulo {
+  font-size: 20px;
+  color: #F93434;
+}
+.oferta-titulo span {
+  font-size: 12px;
+  color: #00C142;
+}
+.oferta-titulo-2 {
+  font-size: 12px;
+  color: #A39D9D;
+}
+.oferta-titulo-3 {
+  font-size: 16px;
+  color: #6F8CF3;
+}
+.oferta-titulo-4 {
+  font-size: 14px;
+  color: $black-color;
+}
+
+
 
 
 .logo {
@@ -213,12 +257,7 @@ $menu-color: #ececf4;
           transform: skew(18deg) translateX(140px);
 }
 .cupom-2 {
-  border-top:0px solid #ffffff;
-  border-right:0px solid #ffffff;
-  border-bottom:0px solid #ffffff;
-  border-left:10px solid #ffffff;
   background-image: url("https://raw.githubusercontent.com/Project-ONDE/Projeto-ONDE/main/app/assets/images/confete.png");
-  width: 100%;
   height: 150px;
   overflow: hidden;
   -webkit-transform: skew(-18deg) translateX(-70px);
