@@ -17,6 +17,7 @@ $menu-color: #ececf4;
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
 
 @media(max-width:576px) { //col-
   .oferta-texto-1 {
@@ -222,7 +223,20 @@ $menu-color: #ececf4;
   font-size: 14px;
   color: $black-color;
 }
-
+.empresa-titulo-1 {
+  font-family: 'Candal', sans-serif;
+  font-size: 18px;
+  color: #729DF0;
+}
+.empresa-titulo-2 {
+  font-size: 14px;
+  color: #000;
+}
+.empresa-titulo-botao {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 18px;
+  color: #000;
+}
 
 
 
@@ -761,8 +775,8 @@ color: $white-color;
 .item:hover #descricao {
   display: block;
   transition: .5s;
- }
- .item #descricao {
+}
+.item #descricao {
   display: none;
   position: relative;
   background-color: white;
@@ -773,7 +787,7 @@ color: $white-color;
   top: -25px;
   left: -150px;
   transition: .5s;
- }
+}
 
 .btncontato {
   background: rgb(2,0,36);
