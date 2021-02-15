@@ -23,6 +23,13 @@
 <% end %>
 <p> <%= link_to "Adicionar nova review", new_review_offer_path %> </p>
 
-<%= button_to "Voltar para ofertas", offers_path, method: :get %>
-<%= button_to "Editar oferta", edit_offer_path(@offer), method: :get %>
-<%= button_to 'Remover oferta', delete_offer_path(@offer), method: 'delete', data: { confirm: 'Você tem certeza?' } %>
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', offers_path, class: 'btn btn-primary form-control w-50' %>
+</div>
+
+<% if current_user&.role_id == 1 || current_user == @offer.company.user %>
+  <div class="back-button d-flex justify-content-center p-3">
+    <%= link_to 'Editar Oferta', edit_offer_path(@offer), method: :get, class: 'btn btn-primary form-control w-25 m-3' %>
+    <%= link_to 'Remover oferta', delete_offer_path(@offer), method: 'delete', data: { confirm: 'Você tem certeza?' }, class: 'btn btn-primary form-control w-25 m-3' %>
+  </div>
+<% end %>

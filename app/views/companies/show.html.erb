@@ -51,6 +51,10 @@
   <tr>
     <td>Nome<%= form.name %></td>
     <td>Preço<%= form.new_price %></td>
+    <% if current_user&.role_id == 1 || current_user == @company.user %>
+      <td><%= button_to 'Editar', edit_offer_path(form), method: 'get'%></td>
+      <td><%= button_to 'Remover', delete_offer_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+    <% end %>
   </tr>
   <br/>
 <% end %>
@@ -60,6 +64,10 @@
   <tr>
     <td>Nome<%= form.name %></td>
     <td>Valor<%= form.value %></td>
+    <% if current_user&.role_id == 1 || current_user == @company.user %>
+      <td><%= button_to 'Editar', edit_coupon_path(form), method: 'get'%></td>
+      <td><%= button_to 'Apagar', delete_coupon_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+    <% end %>
   </tr>
   <br/>
 <% end %>

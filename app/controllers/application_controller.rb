@@ -14,12 +14,20 @@ class ApplicationController < ActionController::Base
   end
   def require_self_or_admin
     u = User.find(params[:id])
-    restrict_access unless (u == current_user) || current_user.role_id == 1
+    restrict_access unless (u == current_user) || current_user&.role_id == 1
   end
 
   def require_owner_or_admin
     c = Company.find(params[:id])
-    restrict_access unless (c.user == current_user) || current_user.role_id == 1
+    restrict_access unless (c.user == current_user) || current_user&.role_id == 1
+  end
+  def require_owner_or_admin_coupon
+    c = Coupon.find(params[:id])
+    restrict_access unless (c.company.user == current_user) || current_user&.role_id == 1
+  end
+  def require_owner_or_admin_offer
+    o = Offer.find(params[:id])
+    restrict_access unless (o.company.user == current_user) || current_user&.role_id == 1
   end
 
   def restrain_new_company

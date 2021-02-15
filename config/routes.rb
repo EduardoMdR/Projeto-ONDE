@@ -116,7 +116,7 @@ Rails.application.routes.draw do
     get '/', to: 'review_offers#index', as: :review_offers
   end
 
-  # Oferta (offer)
+  # Tag (tag)
   scope 'tags' do
     get '/new', to: 'tags#new', as: :new_tag
     post '/new', to: 'tags#create'

@@ -6,19 +6,15 @@
       <th>Valor (%)</th>
       <th>Inicio</th>
       <th>Fim</th>
-      <th>Editar</th>
-      <th>Deletar</th>
     </tr>
     </thead>
     <tbody>
       <% @coupons&.each do |form| %>
         <tr class="text-center">
-          <td class="align-middle"><%= form.name %></td>
+          <td class="align-middle"><%= link_to form.name, show_company_path(form.company), class: 'text-dark' %></td>
           <td class="align-middle"><%= form.value %></td>
           <td class="align-middle"><%= (form.end_time - form.start_time) / 3600 %></td>
           <td class="align-middle"><%= form.end_time.strftime("%m/%d") %></td>
-          <td class="align-middle"><%= button_to 'Editar', edit_coupon_path(form), method: 'get'%></td>
-          <td class="align-middle"><%= button_to 'Remover', delete_coupon_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
         </tr>
       <% end %>
     </tbody>

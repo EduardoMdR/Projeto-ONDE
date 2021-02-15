@@ -1,5 +1,7 @@
 class OffersController < ApplicationController
   ##### Autenticação #####
+  before_action :require_owner_or_admin, only: %i[new create]
+  before_action :require_owner_or_admin_offer, only: %i[edit update destroy]
 
   ##### SHOW #####
   def index

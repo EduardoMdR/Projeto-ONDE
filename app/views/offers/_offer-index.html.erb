@@ -6,8 +6,6 @@
       <th>Preço</th>
       <th>Inicio</th>
       <th>Fim</th>
-      <th>Editar</th>
-      <th>Deletar</th>
     </tr>
     </thead>
     <tbody>
@@ -17,8 +15,6 @@
           <td class="align-middle"><%= form.new_price %></td>
           <td class="align-middle"><%= form.start_time.strftime("%m/%d %H:%M") %></td>
           <td class="align-middle"><%= form.end_time.strftime("%m/%d %H:%M") %></td>
-          <td class="align-middle"><%= button_to 'Editar', edit_offer_path(form), method: 'get'%></td>
-          <td class="align-middle"><%= button_to 'Remover', delete_offer_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
         </tr>
       <% end %>
     </tbody>
