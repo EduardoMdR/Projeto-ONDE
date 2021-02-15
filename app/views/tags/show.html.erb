@@ -9,6 +9,13 @@
   </tr>
 <% end %>
 
-<%= button_to "Voltar para tags", tags_path, method: :get %>
-<%= button_to "Editar tag", edit_tag_path(@tag), method: :get %>
-<%= button_to 'Remover tag', delete_tag_path(@tag), method: 'delete', data: { confirm: 'Você tem certeza?' } %>
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', tags_path, class: 'btn btn-primary form-control w-50' %>
+</div>
+
+<% if current_user&.role_id == 1 %>
+  <div class="back-button d-flex justify-content-center p-3">
+    <%= link_to 'Editar', edit_tag_path(@tag), method: :get, class: 'btn btn-primary form-control w-25 m-3' %>
+    <%= link_to 'Remover', delete_tag_path(@tag), method: 'delete', data: { confirm: 'Você tem certeza?' }, class: 'btn btn-primary form-control w-25 m-3' %>
+  </div>
+<% end %>

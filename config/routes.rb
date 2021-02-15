@@ -113,7 +113,7 @@ Rails.application.routes.draw do
     get '/:id/edit', to: 'review_offers#edit', as: :edit_review_offer
     patch '/:id/edit', to: 'review_offers#update'
     delete '/:id', to: 'review_offers#destroy', as: :delete_review_offer
-    get '/', to: 'review_offers#index', as: :review_offers
+    get ':id/', to: 'review_offers#index', as: :review_offers
   end
 
   # Tag (tag)

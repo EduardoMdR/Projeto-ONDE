@@ -18,10 +18,15 @@
   <tr>
     <td>Nota<%= form.score %></td>
     <td>Descrição<%= form.description %></td>
+    <% if current_user&.role_id == 1 || current_user == form.user %>
+      <td><%= button_to 'Editar', edit_review_offer_path(form), method: 'get'%></td>
+      <td><%= button_to 'Remover', delete_review_offer_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+    <% end %>
   </tr>
   <br/>
 <% end %>
 <p> <%= link_to "Adicionar nova review", new_review_offer_path %> </p>
+<p> <%= link_to "Ver todas review", review_offers_path %> </p>
 
 <div class="back-button d-flex justify-content-center p-3">
   <%= link_to 'Voltar', offers_path, class: 'btn btn-primary form-control w-50' %>

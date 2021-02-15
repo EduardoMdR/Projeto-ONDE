@@ -5,8 +5,6 @@
       <th>Nota</th>
       <th>Produto</th>
       <th>Descrição</th>
-      <th>Editar</th>
-      <th>Deletar</th>
     </tr>
     </thead>
     <tbody>
@@ -15,8 +13,10 @@
           <td class="align-middle"><%= form.score %></td>
           <td class="align-middle"><%= link_to form.offer.name, show_offer_path(form.offer), class: 'text-dark' %></td>
           <td class="align-middle"><%= form.description %></td>
-          <td class="align-middle"><%= button_to 'Editar', edit_review_offer_path(form), method: 'get'%></td>
-          <td class="align-middle"><%= button_to 'Remover', delete_review_offer_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+          <% if current_user&.role_id == 1 || current_user == form.user %>
+            <td class="align-middle"><%= button_to 'Editar', edit_review_offer_path(form), method: 'get'%></td>
+            <td class="align-middle"><%= button_to 'Remover', delete_review_offer_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>

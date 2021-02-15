@@ -1,9 +1,10 @@
 class ReviewOffersController < ApplicationController
   ##### Autenticação #####
+  before_action :require_logged_in, only: %i[new create edit update destroy]
 
   ##### SHOW #####
   def index
-    @review_offers = ReviewOffer.where(user_id: current_user.id)
+    @review_offers = ReviewOffer.where(offer_id: params[:id])
   end
 
   ###### CREATE #####
@@ -47,6 +48,7 @@ class ReviewOffersController < ApplicationController
 
   ##### UPDATE #####
   def edit
+    restrain_review(ReviewOffer.find params[:id])
     @review_offer = ReviewOffer.find(params[:id])
   end
   
@@ -60,6 +62,9 @@ class ReviewOffersController < ApplicationController
     ensure
       redirect_to show_offer_path(@review_offer.offer)
     end
+  end
+  def restrain_review(review)
+    restrict_access unless review.user == current_user || current_user.role_id == 1
   end
 
   ##### DELETE #####
