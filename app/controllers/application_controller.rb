@@ -30,6 +30,10 @@ class ApplicationController < ActionController::Base
     restrict_access unless (o.company.user == current_user) || current_user&.role_id == 1
   end
 
+  def require_address_owner
+    restrict_access unless Address.find(params[:id]).user == current_user || current_user&.role_id == 1
+  end
+
   def restrain_new_company
     company = Company.where(:user_id => current_user).first
     if company.present?

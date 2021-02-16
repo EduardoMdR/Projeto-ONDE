@@ -126,4 +126,13 @@ Rails.application.routes.draw do
     delete '/:id', to: 'tags#destroy', as: :delete_tag
     get '/', to: 'tags#index', as: :tags
   end
+
+  # Endereço (address)
+  scope 'locais' do
+    get 'new', to: 'addresses#new', as: :new_address
+    post 'new', to: 'addresses#create'
+    get 'edit/:id', to: 'addresses#edit', as: :edit_address
+    patch 'edit/:id', to: 'addresses#update'
+    delete 'delete/:id', to: 'addresses#destroy', as: :delete_address
+  end
 end
