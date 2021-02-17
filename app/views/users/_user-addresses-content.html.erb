@@ -11,7 +11,7 @@
         <p class="card-text">Destinatário: <%= address.recipient_name %></p>
         <p class="card-text">Telefone: <%= address.phone_number %></p>
         <%= link_to 'Editar', edit_address_path(address.id), class: 'btn btn-success', data: {turbolinks: false} %>
-        <%= link_to 'Remover', delete_address_path(address.id), class: 'btn btn-primary', method: :delete %>
+        <%= link_to 'Remover', delete_address_path(address.id), class: 'btn btn-outline-danger', method: :delete %>
       </div>
     </div>
   <% end %>
