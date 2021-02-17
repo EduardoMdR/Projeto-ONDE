@@ -34,6 +34,8 @@ Rails.application.routes.draw do
     patch '/:id/edit', to: 'users#update'
     delete '/:id', to: 'users#destroy', as: :delete_user
     get '/:id', to: 'users#show', as: :show_user
+    get ':id/enderecos', to: 'users#show_user_addresses', as: :show_user_addresses
+    get ':id/reviews', to: 'users#show_user_reviews', as: :show_user_reviews
     get '/:id/activate', to: 'users#activate', as: :activate
   end
 

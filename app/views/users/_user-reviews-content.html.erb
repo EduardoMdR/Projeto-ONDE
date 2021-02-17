@@ -1,0 +1,22 @@
+<table class="table table-striped align-middle" >
+  <thead>
+  <tr class="text-center">
+    <th>Nota</th>
+    <th>Empresa</th>
+    <th>Descrição</th>
+    <th>Editar</th>
+    <th>Apagar</th>
+  </tr>
+  </thead>
+  <tbody>
+    <% @reviews.each do |form|%>
+      <tr class="text-center">
+        <td class="align-middle"><%= form.price %></td>
+        <td class="align-middle"><%= form.company.name %></td>
+        <td class="align-middle"><%= form.description %></td>
+        <td class="align-middle"><%= link_to 'Editar', edit_review_path(form), method: 'get' %></td>
+        <td class="align-middle"><%= link_to 'Remover', delete_review_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -8,6 +8,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+  end
+  def show_user_addresses
+    @user = User.find(params[:id])
+  end
+  def show_user_reviews
+    @user = User.find(params[:id])
     @reviews = Review.where(user: @user)
     @review_offers = ReviewOffer.where(user: @user)
   end

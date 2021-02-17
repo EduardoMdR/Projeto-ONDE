@@ -1,0 +1,47 @@
+<div class="col-md-4 col-lg-3 mb-3">
+  <div class="menu">
+    <div class="container">
+      <div class="text-center pt-2">
+        <img src="https://i1.wp.com/terracoeconomico.com.br/wp-content/uploads/2019/01/default-user-image.png?ssl=1" alt="..." class="rounded-circle" style="width:40px;"> 
+        <div class="pt-1">
+          <%= @user.name %>
+        </div>
+        <div class="pt-2">
+          <%= @user.email%>
+        </div>
+      </div>
+      <div class="pt-3 button text-center">
+        <%= link_to "Editar Perfil", edit_user_path(@user.id), class: 'btn btn-link btn-sm'%>
+      </div>
+    </div>
+
+    <div class="pt-3">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <%= link_to show_user_path do %>
+            <i class="fa fa-truck"></i>Meus Pedidos
+          <% end %>
+        </li>
+        <li class="list-group-item"><a href="#"><i class="fa fa-ticket"></i>Cupons salvos</a></li>
+        <li class="list-group-item"><a href="#">
+          <%= link_to show_user_reviews_path do %>
+            <i class="fa fa-comments"></i>Reviews
+          <% end %>
+        </li>
+        <li class="list-group-item"><a href="#"><i class="fa fa-heart"></i>Favoritos</a></li>
+        <li class="list-group-item">
+          <%= link_to show_user_addresses_path do %>
+            <i class="fa fa-home"></i>Endereços
+          <% end %>
+        </li>
+        <li class="list-group-item text-danger" data-toggle="modal" data-target=<%= "#modalConfirmDelete#{@user.id}"%>>
+          <a class="text-danger pointer">
+            <i class="fa fa-sign-out"></i>
+            Deletar Conta
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
