@@ -16,6 +16,8 @@ $menu-color: #ececf4;
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
 
 @media(max-width:576px) { //col-
   .oferta-texto-1 {
@@ -84,7 +86,7 @@ $menu-color: #ececf4;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-image: url("./home.png");
+    background-image: url("https://raw.githubusercontent.com/Project-ONDE/Projeto-ONDE/main/app/assets/images/home.png");
     background-position: center top;
     background-size:cover;
     background-attachment: fixed;
@@ -122,6 +124,16 @@ $menu-color: #ececf4;
   font-size: 30px;
   color: $white-color;
 }
+.cupon-texto-1 {
+  font-family: 'Rammetto One', cursive;
+  font-size: 20px;
+  color: $white-color;
+}
+.cupon-texto-2 {
+  font-family: 'Days One', sans-serif;
+  font-size: 17px;
+  color: $white-color;
+}
 .porcentagem {
   color: $white-color;
   position: relative;
@@ -146,6 +158,9 @@ $menu-color: #ececf4;
   line-height: 1.2em;
   min-height: 3.6em;
 }
+.confete {
+  border-left: 2px solid $white-color;
+}
 .botao-oferta {
   background-color: $button-color;
   border: 1px solid $black-color;
@@ -154,6 +169,7 @@ $menu-color: #ececf4;
   width: 80%;
   padding-top: 0px;
   margin-top: 0px;
+  font-size: 16px;
 }
 .ofertas {
   background: linear-gradient(-45deg, #826DBF, #0D0524);
@@ -168,19 +184,61 @@ $menu-color: #ececf4;
   margin-left: 5%;
   margin-right: 4%;
   border-radius: 5px;
+  background-color: black;
+}
+.fundo {
+  width: 91%;
+  margin-left: 5%;
+  margin-right: 4%;
+  border-radius: 5px;
 }
 .cupom-1 {
-  // background-color: black;
+  border-top: 0px solid #ffffff;
+  border-right: 10px solid #ffffff;
+  border-bottom: 0px solid #ffffff;
+  border-left: 0px solid #ffffff;
   overflow: hidden;
   -webkit-transform: skew(-18deg) translateX(-70px);
       -ms-transform: skew(-18deg) translateX(-70px);
           transform: skew(-18deg) translateX(-70px);
 }
-.cupom-1-bg {
-  background-color: black;
-  height: 150px;
-  left: 20px;
+
+.oferta-titulo {
+  font-size: 20px;
+  color: #F93434;
 }
+.oferta-titulo span {
+  font-size: 12px;
+  color: #00C142;
+}
+.oferta-titulo-2 {
+  font-size: 12px;
+  color: #A39D9D;
+}
+.oferta-titulo-3 {
+  font-size: 16px;
+  color: #6F8CF3;
+}
+.oferta-titulo-4 {
+  font-size: 14px;
+  color: $black-color;
+}
+.empresa-titulo-1 {
+  font-family: 'Candal', sans-serif;
+  font-size: 18px;
+  color: #729DF0;
+}
+.empresa-titulo-2 {
+  font-size: 14px;
+  color: #000;
+}
+.empresa-titulo-botao {
+  font-family: 'Happy Monkey', cursive;
+  font-size: 18px;
+  color: #000;
+}
+
+
 
 .logo {
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -213,9 +271,7 @@ $menu-color: #ececf4;
           transform: skew(18deg) translateX(140px);
 }
 .cupom-2 {
-  background-color: black;
-  background-image: url("./confete.png");
-  width: 100%;
+  background-image: url("https://raw.githubusercontent.com/Project-ONDE/Projeto-ONDE/main/app/assets/images/confete.png");
   height: 150px;
   overflow: hidden;
   -webkit-transform: skew(-18deg) translateX(-70px);
@@ -306,7 +362,7 @@ color: $white-color;
   width: 100%;
   height: 100%;
 }
-.categorias .box .videoBx video {
+.categorias .box .videoBx img {
   position: absolute;
   top:0;
   left: 0;
@@ -320,7 +376,7 @@ color: $white-color;
   -o-transition: opacity .4s ease-in-out;
   transition: opacity .4s ease-in-out;
 }
-.categorias .box:hover video {
+.categorias .box:hover img {
   filter: alpha(opacity=50);
   opacity: 1;
 }
@@ -576,7 +632,7 @@ color: $white-color;
   background: linear-gradient(-45deg, $secondary-color, $primary-color);
   border-bottom: 1px solid wheat;
 }
-.menu {
+.menuzinho {
   max-width: 1024px;
 }
 // fim navbar & footer
@@ -719,8 +775,8 @@ color: $white-color;
 .item:hover #descricao {
   display: block;
   transition: .5s;
- }
- .item #descricao {
+}
+.item #descricao {
   display: none;
   position: relative;
   background-color: white;
@@ -731,7 +787,7 @@ color: $white-color;
   top: -25px;
   left: -150px;
   transition: .5s;
- }
+}
 
 .btncontato {
   background: rgb(2,0,36);
@@ -1309,4 +1365,150 @@ section {
 
 .carousel-item img {
   width: 100%
+}
+
+
+// galeria 
+.galeria {
+  overflow: hidden;
+
+  background-size: .75em 100%, 100% 100%;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  flex-grow: 1;
+  margin: auto;
+  max-width: 1200px;
+  max-height: 1200px;
+  
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2vmin;
+  justify-items: center;
+  align-items: center;
+}
+
+.wrapper IMG {
+  z-index: 1;
+  grid-column: span 2;
+  max-width: 100%;
+  margin-bottom: -52%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: scale(1);
+  transition: all .25s;
+  
+  &:nth-child(7n + 1) {
+    grid-column: 2 / span 2;
+  }
+  
+  &:hover {
+    z-index: 2;
+    transform: scale(2);
+  }
+}
+
+.card-1{
+  background-image: url(https://ionicframework.com/img/getting-started/ionic-native-card.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}
+
+.card-2{
+  background-image: url(https://ionicframework.com/img/getting-started/components-card.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}
+
+.card-3{
+  background-image: url(https://ionicframework.com/img/getting-started/theming-card.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80px;
+}
+
+
+$min-width: 120px;
+$maincolor: #6BBE92;  
+$secondarycolor: #3E8760;
+
+@mixin transform($value){
+  -webkit-transform: ($value);
+     -moz-transform: ($value);
+      -ms-transform: ($value);
+          transform: ($value);
+}
+@mixin transition($value){
+  -webkit-transition: ($value);
+     -moz-transition: ($value);
+      -ms-transition: ($value);
+          transition: ($value);
+}
+
+#main{
+  position: relative;
+  list-style: none;
+  font-weight: 400;
+  font-size: 0;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0;
+  li{
+    font-size: 0.8rem;
+    display: inline-block;
+    position: relative;
+    padding: 4px 12px;
+    cursor: pointer;
+    z-index: 5;
+    min-width: $min-width;
+  }  
+}
+li{
+  margin: 0;
+}
+.drop{
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    top: 25px;
+    div{
+      @include transform(translate(0,-100%));
+      @include transition(all 0.5s 0.1s);
+      position: relative;
+    }
+    li{
+      display:block;
+      padding: 0;
+      width: 100%;
+      background: $secondary-color !important;
+    }
+  }
+#marker{
+  height: 6px;
+  background: $secondary-color !important;
+  position: absolute;
+  bottom: 0;
+  width: $min-width;
+  z-index: 2;
+  @include transition(all 0.35s);
+}
+
+@for $i from 1 through 4{
+  #main li:nth-child(#{$i}){
+    &:hover ul div{
+     @include transform(translate(0,0)); 
+    }
+    &:hover ~ #marker{
+      @include transform(translate(#{(-1+$i)*$min-width},0));
+    }
+  }    
 }
