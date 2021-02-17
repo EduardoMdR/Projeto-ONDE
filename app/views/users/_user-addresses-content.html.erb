@@ -1,0 +1,20 @@
+<div class="d-flex align-content-around justify-content-around flex-wrap pt-3">
+  <% @user.addresses.each_with_index do |address, index| %>
+    <div class="border border-light mb-3" style="max-width: 50%;">
+      <div class="card-body">
+        <h5 class="card-title">Endereço <%= index + 1 %></h5>
+        <p class="card-text"><%= address.address_line %>,
+          nº <%= address.number %>,
+          <%= address.cep %>,
+          <%= address.city %>-<%= address.state %>.
+        </p>
+        <p class="card-text">Destinatário: <%= address.recipient_name %></p>
+        <p class="card-text">Telefone: <%= address.phone_number %></p>
+        <%= link_to 'Editar', edit_address_path(address.id), class: 'btn btn-success', data: {turbolinks: false} %>
+        <%= link_to 'Remover', delete_address_path(address.id), class: 'btn btn-outline-danger', method: :delete %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Adicionar Endereço', new_address_path, class: 'btn btn-secondary', data: {turbolinks: false} %>

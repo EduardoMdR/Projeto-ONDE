@@ -1,0 +1,20 @@
+<!--
+  <div class="rating">
+    <input type="radio" id="star5" name="score" value="5" onclick="myRating(this.value)" /><label class="full" for="star5" title="Otimo - 5 estrelas"></label>
+    <input type="radio" id="star4" name="score" value="4" onclick="myRating(this.value)" /><label class="full" for="star4" title="Muito bom - 4 estrelas"></label>
+    <input type="radio" id="star3" name="score" value="3" onclick="myRating(this.value)" /><label class="full" for="star3" title="Bom - 3 estrelas"></label>
+    <input type="radio" id="star2" name="score" value="2" onclick="myRating(this.value)" /><label class="full" for="star2" title="Poderia ser melhor - 2 estrelas"></label>
+    <input type="radio" id="star1" name="score" value="1" onclick="myRating(this.value)" /><label class="full" for="star1" title="Ruim - 1 estrelas"></label>
+  </div>
+-->
+<div class="container border shadow-sm bg-light p-5 my-3">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Adicione uma avaliação
+  </h1>
+
+  <%= render 'form', review: @review, url: new_review_path, m: :post %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>

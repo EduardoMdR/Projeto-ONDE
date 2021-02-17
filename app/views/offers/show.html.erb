@@ -1,0 +1,40 @@
+<h2>Nome: <%= @offer.name %></h2>
+<h4>Descrição: <%= @offer.description %></h4>
+<h4>Preço antigo: <%= @offer.old_price %></h4>
+<h4>Novo preço: <%= @offer.new_price %></h4>
+<h4>Empresa: <%= link_to @offer.company.name, show_company_path(@offer.company) %></h4>
+<h4>Inicio: <%= @offer.start_time %></h4>
+<h4>Fim: <%= @offer.end_time %></h4>
+<h4>Parcelado: <%= @offer.parceled %></h4>
+<h4>Quantas vezes: <%= @offer.qtd_parcel %></h4>
+<h4>Dinheiro: <%= @offer.cash %></h4>
+<h4>Cartão: <%= @offer.credit_card %></h4>
+<h4>Nota: <%= @score %></h4>
+
+
+<br/>
+<h4>Reviews</h4>
+<% @review_offers.each do |form| %>
+  <tr>
+    <td>Nota<%= form.score %></td>
+    <td>Descrição<%= form.description %></td>
+    <% if current_user&.role_id == 1 || current_user == form.user %>
+      <td><%= button_to 'Editar', edit_review_offer_path(form), method: 'get'%></td>
+      <td><%= button_to 'Remover', delete_review_offer_path(form), method: 'delete', data: { confirm: 'Você tem certeza?' } %></td>
+    <% end %>
+  </tr>
+  <br/>
+<% end %>
+<p> <%= link_to "Adicionar nova review", new_review_offer_path %> </p>
+<p> <%= link_to "Ver todas review", review_offers_path %> </p>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', offers_path, class: 'btn btn-primary form-control w-50' %>
+</div>
+
+<% if current_user&.role_id == 1 || current_user == @offer.company.user %>
+  <div class="back-button d-flex justify-content-center p-3">
+    <%= link_to 'Editar Oferta', edit_offer_path(@offer), method: :get, class: 'btn btn-primary form-control w-25 m-3' %>
+    <%= link_to 'Remover oferta', delete_offer_path(@offer), method: 'delete', data: { confirm: 'Você tem certeza?' }, class: 'btn btn-primary form-control w-25 m-3' %>
+  </div>
+<% end %>

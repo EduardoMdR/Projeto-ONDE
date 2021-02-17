@@ -1,0 +1,21 @@
+<div class="table-responsive">
+  <table class="table table-striped align-middle" >
+    <thead>
+    <tr class="text-center">
+      <th>Título</th>
+      <th>Descrição</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @tags&.each do |form| %>
+        <tr class="text-center">
+          <td class="align-middle"><%= link_to form.name, show_tag_path(form), class: 'text-dark' %></td>
+          <td class="align-middle"><%= form.description %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<% if current_user&.role_id == 1 %>
+  <p><%= link_to "Adicionar nova categoria", new_category_path %> </p>
+<% end %>
