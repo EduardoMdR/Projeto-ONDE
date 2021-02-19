@@ -114,8 +114,7 @@
                   <span class="float-right h6"><i class="fa fa-map-marker text-danger"></i> 1,9 Km </span>
                 </p>
                 <div class="d-flex justify-content-center">
-                <%= link_to "Acessar empresa", show_company_path(form), class:"botao-oferta font-weight-bold mt-2" %>
-                
+                  <%= button_to "Acessar empresa", show_company_path(form), class:"botao-oferta font-weight-bold mt-2", method: :get %>
                 </div>
               </div>
             </div>
@@ -128,5 +127,3 @@
   </div>
 </div>
 </div>
-
-<p> <%= link_to "Adicionar nova empresa", new_company_path %> </p>

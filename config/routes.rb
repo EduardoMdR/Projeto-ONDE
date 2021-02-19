@@ -40,6 +40,10 @@ Rails.application.routes.draw do
     get '/:id/activate', to: 'users#activate', as: :activate
   end
 
+  scope 'admin' do
+    get 'empresas', to: 'admins#company_index', as: :admin_company_index
+  end
+
   scope '' do
     get 'login', to: 'sessions#new', as: :login
     post 'login', to: 'sessions#create'
