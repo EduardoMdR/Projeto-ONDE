@@ -1,2 +1,132 @@
-<% @title = 'Categorias' %>
-<%= render 'layouts/card-form-layout', title: 'Empresas', content: render('company-index') %>
+<%= render 'layouts/navbar' %>
+
+<div style="background-color: #f4fcfc">
+<div class="fundo">
+  <div class="row">
+    <!-- Menu -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-2 menulateral mb-3 mt-3">
+      <h5 class="text-center">Filtrar Empresas:</h5>
+      <div class="d-flex justify-content-center">
+        <select class="" name="option">
+          <option value="" disabled selected>Relevância</option>
+          <option value="1">Avaliação</option>
+          <option value="2">Prazo</option>
+          <option value="3">Desconto</option>
+        </select>
+      </div>
+      <hr class="my-4 w-75">
+      <h5>Raio de busca:</h5>
+      <div class="">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <p>Distância: <span id="demo"></span> Km</p>
+      </div>
+      <hr class="my-4 w-75">
+      <h5 class="pb-1">Avaliação</h5>
+      <div class="pl-2">
+        <p class="h6">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <span class="text-success h6">(35)</span>
+        </p>
+        <p class="h6">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o text-warning text-dark"></i>
+          <span class="text-success h6">(35)</span>
+        </p>
+        <p class="h6">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o text-warning text-dark"></i>
+          <i class="fa fa-star-o text-warning text-dark"></i>
+          <span class="text-success h6">(35)</span>
+        </p>
+        <p class="h6">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o text-warning text-dark"></i>
+          <i class="fa fa-star-o text-warning text-dark"></i>
+          <i class="fa fa-star-o text-warning text-dark"></i>
+          <span class="text-success h6">(35)</span>
+        </p>
+        <p class="h6">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o text-warning text-dark"></i>
+          <i class="fa fa-star-o text-warning text-dark"></i>
+          <i class="fa fa-star-o text-warning text-dark"></i>
+          <i class="fa fa-star-o text-warning text-dark"></i>
+          <span class="text-success h6">(35)</span>
+        </p>
+      </div>
+      <hr class="my-4 w-75">
+      <h5 class="pb-1">Categorias</h5>
+      <div class="item pl-2">
+        <a href="" class="texto-secundario h5">Alimentação</a>
+        <div class="descricao pl-2"><i class="fa fa-square-o" aria-hidden="true"></i> Fast Food <span class="text-success">(35)</span></div>
+        <div class="descricao pl-2"><i class="fa fa-square-o" aria-hidden="true"></i> Hamburgueria <span class="text-success">(35)</span></div>
+        <div class="descricao pl-2"><i class="fa fa-square-o" aria-hidden="true"></i> Supermercado<span class="text-success">(35)</span></div>
+        <div class="descricao pl-2"><i class="fa fa-square-o" aria-hidden="true"></i> lanchonete<span class="text-success">(35)</span></div>
+        <div class="descricao pl-2"><i class="fa fa-square-o" aria-hidden="true"></i> Restaurante<span class="text-success">(35)</span></div>
+      </div>
+      <div class="item pl-2">
+        <a href="" class="texto-secundario h5">Mecânica</a>
+        <div class="descricao pl-2"><i class="fa fa-square-o" aria-hidden="true"></i> Auto Eletrica <span class="text-success">(35)</span></div>
+        <div class="descricao pl-2"><i class="fa fa-square-o" aria-hidden="true"></i> Caminhões <span class="text-success">(35)</span></div>
+        <div class="descricao pl-2"><i class="fa fa-square-o" aria-hidden="true"></i> Auto Mecânica <span class="text-success">(35)</span></div>
+        <div class="descricao pl-2"><i class="fa fa-square-o" aria-hidden="true"></i> Carrocerias <span class="text-success">(35)</span></div>
+        <div class="descricao pl-2"><i class="fa fa-square-o" aria-hidden="true"></i> Borracharia <span class="text-success">(35)</span></div>
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="row">
+      <% @companies&.each do |form| %>
+        <div class="col-4  mt-3">
+        
+        
+          <div class="card-deck">
+            <div class="card">
+              <img class="card-img-top img-fluid p-1 rounded-top" src="https://www.pinhal.sp.gov.br/admin/globalarq/guia-cidade/logo/280_219/d0604eadee4692f709e0734b8ec63f23.png" alt="Card image cap">
+              <div class="card-img-overlay">
+                <span>
+                  <button target="_blank" data-toggle="tooltip" 
+                    data-placement="right" title="Aberto" class="bg-transparent border-0 text-light">
+                    <h5 class="float-left"><i class="fa fa-info-circle fa-lg text-success" aria-hidden="true"></i></h5>
+                  </button>
+                </span>
+              </div>
+              <div class="mb-2 ml-2 mr-2">
+                <div class=" text-center" style="line-height: 10px;">
+                  <p class="text-primary h5"><%= form.name %></p>
+                  <p>Instrumentos - Eventos - Amplificações</p>
+                </div>
+                <p class="h5">
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star text-warning"></i>
+                  <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
+                  <span class="float-right h6"><i class="fa fa-map-marker text-danger"></i> 1,9 Km </span>
+                </p>
+                <div class="d-flex justify-content-center">
+                <%= link_to "Acessar empresa", show_company_path(form), class:"botao-oferta font-weight-bold mt-2" %>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<p> <%= link_to "Adicionar nova empresa", new_company_path %> </p>
