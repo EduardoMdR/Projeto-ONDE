@@ -83,12 +83,10 @@
         <div class="descricao pl-2"><i class="fa fa-square-o" aria-hidden="true"></i> Borracharia <span class="text-success">(35)</span></div>
       </div>
     </div>
-    <div class="col-10">
+    <div class="col-12 col-sm-6 col-md-8 col-lg-9 col-xl-10 mt-3">
       <div class="row">
-      <% @companies&.each do |form| %>
-        <div class="col-4  mt-3">
-        
-        
+        <% @companies&.each do |form| %>
+        <div class="col-12 col-md-6 col-xl-4 pb-2">
           <div class="card-deck">
             <div class="card">
               <img class="card-img-top img-fluid p-1 rounded-top" src="https://www.pinhal.sp.gov.br/admin/globalarq/guia-cidade/logo/280_219/d0604eadee4692f709e0734b8ec63f23.png" alt="Card image cap">
@@ -102,8 +100,8 @@
               </div>
               <div class="mb-2 ml-2 mr-2">
                 <div class=" text-center" style="line-height: 10px;">
-                  <p class="text-primary h5"><%= form.name %></p>
-                  <p>Instrumentos - Eventos - Amplificações</p>
+                  <p class="empresa-titulo-1 pt-1"><%= form.name %></p>
+                  <p class="empresa-titulo-2">Instrumentos - Eventos - Amplificações</p>
                 </div>
                 <p class="h5">
                   <i class="fa fa-star text-warning"></i>
@@ -114,14 +112,14 @@
                   <span class="float-right h6"><i class="fa fa-map-marker text-danger"></i> 1,9 Km </span>
                 </p>
                 <div class="d-flex justify-content-center">
-                  <%= button_to "Acessar empresa", show_company_path(form), class:"botao-oferta font-weight-bold mt-2", method: :get %>
+                  <!--<%= button_to "Acessar empresa", show_company_path(form), class:"botao-oferta empresa-titulo-botao mt-2", method: :get %>-->
+                  <button type="button" class="botao-oferta empresa-titulo-botao mt-2">Acessar empresa</button>
                 </div>
               </div>
             </div>
           </div>
-        
         </div>
-      <% end %>
+        <% end %>
       </div>
     </div>
   </div>
