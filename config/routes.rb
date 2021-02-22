@@ -42,6 +42,7 @@ Rails.application.routes.draw do
 
   scope 'admin' do
     get 'empresas', to: 'admins#company_index', as: :admin_company_index
+    get '/dashboard', to: 'admins#dashboard', as: :admin_dashboard
   end
 
   scope '' do

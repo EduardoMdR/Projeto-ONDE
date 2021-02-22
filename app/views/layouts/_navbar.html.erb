@@ -1,111 +1,52 @@
-<div style="width:100%" class="navbar align-content-center flex-wrap justify-content-center">
-<div class="row text-light menu">
-    <!-- logo -->
-    <div class="col-2">
-      <a href="/"><img src="https://raw.githubusercontent.com/Project-ONDE/Projeto-ONDE/main/app/assets/images/logo2.png" class="m-3 logo" style="width: 100px;"></a>
-    </div>
-    <div class="col-8">
-      <div class="row text-center">
-        <!-- Barra de pesquisa -->
-        <div class="col-12">
-          <% unless  current_page?(root_path) %>
-            <!-- Exemplo de uma outra navbar 
-            <div class="searchbar_menu">
-              <input type="text" placeholder="Procurar lojas hoteis, e muito mais ..." class="search_input_menu">
-              <%= link_to "<i class='fa fa-search' ></i>".html_safe, pesquisa_path, class: 'search_icon_menu' %>
-            </div>
-            -->
-            <div class="input-group mb-3">
-              <div class="input-group-prepend">
-                <select class="custom-select input-group-text">
-                  <option selected>Todas</option>
-                  <option value="1">Alimentação</option>
-                  <option value="2">Hospedagem</option>
-                  <option value="3">turismo</option>
-                </select>
-              </div>
-              <input type="text" class="form-control" placeholder="Procurar lojas hoteis, e muito mais ..." aria-label="Username" aria-describedby="basic-addon1">
-              <%= link_to "<i class='fa fa-search p-2 pt-2' ></i>".html_safe, pesquisa_path, class: 'pesquisar_icon_menu' %>
-            </div>
-          <% else %>
-            <p class="pt-2"></p>
-          <% end %>
-        </div>
-        <!-- Páginas -->
-        <div class="col-12">
-          <div class="row d-flex justify-content-center">
-            <nav>
-              <ul id="main">
-                <li>Empresas
-                  <ul class="drop">
-                    <div>
-                        <li><%= link_to 'todas empresas', companies_path, class: 'text-light'%></li>
-                        <li><%= link_to 'Home da empresa', homeempresa_path, class: 'text-light'%></li>
-                        <li><%= link_to 'Ofertas', todasofertas_path, class: 'text-light'%></li>
-                        <li><%= link_to 'Criar oferta', criaroferta_path, class: 'text-light'%></li>
-                        <li><%= link_to 'Suas review', review_test_path, class: 'text-light'%></li>
-                        <li><%= link_to 'Editar dados', editardados_path, class: 'text-light'%></li>
-                    </div>
-                  </ul>
-                </li>
-                <li>Ofertas
-                  <ul class="drop">
-                    <div>
-                      <li><%= link_to 'Ofertas', ofertas_path, class: 'text-light'%></li>
-                      <li><%= link_to 'Página da oferta', ofertasdestaque_path, class: 'text-light'%></li>
-                    </div>
-                  </ul>
-                <li><%= link_to 'Cupons', cupons_path, class: 'text-light'%></li>
-                <li><%= link_to 'Contato', contato_path, class: 'text-light'%></li>
-                <div id="marker"></div>
-              </ul>
-            </nav>
+<nav class="navbar navbar-top navbar-expand-md navbar-dark bg-primary">
+  <a class="navbar-brand" href="/">
+    <span class="navbar-brand-title">Onde Pinhal</span>
+  </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+
+  <div class="collapse navbar-collapse" id="navbarToggler">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item ml-2">
+        <% if current_user %>
+          <li class="nav-item">
+          <a href="" class="nav-link">
+            <button class="btn btn-navbar">
+              <i class="fa fa-shopping-cart fa-sm mr-2"></i>
+              Carrinho
+            </button>
+          </a>
+        </li>
+          <div class="dropdown nav-link">
+            <a href="#" class="btn btn-navbar" data-toggle="dropdown" data-hover="dropdown" data-close-others="false">
+              <i class="fa fa-user-circle fa-sm mr-2"></i>
+              <%= current_user.name %>
+              <i class="fa fa-angle-down ml-2"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" role="menu">
+              <li><%= link_to 'Perfil', show_user_path(current_user) %></li>
+              <% if current_user.role_id == 1 %>
+                <li><%= link_to 'Painel do Administrador', admin_dashboard_path %></li>
+              <% end %>
+
+              <% if current_user.role_id == 2 %>
+                <li><%= link_to 'Painel da Empresa', company_dashboard_path(current_user.company) %></li>
+              <% end %>
+              <li><%= link_to "Sair", logout_path, class: 'text-primary', method: :delete %></li>
+            </ul>
           </div>
-        </div>
-      </div>
-    </div>  
-    <!-- Login -->
-    <div class="col-2">
-      <div class="row p-2">
-        <div class="col-12">
-          <i class="fa fa-user-plus text-center" aria-hidden="true">
-            <a href="" class="text-light" data-toggle="modal" data-target="#modalLRForm">Cadastro</a>
-          </i>
-        </div>
-        <div class="col-12">
-          <i class="fa fa-sign-in text-center" aria-hidden="true">
-            <a href="" class="text-light pl-1" data-toggle="modal" data-target="#elegantModalForm">Login</a> 
-          </i>
-        </div>
-      </div>
-    </div>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to login_path, class: 'nav-link' do %>
+              <span class="btn btn-navbar">Entrar</span>
+            <% end %>
+          </li>
+        <% end %>
+      </li>
+    </ul>
   </div>
-</div>
+</nav>
 
-
-<!--
-
-<%= link_to 'Categorias', categorias_path, class: 'nav-item nav-link text-light'%>
-
-<%= link_to 'Cupons', cupons_path, class: 'nav-item nav-link text-light'%>
-
-<%= link_to 'Ofertas', ofertas_path, class: 'nav-item nav-link text-light'%>
-
-<%= link_to 'Contato', contato_path, class: 'nav-item nav-link text-light'%>
-
-<%= link_to 'Parceiros', parceiros_path, class: 'nav-item nav-link text-light'%>
-
-<%= link_to 'Empresa', empresas_path, class: 'nav-item nav-link text-light'%>
-
-<%= link_to 'Pesquisa', pesquisa_path, class: 'nav-item nav-link text-light'%>
-
-<%= link_to 'Destaque', ofertasdestaque_path, class: 'nav-item nav-link text-light'%>
-
-<%= link_to 'Admin', homeempresa_path, class: 'nav-item nav-link text-light'%>
-
-<%= link_to "logout", logout_path, method: :delete, class: 'nav-item nav-link text-light' %>
-
--->
-<%= render 'layouts/login-modal' %>
-<%= render 'layouts/register-modal' %>
-<%= render 'layouts/password-modal' %>
