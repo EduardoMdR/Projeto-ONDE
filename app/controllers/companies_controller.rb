@@ -2,7 +2,8 @@ class CompaniesController < ApplicationController
   ##### Autenticação #####
   before_action :require_company, only: %i[new create edit update destroy]
   before_action :restrain_new_company, only: %i[new create]
-  before_action :require_owner_or_admin, only: %i[edit update destroy]
+  before_action :require_owner_or_admin, only: %i[dashboard offers_index coupons_index edit update destroy]
+  layout 'admin_page_layout', only: %i[dashboard offers_index coupons_index]
 
   ##### SHOW #####
   def index
@@ -15,6 +16,16 @@ class CompaniesController < ApplicationController
     @offers = Offer.where(company: @company)
     @coupons = Coupon.where(company: @company)
     @score, @price = calc_score(@company, @review)
+  end
+
+  def dashboard
+  end
+
+  def offers_index
+    @offers = Offer.where(company_id: params[:id]) 
+  end
+  def coupons_index
+    @coupons = Coupon.where(company_id: params[:id]) 
   end
 
   ###### CREATE #####

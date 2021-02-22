@@ -81,6 +81,9 @@ Rails.application.routes.draw do
     delete '/:id', to: 'companies#destroy', as: :delete_company
     get '/', to: 'companies#index', as: :companies
     # get ':id/review', to: 'companies#review', as: :review_company
+    get '/:id/dashboard', to: 'companies#dashboard', as: :company_dashboard
+    get '/:id/ofertas', to: 'companies#offers_index', as: :company_offers_index
+    get '/:id/cupons', to: 'companies#coupons_index', as: :company_coupons_index
   end
 
   # Review das empresas (review)
