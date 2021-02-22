@@ -1,4 +1,4 @@
-<h2>Nome: <%= @offer.name %></h2>
+<!--<h2>Nome: <%= @offer.name %></h2>
 <h4>Descrição: <%= @offer.description %></h4>
 <h4>Preço antigo: <%= @offer.old_price %></h4>
 <h4>Novo preço: <%= @offer.new_price %></h4>
@@ -38,3 +38,117 @@
     <%= link_to 'Remover oferta', delete_offer_path(@offer), method: 'delete', data: { confirm: 'Você tem certeza?' }, class: 'btn btn-primary form-control w-25 m-3' %>
   </div>
 <% end %>
+-->
+
+<%= render 'layouts/navbar' %>
+<div class="fundo">
+
+  <div class="row pt-3">
+    <div class="col-12 col-md-5 col-lg-5 pt-3 pb-5 menulateral-destaque" style="justify-content: center;flex : 1;">
+      <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+        <div class="carousel-inner">
+          <div class="carousel-item active"> <img src="https://dju62cr0hx23m.cloudfront.net/Custom/Content/Products/99/37/993761_pneu-225-50r17-michelin-primacy-4-98v_m3_636806438449880562.jpg" alt="Hills"> </div>
+          <div class="carousel-item"> <img src="https://d1mvenqtvaw2m9.cloudfront.net/CMS/images/ModelosPneu/MICHELIN-PRIMACY4/550/23.jpg" alt="Hills"> </div>
+          <div class="carousel-item"> <img src="https://carrefourbr.vtexassets.com/arquivos/ids/6527186-800-auto?width=800&height=auto&aspect=true" alt="Hills"> </div>
+          <div class="carousel-item"> <img src="https://a-static.mlcdn.com.br/618x463/jogo-de-4-pneus-michelin-aro-16-primacy-4-205-55r16-94v-tl-xl/pneustore/mi10110139/230c26bdc28256616a0a231df462c60e.jpg" alt="Hills"> </div>
+        </div> 
+        <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a>
+        <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a>
+        <ol class="carousel-indicators list-inline">
+          <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="https://dju62cr0hx23m.cloudfront.net/Custom/Content/Products/99/37/993761_pneu-225-50r17-michelin-primacy-4-98v_m3_636806438449880562.jpg" class="img-fluid"> </a> </li>
+          <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="https://d1mvenqtvaw2m9.cloudfront.net/CMS/images/ModelosPneu/MICHELIN-PRIMACY4/550/23.jpg" class="img-fluid"> </a> </li>
+          <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> <img src="https://carrefourbr.vtexassets.com/arquivos/ids/6527186-800-auto?width=800&height=auto&aspect=true" class="img-fluid"> </a> </li>
+          <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel"> <img src="https://a-static.mlcdn.com.br/618x463/jogo-de-4-pneus-michelin-aro-16-primacy-4-205-55r16-94v-tl-xl/pneustore/mi10110139/230c26bdc28256616a0a231df462c60e.jpg" class="img-fluid"> </a> </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-7 col-lg-7 menupesquisa2 pt-3 pb-3">
+      <h2><%= @offer.name %></h2>
+      <span class="h6 pt-3 float-right">De <s class="text-danger">R$<%= @offer.old_price %></s>. Por <span class="h4 text-success">R$<%= @offer.new_price %></span></span>
+      <h4 class="pt-3">Descrição</h4>
+      
+      <button class="btn btn-outline-success float-right m-3" type="button" class="">
+      Calcular Rota <i class="fa fa-map-marker mr-2 text-success"></i>
+      </button>
+      <p><%= @offer.description %></p>
+      <div id="accordion" class="pt-3">
+        <div class="">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <a class="h4 text-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Garantia
+              </a>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+              <p>Todos os Pneus Michelin são uma merda e não tem garantia.
+              Msa com um pouco de briga e alguns processos no Procon, essa 
+              data pode variar entre 6 mêses até 1 ano.</p>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <a class="h4 text-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Desempenho
+              </a>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              <p>Um bom desempenho com média de duração de 3 anos e meio.
+              è muito importante lembrar que isso se aplica em condições 
+              normais, caso um cacchoro decida comer seu pneu nos não 
+              nos responsabilizamos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-lg-5 text-center menulateral-destaque">
+      <h4 class="pt-3">Ofertado por</h4>
+      <img src="https://blog.empresometro.com.br/wp-content/uploads/2017/03/33-1171x417.png" width="80%">
+      <h4 class="pt-3"><%= link_to @offer.company.name, show_company_path(@offer.company), class: 'text-dark' %></h4></h4>
+      <h5>
+        <i class="fa fa-star " aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+        <i class="fa fa-star-o" aria-hidden="true"></i>
+      </h5>
+      <h6>(3,9)<h6>
+      <h6 class="pt-1">
+        <i class="fa fa-1x fa-whatsapp"></i> <%= @offer.company.phone %>
+      </h6>
+      <h6 class="pb-1">
+        <i class="fa fa-1x fa-envelope-o"></i><%= @offer.company.user.email %>
+      </h6>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.372689007904!2d-46.748700385096136!3d-22.187938585382042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c9ae09bf22398b%3A0x235d993ca1cef5b1!2sLojinha%20da%20Ju!5e0!3m2!1spt-BR!2sbr!4v1606923293698!5m2!1spt-BR!2sbr" width="80%" height="225" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+
+  </div>
+
+  <h4 class="text-center pt-4">Produtos relacionado</h4>
+  <div class="row text-dark">
+    <div class="col-12">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <div class="items">
+        <div><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190720/gallery/preview/02_o_car.jpg"></div>
+        <div><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190715/gallery/preview/03_r_car.jpg"></div>
+        <div><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190714/gallery/preview/04_g_car.jpg"></div>
+        <div><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190714/gallery/preview/04_g_car.jpg"></div>
+        <div><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190714/gallery/preview/04_g_car.jpg"></div>
+        <div><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190714/gallery/preview/04_g_car.jpg"></div>
+        <div><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1565190714/gallery/preview/04_g_car.jpg"></div>
+      </div>
+    </div>    
+  </div>
+</div>
