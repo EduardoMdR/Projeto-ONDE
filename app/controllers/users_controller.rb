@@ -80,6 +80,6 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
     def users_params
-        params.require('user').permit(:name, :email, :password, :role_id)
+        params.require('user').permit(:name, :email, :password, :role_id, :photo)
     end
 end

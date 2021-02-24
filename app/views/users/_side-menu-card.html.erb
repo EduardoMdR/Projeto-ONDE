@@ -2,7 +2,11 @@
   <div class="menu">
     <div class="container">
       <div class="text-center pt-2">
-        <img src="https://i1.wp.com/terracoeconomico.com.br/wp-content/uploads/2019/01/default-user-image.png?ssl=1" alt="..." class="rounded-circle" style="width:40px;"> 
+        <% if @user.photo.attached? %>
+          <%= image_tag @user.photo, class: 'rounded-circle', style: 'width:60px; height:60px' ,alt: 'Foto de perfil' %> 
+        <% else %>
+          <img src="https://i1.wp.com/terracoeconomico.com.br/wp-content/uploads/2019/01/default-user-image.png?ssl=1" alt="..." class="rounded-circle" style="width:40px;"> 
+        <% end %>
         <div class="pt-1">
           <%= @user.name %>
         </div>

@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   # Database relationships:
   belongs_to :role
+  has_one_attached :photo
   has_one :company
   has_many :addresses, dependent: :delete_all
 
