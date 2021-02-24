@@ -3,6 +3,7 @@ class Offer < ApplicationRecord
   belongs_to :company
   belongs_to :tag
   has_many :review_offers, dependent: :destroy
+  has_many_attached :images
 
   # Database validations:
   validates :name, length: {

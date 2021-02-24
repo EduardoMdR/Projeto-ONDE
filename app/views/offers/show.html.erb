@@ -45,24 +45,8 @@
 
   <div class="row pt-3">
     <div class="col-12 col-md-5 col-lg-5 pt-3 pb-5 menulateral-destaque" style="justify-content: center;flex : 1;">
-      <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
-        <div class="carousel-inner">
-          <div class="carousel-item active"> <img src="https://dju62cr0hx23m.cloudfront.net/Custom/Content/Products/99/37/993761_pneu-225-50r17-michelin-primacy-4-98v_m3_636806438449880562.jpg" alt="Hills"> </div>
-          <div class="carousel-item"> <img src="https://d1mvenqtvaw2m9.cloudfront.net/CMS/images/ModelosPneu/MICHELIN-PRIMACY4/550/23.jpg" alt="Hills"> </div>
-          <div class="carousel-item"> <img src="https://carrefourbr.vtexassets.com/arquivos/ids/6527186-800-auto?width=800&height=auto&aspect=true" alt="Hills"> </div>
-          <div class="carousel-item"> <img src="https://a-static.mlcdn.com.br/618x463/jogo-de-4-pneus-michelin-aro-16-primacy-4-205-55r16-94v-tl-xl/pneustore/mi10110139/230c26bdc28256616a0a231df462c60e.jpg" alt="Hills"> </div>
-        </div> 
-        <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a>
-        <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a>
-        <ol class="carousel-indicators list-inline">
-          <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="https://dju62cr0hx23m.cloudfront.net/Custom/Content/Products/99/37/993761_pneu-225-50r17-michelin-primacy-4-98v_m3_636806438449880562.jpg" class="img-fluid"> </a> </li>
-          <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="https://d1mvenqtvaw2m9.cloudfront.net/CMS/images/ModelosPneu/MICHELIN-PRIMACY4/550/23.jpg" class="img-fluid"> </a> </li>
-          <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> <img src="https://carrefourbr.vtexassets.com/arquivos/ids/6527186-800-auto?width=800&height=auto&aspect=true" class="img-fluid"> </a> </li>
-          <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel"> <img src="https://a-static.mlcdn.com.br/618x463/jogo-de-4-pneus-michelin-aro-16-primacy-4-205-55r16-94v-tl-xl/pneustore/mi10110139/230c26bdc28256616a0a231df462c60e.jpg" class="img-fluid"> </a> </li>
-        </ol>
-      </div>
+      <%= render 'carousel' %>
     </div>
-
     <div class="col-12 col-md-7 col-lg-7 menupesquisa2 pt-3 pb-3">
       <h2><%= @offer.name %></h2>
       <span class="h6 pt-3 float-right">De <s class="text-danger">R$<%= @offer.old_price %></s>. Por <span class="h4 text-success">R$<%= @offer.new_price %></span></span>
