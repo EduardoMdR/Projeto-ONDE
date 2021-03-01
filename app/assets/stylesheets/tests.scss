@@ -326,7 +326,9 @@ $menu-color: #ececf4;
 color: $white-color;
 }
 .pagina-ofertas {
-  background: linear-gradient(-45deg, #cc3ce4, #5c1c74);
+  background:
+  linear-gradient(-45deg, #cc3ce4, #5c1c74),
+    url("https://raw.githubusercontent.com/Project-ONDE/Projeto-ONDE/main/app/assets/images/banner-ofertas.png");
   width: 92%;
   margin-left: 4%;
   margin-right: 4%;
@@ -779,13 +781,14 @@ color: $white-color;
 .item #descricao {
   display: none;
   position: relative;
+  float: none;
   background-color: white;
   color: $black-color;
   border-radius: 5px;
   box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.68);
   width: 70vh;
   top: -25px;
-  left: -150px;
+  left: -90px;
   transition: .5s;
 }
 
