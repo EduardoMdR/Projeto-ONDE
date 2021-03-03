@@ -16,8 +16,6 @@ class TestsController < ApplicationController
   end
   def parceiros
   end
-  def empresas
-  end
   def empresa
   end
   def empresa2

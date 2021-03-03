@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     get 'ofertas', to: "tests#ofertas", as: :ofertas
     get 'contato', to: "tests#contato", as: :contato
     get 'parceiros', to: "tests#parceiros", as: :parceiros
-    get 'empresas', to: "tests#empresas", as: :empresas
     get 'empresa', to: "tests#empresa", as: :empresa
     get 'empresa2', to: "tests#empresa2", as: :empresa2
     get 'empresa3', to: "tests#empresa3", as: :empresa3
