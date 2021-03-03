@@ -860,7 +860,7 @@ color: $white-color;
 .btn-ofertas {
   border-color: #5cb85c;
   color: #5cb85c;
-  background-color: $white-color;
+  background-color: #fff;
   background-image: -webkit-linear-gradient(45deg, #5cb85c 50%, transparent 50%);
   background-image: linear-gradient(45deg, #5cb85c 50%, transparent 50%);
   background-position: 100%;
@@ -1355,7 +1355,6 @@ section {
   .items {
     width: 100%;
     margin: 0px auto;
-    margin-top: 100px
   }
 
 
@@ -1364,7 +1363,6 @@ section {
 .items {
   width: 90%;
   margin: 0px auto;
-  margin-top: 100px
 }
 
 .slick-slide {
