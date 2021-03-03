@@ -776,7 +776,9 @@ color: $white-color;
 // }
 .item:hover #descricao {
   display: block;
+  position: absolute;
   transition: .5s;
+  z-index: 1;
 }
 .item #descricao {
   display: none;
@@ -787,7 +789,7 @@ color: $white-color;
   border-radius: 5px;
   box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.68);
   width: 70vh;
-  top: -25px;
+
   left: -90px;
   transition: .5s;
 }
@@ -808,6 +810,23 @@ color: $white-color;
  .table{
   border-radius: 10px; 
  }
+ .css-input {
+  padding: 5px;
+  width: 30px;
+  font-size: 16px;
+  border-width: 0px;
+  border-color: #CCCCCC;
+  background-color: #FFFFFF;
+  color: #000000;
+  border-style: solid;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+  text-shadow: 0px 0px 5px rgba(66,66,66,.75);
+  text-align: right;
+}
+.css-input:focus {
+  outline:none;
+}
 .btnempresas {
   background-color: #312A25;
   border-radius: 12px;
@@ -836,8 +855,28 @@ color: $white-color;
 }
 .btn-empresas:hover {
   background-position: 0;
-  color: #ffffff;
+  color: $white-color;
 }
+.btn-ofertas {
+  border-color: #5cb85c;
+  color: #5cb85c;
+  background-color: $white-color;
+  background-image: -webkit-linear-gradient(45deg, #5cb85c 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #5cb85c 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 500ms ease-in-out;
+  font-size: 20px;
+  padding: 5px 0px 5px 0px;
+  text-decoration: none;
+  border-radius: 12px;
+}
+.btn-ofertas:hover {
+  background-position: 0;
+  color: $white-color;
+}
+
 
 .inputtext {
   border: none;
