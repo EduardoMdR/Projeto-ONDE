@@ -2,7 +2,7 @@
 <div class="row text-light menu">
     <!-- logo -->
     <div class="col-2">
-      <a href="/"><img src="/assets/logo.png" style="width:160px"></a>
+      <a href="/"><img src="https://raw.githubusercontent.com/Project-ONDE/Projeto-ONDE/main/app/assets/images/logo.png" style="width:160px"></a>
     </div>
     <div class="col-8">
       <div class="row text-center">
@@ -65,8 +65,10 @@
                   </ul>
                 </li>
                 <li>Faça parte</li>
+                <% unless  current_page?(root_path) %>
                 <li><%= link_to 'Contato', contato_path, class: 'text-light'%></li>
                 <div id="marker"></div>
+                <% end %>
               </ul>
             </nav>
           </div>
