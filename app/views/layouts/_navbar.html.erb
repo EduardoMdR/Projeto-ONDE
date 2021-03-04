@@ -2,7 +2,7 @@
 <div class="row text-light menu">
     <!-- logo -->
     <div class="col-2">
-      <a href="/"><img src="https://raw.githubusercontent.com/Project-ONDE/Projeto-ONDE/main/app/assets/images/logo2.png" class="m-3 logo" style="width: 100px;"></a>
+      <a href="/"><img src="/assets/logo.png" style="width:160px"></a>
     </div>
     <div class="col-8">
       <div class="row text-center">
@@ -15,7 +15,7 @@
               <%= link_to "<i class='fa fa-search' ></i>".html_safe, pesquisa_path, class: 'search_icon_menu' %>
             </div>
             -->
-            <div class="input-group mb-3">
+            <div class="input-group mb-1">
               <div class="input-group-prepend">
                 <select class="custom-select input-group-text">
                   <option selected>Todas</option>
@@ -36,27 +36,35 @@
           <div class="row d-flex justify-content-center">
             <nav>
               <ul id="main">
-                <li>Empresas
+                <li>Serviços</li>
+                <li>Oferta do dia
                   <ul class="drop">
                     <div>
-                        <li><%= link_to 'todas empresas', pesquisa_path, class: 'text-light'%></li>
-                        <li><%= link_to 'Página da empresa', empresa_path, class: 'text-light'%></li>
-                        <li><%= link_to 'Home da empresa', homeempresa_path, class: 'text-light'%></li>
-                        <li><%= link_to 'Ofertas', todasofertas_path, class: 'text-light'%></li>
-                        <li><%= link_to 'Criar oferta', criaroferta_path, class: 'text-light'%></li>
-                        <li><%= link_to 'Suas review', review_path, class: 'text-light'%></li>
-                        <li><%= link_to 'Editar dados', editardados_path, class: 'text-light'%></li>
+                        <li><%= link_to 'todas ofertas', ofertas_path, class: 'text-light'%></li>
+                        <li><%= link_to 'melhores avaliadas', ofertas_path, class: 'text-light'%></li>
+                        <li><%= link_to 'Exemplo 1', ofertasdestaque_path, class: 'text-light'%></li>
                     </div>
                   </ul>
                 </li>
-                <li>Ofertas
+                <li>Marketplace
                   <ul class="drop">
                     <div>
-                      <li><%= link_to 'Ofertas', ofertas_path, class: 'text-light'%></li>
-                      <li><%= link_to 'Página da oferta', ofertasdestaque_path, class: 'text-light'%></li>
+                      <li><%= link_to 'Produtos', ofertas_path, class: 'text-light'%></li>
+                      <li>Alimentação</li>
+                      <li>Supermercado</li>
                     </div>
                   </ul>
-                <li><%= link_to 'Cupons', cupons_path, class: 'text-light'%></li>
+                <li>Empresas
+                  <ul class="drop">
+                    <div>
+                        <li><%= link_to 'Todas', pesquisa_path, class: 'text-light'%></li>
+                        <li><%= link_to 'Exemplo 1', empresa_path, class: 'text-light'%></li>
+                        <li><%= link_to 'Exemplo 2', empresa2_path, class: 'text-light'%></li>
+                        <li><%= link_to 'Exemplo 3', empresa3_path, class: 'text-light'%></li>
+                    </div>
+                  </ul>
+                </li>
+                <li>Faça parte</li>
                 <li><%= link_to 'Contato', contato_path, class: 'text-light'%></li>
                 <div id="marker"></div>
               </ul>
