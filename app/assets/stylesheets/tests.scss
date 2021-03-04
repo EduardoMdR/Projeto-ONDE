@@ -109,6 +109,12 @@ $menu-color: #ececf4;
   padding-top: 115px;
   text-shadow: 1px 1px 4px $primary-color
 }
+.hometextcompany {
+  position: relative;
+  padding-top: 115px;
+  text-shadow: 1px 1px 4px $black-color;
+  color: $white-color;
+}
 .oferta-texto-1 {
   font-family: 'Days One', sans-serif;
   font-size: 18px;
@@ -2034,5 +2040,22 @@ a.icon-link {
   }
   &.btn1--only-icon {
     width: 50px;
+  }
+}
+
+.emrpesaimg{
+
+  &::before {
+    content: '';
+    filter: brightness(75%);
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("https://raw.githubusercontent.com/Project-ONDE/Projeto-ONDE/main/app/assets/images/home.png");
+    background-position: center top;
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 }
