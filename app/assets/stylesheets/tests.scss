@@ -149,6 +149,18 @@ $menu-color: #ececf4;
   top: -20px;
   left: -20px;
 }
+.porcentagem2 {
+  color: $white-color;
+  position: relative;
+  width: 50px;
+  height: 200px;
+  top: -20px;
+  bottom: -20px;
+  left: -20px;
+  writing-mode: vertical-rl; 
+  text-orientation: mixed; 
+  color: #fff;
+}
 .hometexttext {
   border-radius: 10px;
   width: 600px;
