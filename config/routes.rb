@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     get 'empresa4', to: "tests#empresa3", as: :empresa4
     get 'pesquisa', to: "tests#pesquisa", as: :pesquisa
     get 'ofertasdestaque', to: "tests#ofertasdestaque", as: :ofertasdestaque
+    get 'alimentacao', to: "tests#alimentacao", as: :alimentacao
+    get 'alimentacao1', to: "tests#alimentacaodestaque", as: :alimentacaodestaque
 
     # admin
     get 'homeempresa', to: "tests#homeempresa", as: :homeempresa

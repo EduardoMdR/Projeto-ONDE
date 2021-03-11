@@ -28,6 +28,10 @@ class TestsController < ApplicationController
   end
   def ofertasdestaque
   end
+  def alimentacao
+  end
+  def alimentacaodestaque
+  end
   def hover
   end
 
