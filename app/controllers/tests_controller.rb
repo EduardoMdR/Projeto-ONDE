@@ -32,6 +32,8 @@ class TestsController < ApplicationController
   end
   def alimentacaodestaque
   end
+  def carrinho
+  end
   def hover
   end
 

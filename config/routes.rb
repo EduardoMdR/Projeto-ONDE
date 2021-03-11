@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     get 'ofertasdestaque', to: "tests#ofertasdestaque", as: :ofertasdestaque
     get 'alimentacao', to: "tests#alimentacao", as: :alimentacao
     get 'alimentacao1', to: "tests#alimentacaodestaque", as: :alimentacaodestaque
+    get 'carrinho', to: "tests#carrinho", as: :carrinho
 
     # admin
     get 'homeempresa', to: "tests#homeempresa", as: :homeempresa
