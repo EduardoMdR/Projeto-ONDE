@@ -1,4 +1,231 @@
 <%= render 'layouts/navbar' %>
-  <div class="fundo">
-  página alimentação
+<div class="fundo">
+  <div class="row pt-3">
+    <div class="col-9">
+      <img class="card-img-top" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap" style="object-fit: cover;object-fit: cover; filter: brightness(50%);">
+      <div class="card-img-overlay">
+        <div class="pt-2 pl-1 display-4 hometextcompany2" >ABRE AS 18:00</div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class=" menulateral-alimento p-2">
+        <h4><img class="rounded-circle m-2" style="width:75px; height: 75px object-fit: cover;" src="https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/2736/Logo_Jo_o_2.png"> 
+        Loljinha <span class="float-right"><i class="fa fa-star text-warning" aria-hidden="true">4,9</i></span></h4>
+        <p>Pizza - Esfirras - Doces</p>
+      </div>
+    </div>
+  </div>
+  <div class="pt-4">
+    <div class="searchbar_admin">
+      <input type="text" placeholder="Procurar produto" class="search_input_admin">
+      <%= link_to "<i class='fa fa-search' ></i>".html_safe, alimentacao_path, class: 'search_icon_admin' %>
+    </div>
+  </div>
+
+  <h3 class="pt-4" style="font-family: 'Akaya Kanadaka', cursive;">Pizza<hr></h3>
+  <div class="row d-flex justify-content-around">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3">
+      <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+      <div class="mb-2 ml-2 mr-2">
+        <div class=" text-center" style="line-height: 15px;">
+          <p class="pt-1 h5 text-dark ">4 queijos</p>
+          <p class="empresa-titulo-2 hometextcompany">Mussarela, gorgonzola, Catupiry e parmesão</p>
+        </div>
+        <p class="text-success h5">R$ 24,99</p>
+        <div class="d-flex justify-content-center">
+        <button class="btn-ofertas btn-block" type="button" class="">
+          Adicionar ao Carrinho
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3">
+      <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+      <div class="mb-2 ml-2 mr-2">
+        <div class=" text-center" style="line-height: 15px;">
+          <p class="pt-1 h5 text-dark">2 PIZZAS GRANDES +1 REFRI 2 LITROS.</p>
+          <p class="empresa-titulo-2">2 Pizzas Grandes ( 8 Pedaços) +1 Refri 2 Litros.</p>
+        </div>
+        <p class="text-success h5">R$ 84,99</p>
+        <div class="d-flex justify-content-center">
+        <button class="btn-ofertas btn-block" type="button" class="">
+          Adicionar ao Carrinho
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3">
+      <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+      <div class="mb-2 ml-2 mr-2">
+        <div class=" text-center" style="line-height: 15px;">
+          <p class="pt-1 h5 text-dark">FRANGO COM CATUPIRY</p>
+          <p class="empresa-titulo-2">Mussarela, frango marinado e desfiado, milho verde, Catupiry, orégano e azeitonas.</p>
+        </div>
+        <p class="text-success h5">R$ 24,99 <small class="text-muted"><s>R$ 30,00</s></small></p>
+        <div class="d-flex justify-content-center">
+        <button class="btn-ofertas btn-block" type="button" class="">
+          Adicionar ao Carrinho
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3">
+      <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+      <div class="mb-2 ml-2 mr-2">
+        <div class=" text-center" style="line-height: 15px;">
+          <p class="pt-1 h5 text-dark">ATUM</p>
+          <p class="empresa-titulo-2 hometextcompany">Atum umedecido ao molho de tomate, cebola e azeitonas.</p>
+        </div>
+        <p class="text-success h5">R$ 24,99</p>
+        <div class="d-flex justify-content-center">
+        <button class="btn-ofertas btn-block" type="button" class="">
+          Adicionar ao Carrinho
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3">
+      <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+      <div class="mb-2 ml-2 mr-2">
+        <div class=" text-center" style="line-height: 15px;">
+          <p class="pt-1 h5 text-dark ">4 queijos</p>
+          <p class="empresa-titulo-2 hometextcompany">Mussarela, gorgonzola, Catupiry e parmesão</p>
+        </div>
+        <p class="text-success h5">R$ 24,99</p>
+        <div class="d-flex justify-content-center">
+        <button class="btn-ofertas btn-block" type="button" class="">
+          Adicionar ao Carrinho
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 m-3">
+      <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+      <div class="mb-2 ml-2 mr-2">
+        <div class=" text-center" style="line-height: 15px;">
+          <p class="pt-1 h5 text-dark">2 PIZZAS GRANDES +1 REFRI 2 LITROS.</p>
+          <p class="empresa-titulo-2">2 Pizzas Grandes ( 8 Pedaços) +1 Refri 2 Litros.</p>
+        </div>
+        <p class="text-success h5">R$ 84,99</p>
+        <div class="d-flex justify-content-center">
+        <button class="btn-ofertas btn-block" type="button" class="">
+          Adicionar ao Carrinho
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h3 class="pt-4" style="font-family: 'Akaya Kanadaka', cursive;">Esfirras<hr></h3>
+  <div class="row">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+      <div class="mb-2 ml-2 mr-2">
+        <div class=" text-center" style="line-height: 15px;">
+          <p class="pt-1 h5 text-dark ">4 queijos</p>
+          <p class="empresa-titulo-2 hometextcompany">Mussarela, gorgonzola, Catupiry e parmesão</p>
+        </div>
+        <p class="text-success h5">R$ 24,99</p>
+        <div class="d-flex justify-content-center">
+        <button class="btn-ofertas btn-block" type="button" class="">
+          Adicionar ao Carrinho
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+      <div class="mb-2 ml-2 mr-2">
+        <div class=" text-center" style="line-height: 15px;">
+          <p class="pt-1 h5 text-dark">2 PIZZAS GRANDES +1 REFRI 2 LITROS.</p>
+          <p class="empresa-titulo-2">2 Pizzas Grandes ( 8 Pedaços) +1 Refri 2 Litros.</p>
+        </div>
+        <p class="text-success h5">R$ 84,99</p>
+        <div class="d-flex justify-content-center">
+        <button class="btn-ofertas btn-block" type="button" class="">
+          Adicionar ao Carrinho
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+      <div class="mb-2 ml-2 mr-2">
+        <div class=" text-center" style="line-height: 15px;">
+          <p class="pt-1 h5 text-dark">FRANGO COM CATUPIRY</p>
+          <p class="empresa-titulo-2">Mussarela, frango marinado e desfiado, milho verde, Catupiry, orégano e azeitonas.</p>
+        </div>
+        <p class="text-success h5">R$ 24,99</p>
+        <div class="d-flex justify-content-center">
+        <button class="btn-ofertas btn-block" type="button" class="">
+          Adicionar ao Carrinho
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+      <div class="mb-2 ml-2 mr-2">
+        <div class=" text-center" style="line-height: 15px;">
+          <p class="pt-1 h5 text-dark">ATUM</p>
+          <p class="empresa-titulo-2 hometextcompany">Atum umedecido ao molho de tomate, cebola e azeitonas.</p>
+        </div>
+        <p class="text-success h5">R$ 24,99</p>
+        <div class="d-flex justify-content-center">
+        <button class="btn-ofertas btn-block" type="button" class="">
+          Adicionar ao Carrinho
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <h3 class="pt-4 pb-3" style="font-family: 'Akaya Kanadaka', cursive;">Acompanhantes</h3>
+  <div class="row pb-4">
+    <div class="col-4 border border-outline-secondary">
+      <div class="row">
+        <div class="col-8">
+          <p class="pt-1 h5 text-dark">Água com gás</p>
+          <p>Otima para acompanhar algumas deliciosas pizzas</p>
+          <p class="h5">R$ 4,99</p>
+        </div>
+        <div class="col-4">
+          <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+          <button class="btn-ofertas btn-block ml-1" type="button" class="">
+          Adicionar
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 border border-outline-secondary">
+      <div class="row">
+        <div class="col-8">
+          <p class="pt-1 h5 text-dark">Água com gás</p>
+          <p>Otima para acompanhar algumas deliciosas pizzas</p>
+          <p class="h5">R$ 4,99</p>
+        </div>
+        <div class="col-4">
+          <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+          <button class="btn-ofertas btn-block ml-1" type="button" class="">
+          Adicionar
+        </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 border border-outline-secondary">
+      <div class="row">
+        <div class="col-8">
+          <p class="pt-1 h5 text-dark">Coca 2L</p>
+          <p>Otima para acompanhar algumas deliciosas pizzas</p>
+          <p class="h5">R$ 8,99</p>
+        </div>
+        <div class="col-4">
+          <img class="card-img-top m-2" src="https://diariodorio.com/wp-content/uploads/2020/07/daleopizzaria_20200710_144435_0-1280x720.jpg" alt="Card image cap">
+          <button class="btn-ofertas btn-block ml-1" type="button" class="">
+          Adicionar
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
