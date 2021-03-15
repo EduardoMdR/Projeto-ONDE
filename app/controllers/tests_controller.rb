@@ -34,6 +34,12 @@ class TestsController < ApplicationController
   end
   def carrinho
   end
+  def supermercado
+  end
+  def supermercadodestaque
+  end
+  def supermercadocarrinho
+  end
   def hover
   end
 

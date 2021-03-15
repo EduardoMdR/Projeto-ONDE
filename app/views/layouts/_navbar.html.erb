@@ -46,6 +46,15 @@
                   </ul>
                 </li>
                 <li>Serviços</li>
+                <li>Supermercado
+                  <ul class="drop">
+                    <div>
+                        <li><%= link_to 'todas ofertas', supermercado_path, class: 'text-light'%></li>
+                        <li><%= link_to 'página supermercado', supermercadodestaque_path, class: 'text-light'%></li>
+                        <li><%= link_to 'Carrinho', supermercadocarrinho_path, class: 'text-light'%></li>
+                    </div>
+                  </ul>
+                </li>
                 <li>Oferta do dia
                   <ul class="drop">
                     <div>
@@ -76,7 +85,6 @@
                 </li>
                 <li>Faça parte</li>
                 <% unless  current_page?(root_path) %>
-                <li><%= link_to 'Contato', contato_path, class: 'text-light'%></li>
                 <div id="marker"></div>
                 <% end %>
               </ul>
