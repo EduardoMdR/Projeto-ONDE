@@ -20,8 +20,10 @@
                 <select class="custom-select input-group-text">
                   <option selected>Todas</option>
                   <option value="1">Alimentação</option>
-                  <option value="2">Hospedagem</option>
-                  <option value="3">turismo</option>
+                  <option value="2">Serviços</option>
+                  <option value="3">Supermercado</option>
+                  <option value="3">Produtos</option>
+                  <option value="3">Ofertas</option>
                 </select>
               </div>
               <input type="text" class="form-control" placeholder="Procurar lojas hoteis, e muito mais ..." aria-label="Username" aria-describedby="basic-addon1">
@@ -64,6 +66,7 @@
                     </div>
                   </ul>
                 </li>
+                <% unless  current_page?(root_path) %>
                 <li>Marketplace
                   <ul class="drop">
                     <div>
@@ -73,6 +76,7 @@
                     </div>
                   </ul>
                 </li>
+                <% end %>
                 <li>Empresas
                   <ul class="drop">
                     <div>
@@ -84,9 +88,7 @@
                   </ul>
                 </li>
                 <li>Faça parte</li>
-                <% unless  current_page?(root_path) %>
                 <div id="marker"></div>
-                <% end %>
               </ul>
             </nav>
           </div>
