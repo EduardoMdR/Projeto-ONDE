@@ -2082,3 +2082,17 @@ a.icon-link {
     background-repeat: no-repeat;
   }
 }
+
+.bannersp1 {
+  background: linear-gradient(-45deg, #ffec61, #f321d7);
+}
+.bannersp2  {
+  background: linear-gradient(-45deg, #f403d1, #64b5f6);
+}
+.bannersp3  {
+  background: linear-gradient(-45deg, #24ff72, #9a4eff);
+}
+
+.bannersp4  {
+  background: linear-gradient(-45deg, $black-color, $admin-primary-color);
+}
