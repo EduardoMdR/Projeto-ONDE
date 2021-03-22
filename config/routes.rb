@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     get 'carrinho', to: "tests#carrinho", as: :carrinho
     get 'supermercado', to: "tests#supermercado", as: :supermercado
     get 'supermercado1', to: "tests#supermercadodestaque", as: :supermercadodestaque
-    get 'carrinho2', to: "tests#supermercadocarrinho", as: :supermercadocarrinho
+    get 'supermercado2', to: "tests#supermercadocarrinho", as: :supermercadocarrinho
 
     # admin
     get 'homeempresa', to: "tests#homeempresa", as: :homeempresa
