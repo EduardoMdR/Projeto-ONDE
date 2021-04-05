@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  price: 1.5
+  promotion?: false
+  old_price: 1.5
+  qtd_max: 1
+  avaliable?: false
+
+two:
+  name: MyString
+  description: MyString
+  price: 1.5
+  promotion?: false
+  old_price: 1.5
+  qtd_max: 1
+  avaliable?: false

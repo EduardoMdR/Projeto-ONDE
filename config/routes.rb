@@ -138,6 +138,17 @@ Rails.application.routes.draw do
     get '/', to: 'tags#index', as: :tags
   end
 
+  # Comida (food)
+  scope 'alimentacao' do
+    get ':id/new', to: 'foods#new', as: :new_food
+    post ':id/new', to: 'foods#create'
+    get '/:id/edit', to: 'foods#edit', as: :edit_food
+    patch '/:id/edit', to: 'foods#update'
+    get '/:id', to: 'foods#show', as: :show_food
+    delete '/:id', to: 'foods#destroy', as: :delete_food
+    get '/', to: 'foods#index', as: :foods
+  end
+
   # Endereço (address)
   scope 'locais' do
     get 'new', to: 'addresses#new', as: :new_address

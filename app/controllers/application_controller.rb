@@ -29,6 +29,10 @@ class ApplicationController < ActionController::Base
     o = Offer.find(params[:id])
     restrict_access unless (o.company.user == current_user) || current_user&.role_id == 1
   end
+  def require_owner_or_admin_food
+    f = Food.find(params[:id])
+    restrict_access unless (f.company.user == current_user) || current_user&.role_id == 1
+  end
 
   def require_address_owner
     restrict_access unless Address.find(params[:id]).user == current_user || current_user&.role_id == 1
