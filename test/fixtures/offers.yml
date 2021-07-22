@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  old_price: 1.5
+  new_price: 1.5
+  description: MyText
+  company_id: 1
+  qtdscore: 1
+  start_time: 2021-01-20 15:20:05
+  end_time: MyString
+  datetime: MyString
+  parceled: false
+  qtd_parcel: 1
+  cash: false
+  credit_card: false
+
+two:
+  name: MyString
+  old_price: 1.5
+  new_price: 1.5
+  description: MyText
+  company_id: 1
+  qtdscore: 1
+  start_time: 2021-01-20 15:20:05
+  end_time: MyString
+  datetime: MyString
+  parceled: false
+  qtd_parcel: 1
+  cash: false
+  credit_card: false

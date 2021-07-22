@@ -2,6 +2,27 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#show-users-container {
+  .menu {
+    background: #fff;
+    border: 1px solid grey;
+  }
+  .menu ul li a {
+    color: grey;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .menu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  .menu ul li a:hover {
+    color: #3e41cc;
+  }
+  .content {
+    background: #fff;
+    border: 1px solid grey;
+  }
 
 //nav bar
 @import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One|Roboto+Mono:400,700&display=swap');

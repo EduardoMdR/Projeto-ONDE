@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <table class="table table-striped align-middle" >
+    <thead>
+    <tr class="text-center">
+      <th>Nome</th>
+      <th>Valor (%)</th>
+      <th>Inicio</th>
+      <th>Fim</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @coupons&.each do |form| %>
+        <tr class="text-center">
+          <td class="align-middle"><%= link_to form.name, show_company_path(form.company), class: 'text-dark' %></td>
+          <td class="align-middle"><%= form.value %></td>
+          <td class="align-middle"><%= (form.end_time - form.start_time) / 3600 %></td>
+          <td class="align-middle"><%= form.end_time.strftime("%m/%d") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

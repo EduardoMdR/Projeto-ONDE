@@ -1,0 +1,58 @@
+<%= form_with model: offer, url: url, method: m do |form| %>
+  <div class="form-group">
+    <%= form.label :name, 'Nome' %>
+    <%= form.text_field :name, class: 'form-control', required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :old_price, 'Valor antigo' %>
+    <%= form.number_field :old_price, class: 'form-control', required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :new_price, 'Novo valor' %>
+    <%= form.number_field :new_price, class: 'form-control', required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :start_time, 'Inicio' %>
+    <%= form.datetime_field :start_time, required: true  %>
+
+    <%= form.label :end_time, '- Fim' %>
+    <%= form.datetime_field :end_time, required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description, 'Descrição' %>
+    <%= form.text_field :description, placeholder: 'Rua, Avenida', class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :parceled, 'Parcelado?' %>
+    <%= form.check_box :parceled %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :qtd_parcel, 'Em quantas vezes' %>
+    <%= form.number_field :qtd_parcel, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :cash, 'Em dinheiro?' %>
+    <%= form.check_box :cash %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :credit_card, 'Cartão?' %>
+    <%= form.check_box :credit_card %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tag_id, 'Tag' %>
+    <%= form.collection_select(:tag_id, Tag.all, :id, :name) %>
+  </div>
+
+  <div class="text-center">
+    <%= form.submit 'Adicionar', class: 'btn btn-outline-primary' %>
+  </div>
+<% end %>

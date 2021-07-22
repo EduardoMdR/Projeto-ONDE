@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <table class="table table-striped align-middle" >
+    <thead>
+    <tr class="text-center">
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Inicio</th>
+      <th>Fim</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @offers&.each do |form| %>
+        <tr class="text-center">
+          <td class="align-middle"><%= link_to form.name, show_offer_path(form), class: 'text-dark' %></td>
+          <td class="align-middle"><%= form.new_price %></td>
+          <td class="align-middle"><%= form.start_time.strftime("%m/%d %H:%M") %></td>
+          <td class="align-middle"><%= form.end_time.strftime("%m/%d %H:%M") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

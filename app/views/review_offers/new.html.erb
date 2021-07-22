@@ -1,0 +1,11 @@
+<div class="container border shadow-sm bg-light p-5 my-3">
+  <h1 class="d-flex justify-content-between text-secondary">
+    Adicione uma review
+  </h1>
+
+  <%= render 'form', review_offer: @review_offer, url: new_review_offer_path, m: :post %>
+</div>
+
+<div class="back-button d-flex justify-content-center p-3">
+  <%= link_to 'Voltar', url_for(:back), class: 'btn btn-primary form-control w-50' %>
+</div>
