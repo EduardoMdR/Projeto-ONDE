@@ -8,9 +8,18 @@ Rails.application.routes.draw do
     get 'ofertas', to: "tests#ofertas", as: :ofertas
     get 'contato', to: "tests#contato", as: :contato
     get 'parceiros', to: "tests#parceiros", as: :parceiros
-    get 'empresas', to: "tests#empresas", as: :empresas
+    get 'empresa', to: "tests#empresa", as: :empresa
+    get 'empresa2', to: "tests#empresa2", as: :empresa2
+    get 'empresa3', to: "tests#empresa3", as: :empresa3
+    get 'empresa4', to: "tests#empresa3", as: :empresa4
     get 'pesquisa', to: "tests#pesquisa", as: :pesquisa
     get 'ofertasdestaque', to: "tests#ofertasdestaque", as: :ofertasdestaque
+    get 'alimentacao', to: "tests#alimentacao", as: :alimentacao
+    get 'alimentacao1', to: "tests#alimentacaodestaque", as: :alimentacaodestaque
+    get 'carrinho', to: "tests#carrinho", as: :carrinho
+    get 'supermercado', to: "tests#supermercado", as: :supermercado
+    get 'supermercado1', to: "tests#supermercadodestaque", as: :supermercadodestaque
+    get 'supermercado2', to: "tests#supermercadocarrinho", as: :supermercadocarrinho
 
     # admin
     get 'homeempresa', to: "tests#homeempresa", as: :homeempresa

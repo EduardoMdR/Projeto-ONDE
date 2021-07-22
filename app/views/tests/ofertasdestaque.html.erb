@@ -1,176 +1,83 @@
 <%= render 'layouts/navbar' %>
-<div class="container">
-
+<div class="fundo">
+  <small> <a href="#" class="text-dark"> <i class="fa fa-home" aria-hidden="true"></i> </a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> 
+  <a href="#" class="text-dark"> Eletronicos </a> <i class="fa fa-angle-double-right" aria-hidden="true"></i> 
+  <a href="#" class="text-dark"> Celulares </a></small>
   <div class="row pt-3">
-    <div class="col-12 col-md-5 col-lg-5 pt-3 pb-5 menulateral-destaque" style="justify-content: center;flex : 1;">
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 pt-3 pb-5" style="justify-content: center;flex : 1;">
       <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
         <div class="carousel-inner">
-          <div class="carousel-item active"> <img src="https://dju62cr0hx23m.cloudfront.net/Custom/Content/Products/99/37/993761_pneu-225-50r17-michelin-primacy-4-98v_m3_636806438449880562.jpg" alt="Hills"> </div>
-          <div class="carousel-item"> <img src="https://d1mvenqtvaw2m9.cloudfront.net/CMS/images/ModelosPneu/MICHELIN-PRIMACY4/550/23.jpg" alt="Hills"> </div>
-          <div class="carousel-item"> <img src="https://carrefourbr.vtexassets.com/arquivos/ids/6527186-800-auto?width=800&height=auto&aspect=true" alt="Hills"> </div>
-          <div class="carousel-item"> <img src="https://a-static.mlcdn.com.br/618x463/jogo-de-4-pneus-michelin-aro-16-primacy-4-205-55r16-94v-tl-xl/pneustore/mi10110139/230c26bdc28256616a0a231df462c60e.jpg" alt="Hills"> </div>
+          <div class="carousel-item active"> <img src="https://cdn.shopify.com/s/files/1/0413/8896/6039/products/celular-samsung-galaxy-a11-64gb-3gb-tela-64-4g-3-cameras-azul_1.jpg?v=1600458082" alt="Hills"> </div>
+          <div class="carousel-item"> <img style="object-fit: cover;" src="https://www.pontofrio-imagens.com.br/Control/ArquivoExibir.aspx?IdArquivo=1608259880" alt="Hills"> </div>
         </div> 
         <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a>
         <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a>
         <ol class="carousel-indicators list-inline">
-          <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="https://dju62cr0hx23m.cloudfront.net/Custom/Content/Products/99/37/993761_pneu-225-50r17-michelin-primacy-4-98v_m3_636806438449880562.jpg" class="img-fluid"> </a> </li>
-          <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="https://d1mvenqtvaw2m9.cloudfront.net/CMS/images/ModelosPneu/MICHELIN-PRIMACY4/550/23.jpg" class="img-fluid"> </a> </li>
-          <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> <img src="https://carrefourbr.vtexassets.com/arquivos/ids/6527186-800-auto?width=800&height=auto&aspect=true" class="img-fluid"> </a> </li>
-          <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel"> <img src="https://a-static.mlcdn.com.br/618x463/jogo-de-4-pneus-michelin-aro-16-primacy-4-205-55r16-94v-tl-xl/pneustore/mi10110139/230c26bdc28256616a0a231df462c60e.jpg" class="img-fluid"> </a> </li>
+          <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <img src="https://cdn.shopify.com/s/files/1/0413/8896/6039/products/celular-samsung-galaxy-a11-64gb-3gb-tela-64-4g-3-cameras-azul_1.jpg?v=1600458082" class="img-fluid"> </a> </li>
+          <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="https://www.pontofrio-imagens.com.br/Control/ArquivoExibir.aspx?IdArquivo=1608259880" class="img-fluid"> </a> </li>
         </ol>
       </div>
     </div>
 
-    <div class="col-12 col-md-7 col-lg-7 menupesquisa2 pt-3 pb-3">
-      <h2>Conjunto 4 pneu Michellin</h2>
-      <span class="h6 pt-3 float-right">De <s class="text-danger">R$1099,99</s>. Por <span class="h4 text-success">R$999,99</span></span>
-      <h4 class="pt-3">Descrição</h4>
-      
-      <button class="btn btn-outline-success float-right m-3" type="button" class="">
-      Calcular Rota <i class="fa fa-map-marker mr-2 text-success"></i>
-      </button>
-      
-      <p>A Michelin é uma das marcas mais famosas e reconhecidas do mundo
-       no segmento de pneus. Presente em mais de 170 países, a empresa 
-       de origem francesa fabrica pneus para automóveis. É uma das principais fabricantes de pneus do mundo.</p>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-12 col-lg-5 text-center menulateral-destaque">
-      <h4 class="pt-3">Ofertado por</h4>
-      <img src="https://blog.empresometro.com.br/wp-content/uploads/2017/03/33-1171x417.png" width="80%">
-      <h4 class="pt-3">Lojinha da Ju</h4>
-      <h5>
-        <i class="fa fa-star " aria-hidden="true"></i>
+    <div class="col-12 col-sm-6 col-md-6 col-lg-5 menupesquisa2 pt-3 pb-3 m-1">
+      <h5>Smartphone Galaxy A11 Samsung 3GB Ram 64GB Android 10 Câmera Tripla 13MP+2M+5MP Tela 6.4" Preto</h5>
+      <p class=" text-warning">
         <i class="fa fa-star" aria-hidden="true"></i>
         <i class="fa fa-star" aria-hidden="true"></i>
-        <i class="fa fa-star-half-o" aria-hidden="true"></i>
-        <i class="fa fa-star-o" aria-hidden="true"></i>
-      </h5>
-      <h6>(3,9)<h6>
-      <h6 class="pt-1">
-        <i class="fa fa-1x fa-whatsapp"></i> (35) 99999-9999
-      </h6>
-      <h6 class="pb-1">
-        <i class="fa fa-1x fa-envelope-o"></i>lojinhadaju@gmail.com
-      </h6>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.372689007904!2d-46.748700385096136!3d-22.187938585382042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c9ae09bf22398b%3A0x235d993ca1cef5b1!2sLojinha%20da%20Ju!5e0!3m2!1spt-BR!2sbr!4v1606923293698!5m2!1spt-BR!2sbr" width="80%" height="225" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-    <div class="col-12 col-lg-7 menupesquisa2 pt-3 pb-3">
-
-      <!-- Exemplo 1
-      <p>
-        <a class="h4 text-dark pl-5" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Garantia</a>
-        <a class="h4 text-dark float-right pr-5" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Desempenho</a>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star text-muted" aria-hidden="true"></i>
+        <span class="text-primary h6">(35)</span>
       </p>
-      <div class="row">
-        <div class="col">
-          <div class="collapse multi-collapse" id="multiCollapseExample1">
-            <div class="card card-body">
-              <p>Todos os Pneus Michelin são uma merda e não tem garantia.
-              Msa com um pouco de briga e alguns processos no Procon, essa 
-              data pode variar entre 6 mêses até 1 ano.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="collapse multi-collapse" id="multiCollapseExample2">
-            <div class="card-body">
-              <p>Um bom desempenho com média de duração de 3 anos e meio.
-              è muito importante lembrar que isso se aplica em condições 
-              normais, caso um cacchoro decida comer seu pneu nos não 
-              nos responsabilizamos</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      -->
-
-      <!-- Exemplo 2 -->
-      <div id="accordion">
-        <div class="">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-              <a class="h4 text-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Garantia
-              </a>
-            </h5>
-          </div>
-
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-              <p>Todos os Pneus Michelin são uma merda e não tem garantia.
-              Msa com um pouco de briga e alguns processos no Procon, essa 
-              data pode variar entre 6 mêses até 1 ano.</p>
-            </div>
-          </div>
-        </div>
-        <div class="">
-          <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-              <a class="h4 text-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Desempenho
-              </a>
-            </h5>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body">
-              <p>Um bom desempenho com média de duração de 3 anos e meio.
-              è muito importante lembrar que isso se aplica em condições 
-              normais, caso um cacchoro decida comer seu pneu nos não 
-              nos responsabilizamos</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- -->
-
-      <!-- Exemplo 3
-      <div id="accordion">
-        <div class="card">
-          <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-              <button class="btn btn-link h4 text-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Garantia
-              </button>
-            </h5>
-          </div>
-
-          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-              Todos os Pneus Michelin são uma merda e não tem garantia.
-              Msa com um pouco de briga e alguns processos no Procon, essa 
-              data pode variar entre 6 mêses até 1 ano.
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h5 class="mb-0">
-              <button class="btn btn-link h4 text-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Desempenho
-              </button>
-            </h5>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body">
-              Um bom desempenho com média de duração de 3 anos e meio.
-              è muito importante lembrar que isso se aplica em condições 
-              normais, caso um cacchoro decida comer seu pneu nos não 
-              nos responsabilizamos
-            </div>
-          </div>
-        </div>
-      </div>
-      -->
-
+      <p>O Smartphone Samsung Galaxy A11 é o item perfeito para quem gosta de tela grande!
+        Com display Infinito de 6.4 polegadas do Galaxy A11, possui uma proporção ampla que
+        preenche sua tela com conteúdos de ponta a ponta. Assista aos... <a href="#informacoes">Ver mais</a></p>
+      <p>Vendido por <a href="#" class="text-dark">Lojinha A</a></p>
+      <hr class="my-4 w-100">
+      <p class="font-weight-bold">Características do Produto</p>
+      <p>
+        <ul>
+          <li>Uma tela grande para ver melhor</li>
+          <li>Produto de alta qualidade</li>
+          <li>Fabricado com muito cuidado e atencao aos detalhes</li>
+          <li>Marca reconhecida</li>
+        </ul>
+      </p>
+    </div>
+    <div class="col-12 col-sm-12 col-md-12 col-lg-3 menupesquisa2 pt-3 pb-3 m-1">
+      <span class="font-weight-light">De <s>R$1099,99</s>.</span><br /> <span class="h3 text-dark">Por R$999,99</span> <span class="text-success">(10% de desconto)</span>
+      <p class="text-success">Em estoque</p>
+      <hr class="my-4 w-75">
+      <p>Em até <span class="text-success">12x</span> sem juros
+      <p>Quantidade <input type="text" value="1" class="css-input"></p>
+      <button class="btn-ofertas btn-block" type="button" class="">
+        Adicionar ao Carrinho
+      </button>
+      <hr class="my-4 w-75">
+      <i class="fa fa-map-marker" aria-hidden="true"><span class="text-dark"></span></i> <span class="font-weight-bold"> Pinhal - SP</span><small> (Seu endereço)</small>
+      <table class="table mt-2">
+        <tbody>
+          <tr>
+            <td>Retirada na loja</td>
+            <td>Hoje</td>
+            <td class="text-success">gratis</td>
+          </tr>
+          <tr>
+            <td>Delivery</td>
+            <td>1 dia</td>
+            <td class="text-success">R$ 5,97</td>
+          </tr>
+        </tbody>
+      </table>
+      <!--<p>Consultar prazo e frete</p>
+      <input class="" type="text" placeholder="00000-000">
+      <a href="" class="btn text-center btn-sm btn-light">BUSCAR</a>-->
     </div>
   </div>
 
-  <h4 class="text-center pt-4">Produtos relacionado</h4>
   <div class="row text-dark">
     <div class="col-12">
+    <h4 class="text-center pt-5">Produtos relacionado</h4>
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -185,4 +92,109 @@
       </div>
     </div>    
   </div>
+  <div>
+  </div>
+  <h4 class="pt-3">Detalhes do Produto</h4>
+  <p class="m-4">O Smartphone Samsung Galaxy A11 é o item perfeito para quem gosta de tela grande!
+  Com display Infinito de 6.4 polegadas do Galaxy A11, possui uma proporção ampla que 
+  preenche sua tela com conteúdos de ponta a ponta. Assista aos seus vídeos, jogos e 
+  streaming ao vivo favoritos em alta definição e com muito mais qualidade.
+  Com o design moderno, conta com uma câmera Ultra Wide de 115 graus, como o olho humano, 
+  uma Câmera Wide de 13MP para fotos claras e nítidas durante todo o dia e, para completar, 
+  uma câmera de profundidade de 2MP para ajustar o desfoque e destacar o que realmente importa. 
+  Você merece fotos incríveis.Possui ainda uma bateria de ótima duração, mesmo com uso mais 
+  prolongado. Já pensou ter esse aparelho tecnológico na palma da mão?</p>
+  <h4 class="pt-3">Ficha técnica</h4>
+  <table class="table table-striped m-4">
+    <tbody>
+      <tr>
+        <th scope="row">Marca</th>
+        <td>Samsumg</td>
+      </tr>
+      <tr>
+        <th scope="row">Tipo de Chip</th>
+        <td>Nano Chip</td>
+      </tr>
+      <tr>
+        <th scope="row">Versão S.O.</th>
+        <td>Android 10.0</td>
+      </tr>
+      <tr>
+        <th scope="row">Tamanho do Display</th>
+        <td>6.4"</td>
+      </tr>
+      <tr>
+        <th scope="row">Resolução </th>
+        <td>720 x 1560 (HD+)</td>
+      </tr>
+      <tr>
+        <th scope="row">Câmera Traseira</th>
+        <td>13MP (Principal) + 5MP (Ultra Wide) + 2MP (Profundidade)</td>
+      </tr>
+      <tr>
+        <th scope="row">Câamera Frontal</th>
+        <td>8MP</td>
+      </tr>
+      <tr>
+        <th scope="row">Memoria RAM</th>
+        <td>3GB</td>
+      </tr>
+      <tr>
+        <th scope="row">Memoria Interna</th>
+        <td>34GB</td>
+      </tr>
+      <tr>
+        <th scope="row">Cor</th>
+        <td>Azul</td>
+      </tr>
+      <tr>
+        <th scope="row">Garantia do Fornecedor</th>
+        <td>12 Meses</td>
+      </tr>
+      <tr>
+        <th scope="row">Dimensões do produto - cm (AxLxP)</th>
+        <td>161.4 x 76.3 x 8.0 mm</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4 class="pt-3">Avaliações</h4>
+  <div class="m-4">
+    <p class=" text-warning">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+    </p>
+    <h6>Ótima performance.</h6>
+    <p>Excelente. Até o momento desta review, o produto apresenta-se 
+    em ótima performance.</p>
+    <h6>Shirlene <small>(04/03/21)</small></h6>
+    <hr class="my-4 w-100">
+    <p class=" text-warning">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <i class="fa fa-star text-muted" aria-hidden="true"></i>
+      <i class="fa fa-star text-muted" aria-hidden="true"></i>
+    </p>
+    <h6>Produto muito bom, mas tive uma dificuldade com o carregador</h6>
+    <p>Boa tarde, o carregador comprado não está carregando. 
+    Coloquei minha bateria viciada para testar e outra bateria 
+    que comprei nova e não carrega de jeito nenhum. Tenho que 
+    usar meu carregador do outro notebook acer f5-573g50ks. 
+    Já comprei para não ter que estar usando de um em outro.</p>
+    <h6>Jeosvaldo <small>(03/03/21)</small></h6>
+
+    <a href="" class="pt-5"><small>Ver todas reviwes</small></a>
+  </div>
 </div>
+<script>
+    $('.items').slick({
+  dots: true,
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 3
+  });
+</script>

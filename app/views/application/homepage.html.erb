@@ -4,293 +4,517 @@
 
 <div class="home">
   <div class="homeimg">
-  <div class="hometext">
-    <h1 class="display-3 text-light text-center pt-5 pb-4">
+  <div class="hometext text-light">
+    <h1 class="display-4 text-center">
     Bem Vindo ao <strong>ONDE Pinhal</strong>
     </h1>
     <div class="d-flex justify-content-center">
+    <p class="hometexttext mt-4 text-justify">Somos uma plataforma de empresas comerciais
+      temos mais de 000 empresas cadastradas.
+      O que está esperando, faça já sua busca pela
+      cidade de Espirito Santo do Pinhal.</p>
+    </div>
+
+    <div class="d-flex justify-content-center pt-1">
       <div class="searchbar">
-        <input type="text" placeholder="Procurar categoria ..." class="search_input">
+        <input type="text" placeholder="Buscar lugares, marcas e muito mais ..." class="search_input">
         <%= link_to "<i class='fa fa-search' ></i>".html_safe, pesquisa_path, class: 'search_icon' %>
       </div>
     </div>
     </div>
   </div>
 </div>
-<div class="container background">
-  
-<h2 class="pt-5">Principais categorias</h2>
-<div class="row pb-5">
-  <p>
-    <div class="col-6 col-sm-6 col-md-3 col-lg-3 mt-5">
-      <a class="text-dark" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
-        <div class="card-deck">
-          <div class="">
-            <%=image_tag("imagens_categoria/calendario.png", class: "card-img-top", alt: "Card_Top")%>
-            <div class="card-body">
-              <h5 class="card-title text-center">Eventos (3)</h5>
-            </div>
-          </div>
+<div class="background">
+<div class="cat my-3">
+  <div class="categorias row text-justify">
+    <div class="box col-12 col-sm-6 col-lg-6 col-xl-6">
+      <div class="videoBx">
+        <img src="https://www.pfizer.com.br/sites/default/files/inline-images/alimentos-funcionais-o-que-sao-e-para-que-servem.jpg">
+      </div>
+      <div class="contentBX">
+        <div class="content">
+          <h2>Alimentação</h2>
+          <p>Está precisando almoçar fora de casa? Ou quer conhecer 
+            os melhores restaurantes/lanchonete da cidade? Encontre
+            aqui mesmo !!! 
+          </p>
         </div>
-      </a> 
+      </div>
     </div>
-    
-    <div class="col-6 col-sm-6 col-md-3 col-lg-3 mt-5">
-      <a class="text-dark" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">
-        <div class="card-deck">
-          <div class="">
-            <%=image_tag("imagens_categoria/saude.png", class: "card-img-top p-3", alt: "Card_Top")%>
-            <div class="card-body">
-              <h5 class="card-title text-center">Saúde (12)</h5>
-            </div>
-          </div>
-        </div>
-      </a>      
-    </div>
-      
-    <div class="col-6 col-sm-6 col-md-3 col-lg-3 mt-5">
-      <a class="text-dark" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">
-        <div class="card-deck">
-          <div class="">
-            <%=image_tag("imagens_categoria/transporte.png", class: "card-img-top p-3", alt: "Card_Top")%>
-            <div class="card-body">
-              <h5 class="card-title text-center">Delivery (11)</h5>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    
-    <div class="col-6 col-sm-6 col-md-3 col-lg-3 mt-5">
-      <a class="text-dark" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample4">
-        <div class="card-deck">
-          <div class="">
-            <%=image_tag("imagens_categoria/cinema.png", class: "card-img-top p-3", alt: "Card_Top")%>
-            <div class="card-body">
-              <h5 class="card-title text-center">lazer (15)</h5>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </p>
-</div>
-  <div class="row">
-    <div class="col-6">
-      <a href="./test/pesquisa" class="text-dark">
-        <div class="collapse multi-collapse" id="multiCollapseExample1">
-          <div class="card card-body">
-            Descubra os principais eventos que estão presentes na nossa
-            querida cidade. Nada melhor do que encontrar um acontecimento
-            novo e aproveitar ao maximo tudo que está ocorrendo.
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="col-6">
-      <a href="./test/pesquisa" class="text-dark">
-        <div class="collapse multi-collapse" id="multiCollapseExample2">
-          <div class="card card-body">
-            Está precisando de cuidados médicos? Ou de algum
+    <div class="box col-12 col-sm-6 col-lg-6 col-xl-6">
+      <div class="videoBx">
+        <img src="https://telemedicinamorsch.com.br/wp-content/uploads/2019/09/como-abrir-consultorio-medico.jpg">
+      </div>
+      <div class="contentBX">
+        <div class="content">
+          <h2>Saúde</h2>
+          <p>Está precisando de cuidados médicos? Ou de algum
             medicamneto? Encontre os locais mais bem avaliados e se
-            mantenha informado sobre os principais dados sobre a 
-            Covid-19.
-          </div>
+            mantenha informado sobre a Covid-19.
+          </p>
         </div>
-      </a>
+      </div>
     </div>
-    <div class="col-6 mt-3">
-      <a href="./test/pesquisa" class="text-dark">
-        <div class="collapse multi-collapse" id="multiCollapseExample3">
-          <div class="card card-body">
-            Precisando comprar algo e não quer sair do conforto de sua
-            casa? Encontre as principais lojas que estão fazendo entregas
-            a domicilio.
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="col-6 mt-3">
-      <a href="./test/pesquisa" class="text-dark">
-        <div class="collapse multi-collapse" id="multiCollapseExample4">
-          <div class="card card-body">
-            Está afim de curtir o tempo livre? Descubra os melhores 
-            locais para curtir o final de semana, fazer uma trilha
-            com os amigos, ou ainda, esperimentar comidas em alta na
+    <div class="box col-12 col-sm-6 col-lg-4 col-xl-4">
+      <div class="videoBx">
+        <img src="https://www.business.rutgers.edu/sites/default/files/styles/hero_detail_1200x500_/public/images/news/bizoffashion5reasons-hero.jpg?h=1146c5e2&itok=_Tqr-pNp">
+      </div>
+      <div class="contentBX">
+        <div class="content">
+          <h2>Moda e Beleza</h2>
+          <p>Encontre os melhores lugares antedos na moda em nossa
             cidade.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="box col-12 col-sm-6 col-lg-4 col-xl-4">
+      <div class="videoBx">
+        <img src="https://i0.wp.com/www.tempario.com.br/wp-content/uploads/2019/06/ferramentas-para-oficina-mec%C3%A2nica-1-2.jpg?fit=1254%2C837">
+      </div>
+      <div class="contentBX">
+        <div class="content">
+          <h2>Automobilismo</h2>
+          <p>Não se preocupe se seu carro quebrou, ou se está
+            procurando um novo Calhambeque para escutar as músicas
+            do Rei, sua solução está aqui.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="box col-12 col-sm-12 col-lg-4 col-xl-4">
+      <div class="videoBx">
+        <img src="https://www.projectbuilder.com.br/wp-content/themes/yootheme/cache/177923-afinal-o-que-e-melhor-terceirizar-um-servico-ou-contratar-novos-funcionarios-b5927463.jpeg">
+      </div>
+      <div class="contentBX">
+        <div class="content">
+          <h2>Serviços</h2>
+          <p>Descubra os serviços prestados por grandes
+            empresas locais.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+<div class="ofertas pb-4">
+  <div class="row d-flex justify-content-center">
+    <div class="col-sm-10 col-md-5 col-lg-4 col-xl-3 text-justify pt-5 ml-3 oferta-texto-1">
+      Agora você pode ficar por dentro das melhores ofertas de 
+      Espirito santo do pinhal. Desejamos boas compras a todos
+      <div class="d-flex justify-content-center w-100 mt-5">
+        <button type="button" class="botao-oferta font-weight-bold mt-4 text-light">Conheça todas as Ofertas perto de você</button>
+      </div>
+    </div>
+    <div class="col-lg-4 col-xl-3 col-sm-6 pt-5 oferta-texto-2">
+      <p class="pt-4 ml-4">Ofertas verificadas antes de serem adicionadas</p>
+      <p>+ de 50 novas Ofertas Diariamente</p>
+      <p class="mr-5">Tudo o que precisa em um só Lugar</p>
+    </div>
+    <div class="col-md-6 col-lg-3 col-xl-5 oferta-texto-3">
+      Milhares de Ofertas para aproveitar
+      <img class="pt-2 pb-2 mr-5 img-fluid" src="https://raw.githubusercontent.com/Project-ONDE/Projeto-ONDE/main/app/assets/images/anuncio.png" alt="Card image cap">
+    </div>
+  </div>
+</div>
+<div class="mt-3 mx-5">
+  <div class="card-group">
+    <div class="cards oferta-home">
+      <img class="card-img-top img-fluid p-1 rounded-top p-3" style="object-fit: cover;" src="https://a-static.mlcdn.com.br/1500x1500/amaciante-ype-blue-concentrado-1l/magazineluiza/225595700/3f85639419aed188672e0fe8757edc9e.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="oferta-titulo text-bold">R$ 5,90
+          <span class="text-success float-right pt-1">À vista</span>
+        </h5>
+        <div style="line-height: 5px;">
+          <p class="card-text d-none d-xl-block oferta-titulo-2">Preço: <s>R$ 11,80</s> (Economia de 50%)</p>
+          <p class="card-text d-none d-xl-block oferta-titulo-2"><span style="color: #000">Tempo restante:</span> 10:59:01</p>
+          <p class="oferta-titulo-3 hometextcompany text-justify">Amaciante Ype 1L - Confort e carinho</p>
+          <i class="fa fa-check-circle text-primary"></i><span class="font-weight-bold oferta-titulo-4"> Supermercado Cubatão</span>
+        </div>
+        
+        <p class="h5">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
+        </p>
+        <div class="d-flex justify-content-center">
+        <button type="button" class="botao-oferta mt-4">Ver Oferta</button>
+        </div>
+      </div>
+    </div>
+    <div class="cards oferta-home">
+      <img class="card-img-top img-fluid p-1 rounded-top p-3" style="object-fit: cover;" src="https://images-shoptime.b2w.io/produtos/01/00/img/52403/7/52403727_1GG.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="oferta-titulo text-bold"> R$ 70.000 
+          <span class="text-success float-right pt-1">Entrada + 48x</span>
+        </h5>
+        <div style="line-height: 5px;">
+          <p class="card-text d-none d-xl-block oferta-titulo-2">Preço: <s>R$ 11,80</s> (Economia de 50%)</p>
+          <p class="card-text d-none d-xl-block oferta-titulo-2"><span style="color: #000">Tempo restante:</span> 10:59:01</p>
+          <p class="oferta-titulo-3 hometextcompany text-justify">Chevrolet Camaro Amarelo 350cc - 2015</p>
+          <i class="fa fa-check-circle text-primary"></i><span class="font-weight-bold oferta-titulo-4"> JF Veiculos</span>
+        </div>
+        
+        <p class="h5">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
+        </p>
+        <div class="d-flex justify-content-center">
+        <button type="button" class="botao-oferta mt-4">Ver Oferta</button>
+        </div>
+      </div>
+    </div>
+    <div class="cards oferta-home">
+      <img class="card-img-top img-fluid p-1 rounded-top p-3" style="object-fit: cover;" src="https://www.superfrut.com.br/paginas/imagem/4d732-sorvete.png/450/400/auto" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="oferta-titulo text-bold">R$ 9,90
+          <span class="text-success float-right pt-1">À vista</span>
+        </h5>
+        <div style="line-height: 5px;">
+          <p class="card-text d-none d-xl-block oferta-titulo-2">Preço: <s>R$ 11,80</s> (Economia de 50%)</p>
+          <p class="card-text d-none d-xl-block oferta-titulo-2"><span style="color: #000">Tempo restante:</span> 10:59:01</p>
+          <p class="oferta-titulo-3 hometextcompany text-justify">Sorvete de três bolas kibom</p>
+          <i class="fa fa-check-circle text-primary"></i><span class="font-weight-bold oferta-titulo-4"> Açai, Sorvetes & CIA</span>
+        </div>
+        
+        <p class="h5">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
+        </p>
+        <div class="d-flex justify-content-center">
+        <button type="button" class="botao-oferta mt-4">Ver Oferta</button>
+        </div>
+      </div>
+    </div>
+    <div class="cards oferta-home">
+      <img class="card-img-top img-fluid p-1 rounded-top p-3" style="object-fit: cover;" src="https://d129q82p91aw7f.cloudfront.net/d1c288dedb45/sutia-sem-bojo-com-renda-preto-44.200x200.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="oferta-titulo text-bold">R$ 29,90
+          <span class="text-success float-right pt-1">3x sem juros</span>
+        </h5>
+        <div style="line-height: 5px;">
+          <p class="card-text d-none d-xl-block oferta-titulo-2">Preço: <s>R$ 11,80</s> (Economia de 50%)</p>
+          <p class="card-text d-none d-xl-block oferta-titulo-2"><span style="color: #000">Tempo restante:</span> 10:59:01</p>
+          <p class="oferta-titulo-3 hometextcompany text-justify">Sutiã feminino luivitara preto marinho - 47 ao 70</p>
+          <i class="fa fa-check-circle text-primary"></i><span class="font-weight-bold oferta-titulo-4"> Espaço feminino</span>
+        </div>
+        
+        <p class="h5">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
+        </p>
+        <div class="d-flex justify-content-center">
+        <button type="button" class="botao-oferta mt-4">Ver Oferta</button>
+        </div>
+      </div>
+    </div>
+    <div class="cards oferta-home">
+      <img class="card-img-top img-fluid p-1 rounded-top p-3" style="object-fit: cover;" src="https://cd.shoppub.com.br/rafale/media/cache/0c/1e/0c1e95e971cc26a45dff8214e6566682.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="oferta-titulo text-bold">R$ 75,90
+          <span class="text-success float-right pt-1">10x sem juros</span>
+        </h5>
+        <div style="line-height: 5px;">
+          <p class="card-text d-none d-xl-block oferta-titulo-2">Preço: <s>R$ 11,80</s> (Economia de 50%)</p>
+          <p class="card-text d-none d-xl-block oferta-titulo-2"><span style="color: #000">Tempo restante:</span> 10:59:01</p>
+          <p class="oferta-titulo-3 hometextcompany text-justify">Cortuno tático femino preto 37 ao 50</p>
+          <i class="fa fa-check-circle text-primary"></i><span class="font-weight-bold oferta-titulo-4"> Sapatos Pinhal</span>
+        </div>
+        
+        <p class="h5">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
+        </p>
+        <div class="d-flex justify-content-center">
+        <button type="button" class="botao-oferta mt-4">Ver Oferta</button>
+        </div>
+      </div>
+    </div>
+    <div class="cards oferta-home">
+      <img class="card-img-top img-fluid p-1 rounded-top p-3" style="object-fit: cover;" src="https://br.habcdn.com/files/dynamic_content/mesa-de-compensado-naval-2823620_gallery.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="oferta-titulo text-bold"> R$ 299,90
+          <span class="text-success float-right pt-1">10x sem juros</span>
+        </h5>
+        <div style="line-height: 5px;">
+          <p class="card-text d-none d-xl-block oferta-titulo-2">Preço: <s>R$ 11,80</s> (Economia de 50%)</p>
+          <p class="card-text d-none d-xl-block oferta-titulo-2"><span style="color: #000">Tempo restante:</span> 10:59:01</p>
+          <p class="oferta-titulo-3 hometextcompany text-justify">Armario compensado de madeira - cor beje</p>
+          <i class="fa fa-check-circle text-primary"></i><span class="font-weight-bold oferta-titulo-4"> Casas Bahia</span>
+        </div>
+        
+        <p class="h5">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
+        </p>
+        <div class="d-flex justify-content-center">
+        <button type="button" class="botao-oferta mt-4">Ver Oferta</button>
+        </div>
+      </div>
+    </div>
+    <div class="cards oferta-home">
+      <img class="card-img-top img-fluid p-1 rounded-top p-3" style="object-fit: cover;" src="https://www.palaciodasferramentas.com.br/uploads/produtos/full/90689103-2016-10-9-8-57.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="oferta-titulo text-bold">R$ 10,90
+          <span class="text-success float-right pt-1">À vista</span>
+        </h5>
+        <div style="line-height: 5px;">
+          <p class="card-text d-none d-xl-block oferta-titulo-2">Preço: <s>R$ 11,80</s> (Economia de 50%)</p>
+          <p class="card-text d-none d-xl-block oferta-titulo-2"><span style="color: #000">Tempo restante:</span> 10:59:01</p>
+          <p class="oferta-titulo-3 hometextcompany text-justify">Martelo para matar tik toker - ultragas</p>
+          <i class="fa fa-check-circle text-primary"></i><span class="font-weight-bold oferta-titulo-4"> JC Materiais de construção</span>
+        </div>
+        
+        <p class="h5">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
+        </p>
+        <div class="d-flex justify-content-center">
+        <button type="button" class="botao-oferta mt-4">Ver Oferta</button>
+        </div>
+      </div>
+    </div>
+    <div class="cards oferta-home">
+      <img class="card-img-top img-fluid p-1 rounded-top p-3" style="object-fit: cover;" src="https://a-static.mlcdn.com.br/1500x1500/sabao-em-po-omo-lavagem-perfeita-16kg/magazineluiza/223322600/3556921304d1908de39b2046e65de7fe.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="oferta-titulo text-bold">R$ 7,90
+          <span class="text-success float-right pt-1">À vista</span>
+        </h5>
+        <div style="line-height: 5px;">
+          <p class="card-text d-none d-xl-block oferta-titulo-2">Preço: <s>R$ 11,80</s> (Economia de 50%)</p>
+          <p class="card-text d-none d-xl-block oferta-titulo-2"><span style="color: #000">Tempo restante:</span> 10:59:01</p>
+          <p class="oferta-titulo-3 hometextcompany text-justify">Omo multilação progress - edição pós massacre</p>
+          <i class="fa fa-check-circle text-primary"></i><span class="font-weight-bold oferta-titulo-4"> Supermercado Cubatão</span>
+        </div>
+        
+        <p class="h5">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i>
+          <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
+        </p>
+        <div class="d-flex justify-content-center">
+        <button type="button" class="botao-oferta mt-4">Ver Oferta</button>
+        </div>
+      </div>
+    </div>
+    <div class="cards oferta-home">
+      <img class="card-img-top img-fluid p-1 rounded-top p-3" style="object-fit: cover;" src="https://d1mvenqtvaw2m9.cloudfront.net/CMS/images/ModelosPneu/MICHELIN-PILOT-SPORT-4/550/23.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="oferta-titulo text-bold"> R$ 105,90
+          <span class="text-success float-right pt-1">10x sem juros</span>
+        </h5>
+        <div style="line-height: 5px;">
+          <p class="card-text d-none d-xl-block oferta-titulo-2">Preço: <s>R$ 11,80</s> (Economia de 50%)</p>
+          <p class="card-text d-none d-xl-block oferta-titulo-2"><span style="color: #000">Tempo restante:</span> 10:59:01</p>
+          <p class="oferta-titulo-3 hometextcompany text-justify">Pneu aro 17 para corrida - michillin</p>
+          <i class="fa fa-check-circle text-primary"></i><span class="font-weight-bold oferta-titulo-4"> Pneus SportCar</span>
+        </div>
+        
+        <p class="h5">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
+        </p>
+        <div class="d-flex justify-content-center">
+        <button type="button" class="botao-oferta mt-4">Ver Oferta</button>
+        </div>
+      </div>
+    </div>
+    <div class="cards oferta-home">
+      <img class="card-img-top img-fluid p-1 rounded-top p-3" style="object-fit: cover;" src="https://payload.cargocollective.com/1/3/99601/1298046/OMOGPS-1_o.jpg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="oferta-titulo text-bold">R$ 5,90
+          <span class="text-success float-right pt-1">10x sem juros</span>
+        </h5>
+        <div style="line-height: 5px;">
+          <p class="card-text d-none d-xl-block oferta-titulo-2">Preço: <s>R$ 11,80</s> (Economia de 50%)</p>
+          <p class="card-text d-none d-xl-block oferta-titulo-2"><span style="color: #000">Tempo restante:</span> 10:59:01</p>
+          <p class="oferta-titulo-3 hometextcompany text-justify">Omo multilação progress - edição pós massacre</p>
+          <i class="fa fa-check-circle text-primary"></i><span class="font-weight-bold oferta-titulo-4"> Supermercado Dia</span>
+        </div>
+        
+        <p class="h5">
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star text-warning"></i>
+          <i class="fa fa-star-o"></i> <span class="text-primary h6">(35)</span>
+        </p>
+        <div class="d-flex justify-content-center">
+        <button type="button" class="botao-oferta mt-4">Ver Oferta</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fim de categorias -->
+
+<!-- Ofertas do dia -->
+  <div class="cupons text-light mt-3">
+    <div class="row">
+      <div class="col-6 cupom-1">
+        <div class="positive">
+          <p class="cupon-texto-1 pt-2">Economize seu dinheiro com nossos cupons</h4>
+          <p class="cupon-texto-2">São dezenas de cupons que nossos parceiros
+          disponibilizam <br /> diariamente.</p>
+          <div class="d-flex justify-content-center w-75 pb-3">
+            <button type="button" class="botao-oferta font-weight-bold mt-4 text-light">Garanta já o seu simples, rápido e facíl</button>
           </div>
         </div>
-      </a>
+      </div>
+      <div class="col-6 cupom-2 d-flex justify-content-center p-4">
+        <img src="https://raw.githubusercontent.com/Project-ONDE/Projeto-ONDE/main/app/assets/images/80.png">
+      </div>
     </div>
   </div>
 
-<!-- Fim de categorias -->
-<hr class="my-5">
-<!-- Ofertas do dia -->
-  <div class="row">
-    <div class="col-7 pt-5">
-      <h2>Ofertas do dia</h2>
-      <h6>Confira as principais ofertas encontradas hoje em Espirito
-      Santo do Pinhal! As ofertas são atualizadas instantaneamente
-      a partir da divulgação das empresas associadas.</h6>
+  <div class="ofertas-home pt-5 d-flex justify-content-center">
+    <div class="flip-container m-2">
+      <div class="flipper">
+        <div class="front">
+          <div class="cards">
+            <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
+            <div class="card-img-overlay">
+              <div class="rounded-circle porcentagem pt-2 pl-1 h5">45%</div>
+            </div>
+            <div class=" m-1">
+              <p class="card-text hometextcupom text-justify">Toda a loja de Espirito Santo do Pinhal 30% OFF,
+                Compra limitadas 1 por pessoa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="cards">
+            <img class="card-img-top" src="https://diariodorio.com/wp-content/uploads/2020/03/foto-americanas-1280x720.jpg" alt="Card image cap">
+            <div class="card-img-overlay">
+              <div class="rounded-circle porcentagem pt-2 pl-1 h5">45%</div>
+            </div>
+            <div class="m-1">
+              <h5 class="card-title">Americanas</h5>
+              <p class="card-text">Valido até: <span class="text-success">27/12</span></p>
+              <div class="text-center pt-1 col">
+                <%= button_to  "Pegar Cupom", cupons_path, method: :get, class: 'btn-home' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-5 pt-5">
-      <img class="w-75" src="https://www.printebrindes.com.br/wp-content/uploads/2020/11/imperdivel.png" alt="First slide">
+    <div class="flip-container m-2">
+      <div class="flipper">
+        <div class="front">
+          <div class="cards">
+            <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
+            <div class="card-img-overlay">
+              <div class="rounded-circle porcentagem pt-2 pl-1 h5">30%</div>
+            </div>
+            <div class="confete m-1">
+              <p class="card-text hometextcupom text-justify">Toda a linha de notebook acer com 30%OFF.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="cards">
+            <img class="card-img-top" src="https://diariodorio.com/wp-content/uploads/2020/03/foto-americanas-1280x720.jpg" alt="Card image cap">
+            <div class="card-img-overlay">
+              <div class="rounded-circle porcentagem pt-2 pl-1 h5">30%</div>
+            </div>
+            <div class="m-1">
+              <h5 class="card-title">Americanas</h5>
+              <p class="card-text">Valido até: <span class="text-success">27/12</span></p>
+              <div class="text-center pt-1 col">
+                <%= button_to  "Pegar Cupom", cupons_path, method: :get, class: 'btn-home' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="flip-container m-2">
+      <div class="flipper">
+        <div class="front">
+          <div class="cards">
+            <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
+            <div class="card-img-overlay">
+              <div class="rounded-circle porcentagem pt-2 pl-1 h5">30%</div>
+            </div>
+            <div class=" m-1">
+              <p class="card-text hometextcupom text-justify">Toda a loja de Espirito Santo do Pinhal 30% OFF,
+                Compra limitadas 1 por pessoa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="cards">
+            <img class="card-img-top" src="https://diariodorio.com/wp-content/uploads/2020/03/foto-americanas-1280x720.jpg" alt="Card image cap">
+            <div class="m-1">
+              <h5 class="card-title">Americanas</h5>
+              <p class="card-text">Valido até: <span class="text-success">27/12</span></p>
+              <div class="text-center pt-1 col">
+                <%= button_to  "Pegar Cupom", cupons_path, method: :get, class: 'btn-home' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flip-container m-2">
+      <div class="flipper">
+        <div class="front">
+          <div class="cards">
+            <img class="card-img-top" src="https://foxcriacaodesitesbh.com.br/fotos/capa_171523130834_1515441788577037_3881032599581863332_n.png" alt="Card image cap">
+            <div class="card-img-overlay">
+              <div class="rounded-circle porcentagem pt-2 pl-1 h5">30%</div>
+            </div>
+            <div class=" m-1">
+              <p class="card-text hometextcupom text-justify">Toda a loja de Espirito Santo do Pinhal 30% OFF,
+                Compra limitadas 1 por pessoa.</p>
+            </div>
+          </div>
+        </div>
+        <div class="back">
+          <div class="cards">
+            <img class="card-img-top" src="https://diariodorio.com/wp-content/uploads/2020/03/foto-americanas-1280x720.jpg" alt="Card image cap">
+            <div class="m-1">
+              <h5 class="card-title">Americanas</h5>
+              <p class="card-text">Valido até: <span class="text-success">27/12</span></p>
+              <div class="text-center pt-1 col">
+                <%= button_to  "Pegar Cupom", cupons_path, method: :get, class: 'btn-home' %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div class="row pb-5">
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top img-fluid" src="https://a-static.mlcdn.com.br/1500x1500/batata-frita-peito-peru-45g-elma-chips/docemalu/1467/7f512b84a084e6433396b334c703cc2f.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title text-center">batatinha</h4>
-            <footer class="h6 text-dark font-italic text-center">Supermecado Campeão</footer>
-            <h6>De <s class="text-danger">R$19,99</s>. Por <span class="h4 text-success">R$15,99</span></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title text-center">Mensalidade</h4>
-            <footer class="h6 text-dark font-italic text-center">Academia SJ</footer>
-            <h6>De <s class="text-danger">R$99,99</s>. Por <span class="h4 text-success">R$75,99</span></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://images-submarino.b2w.io/produtos/01/00/item/124828/5/124828563_1GG.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title text-center">Pneu aro 15</h4>
-            <footer class="h6 text-dark font-italic text-center">Michellan</footer>
-            <h6>De <s class="text-danger">R$195,99</s>. Por <span class="h4 text-success">R$99,10</span></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://d25dk4h1q4vl9b.cloudfront.net/media/images/menu-content/BR/sobremesas/casquinhas_new.png" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title text-center">Casquinha</h4>
-            <footer class="h6 text-dark font-italic text-center">Chiquinho</footer>
-            <h6>De <s class="text-danger">R$2,99</s>. Por <span class="h4 text-success">R$2,00</span></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title text-center">Anuidade</h4>
-            <footer class="h6 text-dark font-italic text-center">Academia SJ</footer>
-            <h6>De <s class="text-danger">R$999,99</s>. Por <span class="h4 text-success">R$900</span></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQuVaNgf6IFefSwKceEBOgkPdhs2iUiNF2LYb7jzumOpRxYYOhyKNR6ECA1Q42Qv0YUZ_rlqUK&usqp=CAc" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title text-center">Calça Jeans 37</h4>
-            <footer class="h6 text-dark font-italic text-center">Lojinha da Ju</footer>
-            <h6>De <s class="text-danger">R$90,99</s>. Por <span class="h4 text-success">R$70,99</span></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://www.socialbauru.com.br/wp-content/uploads/2020/09/seu-joao-barbearia-bauru-3-1024x768.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title text-center">Corte de cabelo</h4>
-            <footer class="h6 text-dark font-italic text-center">Barbearia Sr. Miguel</footer>
-            <h6>De <s class="text-danger">R$ 19,99</s>. Por <span class="h4 text-success">R$ 15,99</span></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://www.cidademarketing.com.br/marketing/wp-content/uploads/2020/01/popsubs_subway.png" alt="Card image cap">
-          <div class="card-body">
-            <h4 class="card-title text-center">2 po 1 Subway</h4>
-            <footer class="h6 text-dark font-italic text-center">Subway</footer>
-            <h6>De <s class="text-danger">R$19,99</s>. Por <span class="h4 text-success">R$12,90</span></h6>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="text-center pt-4 col-12">
-      <%= button_to  "Confira todas as ofertas", ofertas_path, method: :get, class: 'btn-home' %>
-    </div>
-  </div>
-  <!-- Fim de ofertas do dia -->
-<hr class="my-5">
-  <!-- Inicio de Cupons -->
-  <h2 class="pt5">Cupon</h2>
-  <div class="row pb-5">
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <footer class="blockquote-footer">Válido até <cite title="Source Title">00/00/2020</cite></footer>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <footer class="blockquote-footer">Válido até <cite title="Source Title">00/00/2020</cite></footer>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <footer class="blockquote-footer">Válido até <cite title="Source Title">00/00/2020</cite></footer>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-6 col-sm-6 col-md-4 col-lg-3 mt-5">
-      <div class="card-deck">
-        <div class="card">
-            <img class="card-img-top" src="https://uploads.bemparana.com.br/upload/image/noticia/noticia_552317_img1_academias.jpeg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title text-center">Card title</h5>
-            <footer class="blockquote-footer">Válido até <cite title="Source Title">00/00/2020</cite></footer>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="text-center pt-4 col-12">
-      <%= button_to  "Confira todos os cupons", cupons_path, method: :get, class: 'btn-home' %>
-    </div>
-  </div>
+  
   <!-- Fim de Cupons -->
 </div>
+

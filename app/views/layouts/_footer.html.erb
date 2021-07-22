@@ -38,14 +38,14 @@
         <!-- Contato -->
           <span>
             <button target="_blank" data-toggle="tooltip" 
-              data-placement="right" title="(35)9 9999-9999" class="bg-transparent border-0 text-light">
+              data-placement="right" title="Abrir Whatsapp Web" class="bg-transparent border-0 text-light">
               <i class="fa fa-1x fa-whatsapp"></i>
             </button>
           </span>(35) 99999-9999
           <br/>
           <span>
             <button target="_blank" data-toggle="tooltip" 
-              data-placement="right" title="suporte@ondepinhal.com" class="bg-transparent border-0 text-light">
+              data-placement="right" title="Entrar em contato conosco" class="bg-transparent border-0 text-light">
               <i class="fa fa-1x fa-envelope-o"></i>
             </button>
           </span>suporte@ondepinhal.com
@@ -60,6 +60,24 @@
     <% if current_user %>
       <li class="nav-item nav-link active"><%= link_to "<i class='fa fa-sign-out'></i>".html_safe, logout_path, method: :delete%></li>
     <% end %>
+  </div>
+
+  <div class="footer-copyright text-center py-3">
+    <hr class="my-4 w-100">
+    Principais página do site:
+    <%= link_to 'Home', root_path, class: 'text-light'%> - 
+    <%= link_to 'Ofertas', ofertas_path, class: 'text-light'%> -
+    <%= link_to 'Página da oferta', ofertasdestaque_path, class: 'text-light'%> -
+    <%= link_to 'Empresas', pesquisa_path, class: 'text-light'%> -
+    <%= link_to 'Página da empresa', empresa_path, class: 'text-light'%> -
+    <%= link_to 'Contato', contato_path, class: 'text-light'%>
+    <br /><br />
+    Principais página de acesso da empresa:
+    <%= link_to 'Home da empresa', homeempresa_path, class: 'text-light'%> -
+    <%= link_to 'Ofertas', todasofertas_path, class: 'text-light'%> -
+    <%= link_to 'Criar oferta', criaroferta_path, class: 'text-light'%> -
+    <%= link_to 'Suas review', review_path, class: 'text-light'%> -
+    <%= link_to 'Editar dados', editardados_path, class: 'text-light'%>
   </div>
 </footer>
 <!-- Footer  nav-item nav-link text-light-->

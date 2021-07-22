@@ -1,0 +1,373 @@
+<%= render 'layouts/navbar' %>
+
+<div class="fundo">
+  <div class="row">
+    <!-- Menu -->
+    <div class="col-12 col-sm-5 col-md-4 col-lg-3 col-xl-3 menulateral mb-3 mt-3 text-center">
+      <span class="display-4">5</span>
+      <p class=" text-warning h5">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <span class="text-primary h6">(35)</span>
+      </p>
+      <hr class="my-4 w-75">
+      <h5>Faixa de preço</h5>
+      <h5 class="text-success">
+        <i class="fa fa-usd" aria-hidden="true"></i>
+        <i class="fa fa-usd" aria-hidden="true"></i>
+        <i class="fa fa-usd" aria-hidden="true"></i>
+      </h5>
+      <hr class="my-4 w-75">
+      <h5>Periodo de atendimento</h5>
+      <h6 class="float-right">16h</h6>
+      <h6 class="float-left">8h</h6>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">14h 01m</div>
+      </div>
+      <hr class="my-4 w-75">
+      <h5>Localização</h5>
+      <div class="text-center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3694.372689007904!2d-46.748700385096136!3d-22.187938585382042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c9ae09bf22398b%3A0x235d993ca1cef5b1!2sLojinha%20da%20Ju!5e0!3m2!1spt-BR!2sbr!4v1606923293698!5m2!1spt-BR!2sbr" width="100%" height="225" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <p>Av. Ricardo teixeira, 35, Jardim Espirito santo</p>
+        <div class="d-flex justify-content-center">
+          <button type="button" class="botao-oferta font-weight-bold border-light text-light">Marcar rota</button>
+        </div>
+      </div>
+      <hr class="my-4 w-75">
+      <h5>Redes Sociais</h5>
+      <div>
+        <span>
+          <a href="#" target="_blank">
+            <i class="fa fa-2x fa-youtube-play mr-2 text-danger" style="color: #bb0000"></i>
+          </a>
+        </span>
+        <span>
+          <a href="#" target="_blank">
+            <i class="fa fa-2x fa-facebook-official mr-2" style="color: #3b5998"></i>
+          </a>
+        </span>
+        <span>
+          <a href="#" target="_blank">
+            <i class="fa fa-2x fa-twitter mr-2" style="color: #00aced"></i>
+          </a>
+        </span>
+        <span>
+          <a href="#" target="_blank">
+            <i class="fa fa-2x fa-whatsapp mr-2" style="color: #1ED760;"></i>
+          </a>
+        </span>
+        <span>
+          <a href="#" target="_blank">
+            <i class="fa fa-2x fa-instagram mr-2" style="color: #517fa4;"></i>
+          </a>
+        </span>
+      </div>
+      <div class="d-flex justify-content-center">
+          <button type="button" class="botao-oferta font-weight-bold border-light text-light bg-danger mt-4 mb-2">Ver Cupons & Ofertas</button>
+        </div>
+    </div>
+    <div class="col-12 col-sm-7 col-md-8 col-lg-9 col-xl-9 mt-3"> 
+      <h1 class=" text-center display-4">Supermercado Cubatão</h1>
+      <%= render 'layouts/carousel' %>
+
+      <div>
+        <div class="tabbed">
+          <input type="radio" name="tabs" id="tab-nav-1" checked>
+          <label for="tab-nav-1"><i class="fa fa-info-circle" aria-hidden="true"></i> Sobre</label>
+          <input type="radio" name="tabs" id="tab-nav-2">
+          <label for="tab-nav-2"><i class="fa fa-truck" aria-hidden="true"></i> Entregas</label>
+          <input type="radio" name="tabs" id="tab-nav-3">
+          <label for="tab-nav-3"><i class="fa fa-refresh" aria-hidden="true"></i> Troca</label>
+          <input type="radio" name="tabs" id="tab-nav-4">
+          <label for="tab-nav-4"><i class="fa fa-repeat" aria-hidden="true"></i> Reembolso</label>
+          <div class="tabs">
+            <div><h2>Descubra mais sobre nossa empresa</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla tortor, a posuere urna. Praesent urna quam, semper ut ultricies et, mollis ac elit. </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla tortor, a posuere urna. Praesent urna quam, semper ut ultricies et, mollis ac elit. Suspendisse tempor, lacus id consectetur sagittis, lorem odio dignissim nulla, a condimentum sem neque sed ligula. Maecenas id risus eros, eget porttitor metus. Quisque pellentesque neque dignissim nisl pellentesque vitae tempus urna eleifend. Nullam egestas, neque id placerat luctus, nibh velit pharetra nulla, vel pretium justo massa ut elit. Vivamus nec auctor nunc.</p></div>
+            <div><h2>Entregas</h2><p>Maecenas dictum, urna ut consequat condimentum, est dui commodo diam, ac pretium dui ante eu quam. Curabitur posuere metus nec tellus venenatis placerat. Ut egestas neque in odio vulputate gravida. In at justo ac est laoreet eleifend vel quis arcu. Aliquam erat volutpat. Proin vitae vehicula neque. Nam tempus erat ac ante tincidunt tincidunt. Pellentesque eu nibh sapien. Nunc augue magna, lacinia eget congue eget, mattis id tortor. Fusce id vestibulum neque. Proin tincidunt tellus ut risus lobortis cursus. Duis sit amet urna vel sapien ullamcorper varius.</p></div>
+            <div><h2>Troca de mercadoria</h2><p>Duis luctus dolor ac erat luctus hendrerit. Aenean id congue magna. Proin sit amet elit vel lacus ornare dignissim imperdiet nec odio. Maecenas condimentum egestas lorem et laoreet. Donec ut leo non purus rutrum euismod vel faucibus nunc. Curabitur vel mauris nisi, vitae laoreet erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas ipsum odio, iaculis id vulputate vitae, vestibulum at nunc. Integer non nisl lorem. Quisque lobortis congue semper. Nunc neque nisi, consequat id egestas vitae, porta vel sem.</p></div>
+            <div><h2>Politica de reembolso</h2><p>Fusce vel eros eu lectus ultricies fermentum vestibulum adipiscing odio. Suspendisse ultricies, metus nec dapibus pharetra, quam arcu vulputate nisl, a pretium nisi velit id ante. Nunc auctor augue sit amet orci vestibulum id placerat nulla pellentesque. Duis vel quam velit. Ut auctor ipsum quis lacus semper non pretium mi dignissim. Morbi ultrices augue eget nisi hendrerit placerat. Mauris rhoncus urna quis metus congue quis condimentum risus interdum. Nam lobortis lectus et enim laoreet mattis. Integer faucibus ullamcorper erat, at rhoncus leo bibendum sed. Mauris libero urna, placerat non pretium ac, elementum et arcu. Aliquam non tellus diam, vel scelerisque odio. Etiam a quam et enim vehicula feugiat posuere at dui. Phasellus at nisl quam. Integer nisi mi, varius vitae placerat viverra, dapibus vitae massa. Nullam ut orci vitae nisi ornare aliquam in eget orci.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <article class="blog-card">
+        <div class="blog-card__background">
+          <div class="card__background--wrapper">
+            <div class="card__background--main" style="background-image: url('http://demo.yolotheme.com/html/motor/images/demo/demo_131.jpg');">
+              <div class="card__background--layer"></div>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card__head">
+          <span class="date__box">
+            <span class="date__day">11</span>
+            <span class="date__month">JAN</span>
+          </span>
+        </div>
+        <div class="blog-card__info">
+          <h5>Melhor supermercado da região segundo *******</h5>
+          <p>
+            <a href="#" class="icon-link mr-3"><i class="fa fa-pencil-square-o"></i> Disponivel no Facebook</a>
+          </p>
+          <p>Confira está materia na integra feita por uma respeitada jornalista de pinhal.
+          Mostramos que a apesar da pandemia continuamos oferecendo um otimo ambiente para todos clientes!</p>
+          <a href="https://www.facebook.com/" class="btn1 btn1--with-icon"><i class="btn1-icon fa fa-long-arrow-right"></i>LEIA MAIS</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+    
+
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3 menulateral mb-3 mt-3">
+      <h5 class="text-center" style="color: #6c8cf4">Ultimas Reviews</h5>
+
+      <p><img src="https://i1.wp.com/terracoeconomico.com.br/wp-content/uploads/2019/01/default-user-image.png?ssl=1" alt="..." class="rounded-circle" style="width:40px;"> 
+        Adriana Tonietti
+      <p>
+      <p>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <span class="float-right">17 de março de 2020</span>
+      </p>
+      <p class="text-justify">Empresa muito boa sofísticada, com
+        ar condicionado e tudo mais, adorei a
+        expêriencia. Atendimento Genia</p>
+      <hr class="my-4 w-75">
+      <p class="pt-3"><img src="https://www.diariodocentrodomundo.com.br/wp-content/uploads/2015/01/didi.jpg?width=1200&enable=upscale" alt="..." class="rounded-circle" style="width:40px; height: 40px"> 
+        Mocó, Didi
+      <p>
+      <p>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <i class="fa fa-star-o" aria-hidden="true"></i>
+        <span class="float-right">17 de março de 2020</span>
+      </p>
+      <p class="text-justify">Procurei uma empresa assim a vida
+        toda, finalmente encontrei, eles tem
+        um bebedouro de agua com
+        grosselha, é como viver em um filme
+        da disney recomendadissimo... <span class="text-primary">Ver mais</span></p>
+      <hr class="my-4 w-75">
+      <p><img src="https://img.r7.com/images/2016/01/25/88kdfwlfqw_50win3hk6a_file.jpg" alt="..." class="rounded-circle" style="width:40px; height: 40px"> 
+        Tobias
+      <p>
+      <p>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+        <i class="fa fa-star-o" aria-hidden="true"></i>
+        <i class="fa fa-star-o" aria-hidden="true"></i>
+        <span class="float-right">17 de março de 2020</span>
+      </p>
+      <p class="text-justify">Bom !!!</p>
+
+      <hr class="my-4 w-75">
+      <div class="d-flex justify-content-center">
+        <button type="button" class="botao-oferta font-weight-bold border-light text-light mb-2">Ver todas as Reviews</button>
+      </div>
+    </div>
+    <div class="col-12 col-sm-7 col-md-8 col-lg-9 col-xl-9 mt-3">
+      <img src="https://super.abril.com.br/wp-content/uploads/2017/11/como-economizar-no-supermercado.png" class="m-1" alt="..." style="width: 100%; height: 350px;object-fit: cover; filter: brightness(75%);"> 
+      <div class="card-img-overlay">
+        <div class="pt-2 pl-1 h5 display-4 hometextcompany2" style="font-family: 'Akaya Kanadaka', cursive;">Um lugar perfeito para suas compras</div>
+      </div>
+      <div class="row">
+        <div class="col-4 p-3"><img src="https://super.abril.com.br/wp-content/uploads/2017/11/como-economizar-no-supermercado.png" alt="..." style="width: 100%; height: 350px;object-fit: cover;"> </div>
+        <div class="col-4 p-3">
+          Uma Rede de Supermercados do interior de São Paulo com mais de 25 anos de trajetória.<br />
+          Comprometida com a satisfação, qualidade e bom atendimento, tem escrito sua historia com sucesso e dedicação desde 1987, na cidade de Itapira.<br />
+          Hoje conta com 5 lojas de Supermercados nas cidades de Itapira, Mogi-Guaçu, Espírito Santo do Pinhal e Jaguariúna.
+          Buscando sempre a inovação e a perfeição.<br />
+          Mas para esta história ter chegado até onde chegou e para dar continuidade e crescer cada dia mais é 
+          preciso muito foco e principalmente comprometimento com a empresa e sua trajetória.
+        </div>
+        <div class="col-4 p-4">
+          <img src="https://super.abril.com.br/wp-content/uploads/2017/11/como-economizar-no-supermercado.png" alt="..." style="width: 100%; height: 175px;object-fit: cover;">
+          <p class="font-weight-bold">Vantagens de comprar aqui</p>
+          <p>
+            <ul style="list-style-type: circle;">
+              <li>Melhores preços</li>
+              <li>Produtos de alta qualidade</li>
+              <li>Diversidades de produtos</li>
+              <li>Ganhe pontos ao comprar, e troque por brindes</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+.center {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+
+.card1 {
+  width: 450px;
+  height: 250px;
+  background-color: #fff;
+  background: linear-gradient(#f8f8f8, #fff);
+  box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  position:relative;
+  margin: 1.5rem;
+}
+
+.card1 h1 {
+  text-align: center;
+}
+
+.card1 .additional {
+  position: absolute;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(#dE685E, #EE786E);
+  transition: width 0.4s;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.card1:hover .additional {
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+
+.card1 .additional .user-card {
+  width: 150px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.card1 .additional .user-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: -2px;
+  height: 80%;
+  border-left: 2px solid rgba(0,0,0,0.025);*/
+}
+
+.card1 .additional .user-card .level,
+.card1 .additional .user-card .points {
+  top: 15%;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: rgba(0,0,0,0.15);
+  padding: 0.125rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.card1 .additional .user-card .points {
+  top: 85%;
+}
+
+.card1 .additional .user-card svg {
+  top: 50%;
+}
+
+.card1 .additional .more-info {
+  width: 300px;
+  float: left;
+  position: absolute;
+  left: 150px;
+  height: 100%;
+}
+
+.card1 .additional .more-info h1 {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.card1 .additional .coords {
+  margin: 0 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card1 .additional .coords span + span {
+  float: right;
+}
+
+.card1 .additional .stats {
+  font-size: 2rem;
+  display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  top: auto;
+  color: #fff;
+}
+
+.card1 .additional .stats > div {
+  flex: 1;
+  text-align: center;
+}
+
+.card1 .additional .stats i {
+  display: block;
+}
+
+.card1 .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card1 .additional .stats div.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.card1 .additional .stats div.value.infinity {
+  font-size: 2.5rem;
+}
+
+.card1 .general {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.card1 .general .more {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 0.9em;
+}
+</style>

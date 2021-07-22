@@ -2,7 +2,7 @@
 <div class="row text-light menu">
     <!-- logo -->
     <div class="col-2">
-      <a href="/"><img src="/assets/logo.png" class="m-3" style="width: 75px;"></a>
+      <a href="/"><img src="https://raw.githubusercontent.com/Project-ONDE/Projeto-ONDE/main/app/assets/images/logo.png" style="width:160px"></a>
     </div>
     <div class="col-8">
       <div class="row text-center">
@@ -15,13 +15,15 @@
               <%= link_to "<i class='fa fa-search' ></i>".html_safe, pesquisa_path, class: 'search_icon_menu' %>
             </div>
             -->
-            <div class="input-group mb-3">
+            <div class="input-group mb-1">
               <div class="input-group-prepend">
                 <select class="custom-select input-group-text">
                   <option selected>Todas</option>
                   <option value="1">Alimentação</option>
-                  <option value="2">Hospedagem</option>
-                  <option value="3">turismo</option>
+                  <option value="2">Serviços</option>
+                  <option value="3">Supermercado</option>
+                  <option value="3">Produtos</option>
+                  <option value="3">Ofertas</option>
                 </select>
               </div>
               <input type="text" class="form-control" placeholder="Procurar lojas hoteis, e muito mais ..." aria-label="Username" aria-describedby="basic-addon1">
@@ -33,22 +35,62 @@
         </div>
         <!-- Páginas -->
         <div class="col-12">
-          <div class="row">
-            <div class="col">
-              <%= link_to 'Categorias', categorias_path, class: 'text-light'%>
-            </div>
-            <div class="col">
-              <%= link_to 'Ofertas', ofertas_path, class: 'text-light'%>
-            </div>
-            <div class="col">
-              <%= link_to 'Cupons', cupons_path, class: 'text-light'%>
-            </div>
-            <div class="col">
-              <%= link_to 'Parceiros', parceiros_path, class: 'text-light'%>
-            </div>
-            <div class="col">
-              <%= link_to 'Contato', contato_path, class: 'text-light'%>
-            </div>
+          <div class="row d-flex justify-content-center">
+            <nav>
+              <ul id="main">
+                <li>Alimentação
+                  <ul class="drop">
+                    <div>
+                      <li><%= link_to 'Todas', alimentacao_path, class: 'text-light'%></li>
+                      <li><%= link_to 'página empresa', alimentacaodestaque_path, class: 'text-light'%></li>
+                      <li><%= link_to 'carrinho', carrinho_path, class: 'text-light'%></li>
+                    </div>
+                  </ul>
+                </li>
+                <li>Serviços</li>
+                <li>Supermercado
+                  <ul class="drop">
+                    <div>
+                        <li><%= link_to 'página supermercado', supermercado_path, class: 'text-light'%></li>
+                        <li><%= link_to 'todas ofertas', supermercadodestaque_path, class: 'text-light'%></li>
+                        <li><%= link_to 'Oferta', supermercadocarrinho_path, class: 'text-light'%></li>
+                    </div>
+                  </ul>
+                </li>
+                <li>Oferta do dia
+                  <ul class="drop">
+                    <div>
+                        <li><%= link_to 'todas ofertas', ofertas_path, class: 'text-light'%></li>
+                        <li><%= link_to 'melhores avaliadas', ofertas_path, class: 'text-light'%></li>
+                        <li><%= link_to 'Exemplo 1', ofertasdestaque_path, class: 'text-light'%></li>
+                    </div>
+                  </ul>
+                </li>
+                <% unless  current_page?(root_path) %>
+                <li>Marketplace
+                  <ul class="drop">
+                    <div>
+                      <li><%= link_to 'Produtos', ofertas_path, class: 'text-light'%></li>
+                      <li>Alimentação</li>
+                      <li>Supermercado</li>
+                    </div>
+                  </ul>
+                </li>
+                <% end %>
+                <li>Empresas
+                  <ul class="drop">
+                    <div>
+                        <li><%= link_to 'Todas', pesquisa_path, class: 'text-light'%></li>
+                        <li><%= link_to 'Exemplo 1', empresa_path, class: 'text-light'%></li>
+                        <li><%= link_to 'Exemplo 2', empresa2_path, class: 'text-light'%></li>
+                        <li><%= link_to 'Exemplo 3', empresa3_path, class: 'text-light'%></li>
+                    </div>
+                  </ul>
+                </li>
+                <li>Faça parte</li>
+                <div id="marker"></div>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -84,7 +126,7 @@
 
 <%= link_to 'Parceiros', parceiros_path, class: 'nav-item nav-link text-light'%>
 
-<%= link_to 'Empresa', empresas_path, class: 'nav-item nav-link text-light'%>
+
 
 <%= link_to 'Pesquisa', pesquisa_path, class: 'nav-item nav-link text-light'%>
 

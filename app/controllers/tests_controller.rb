@@ -16,11 +16,29 @@ class TestsController < ApplicationController
   end
   def parceiros
   end
-  def empresas
+  def empresa
+  end
+  def empresa2
+  end
+  def empresa3
+  end
+  def empresa4
   end
   def pesquisa
   end
   def ofertasdestaque
+  end
+  def alimentacao
+  end
+  def alimentacaodestaque
+  end
+  def carrinho
+  end
+  def supermercado
+  end
+  def supermercadodestaque
+  end
+  def supermercadocarrinho
   end
   def hover
   end
